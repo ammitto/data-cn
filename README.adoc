@@ -1,0 +1,133 @@
+= Ammitto China Sanctions Data Repository
+
+== Purpose
+
+This repository stores downloaded and processed sanctions data from the
+People's Republic of China government sanctions announcements.
+
+The data is maintained by the Ammitto project and used by the `ammitto` Ruby
+gem for querying international sanctions information.
+
+== Legal Basis
+
+China maintains several sanctions and restricted entity lists:
+
+* **不可靠实体清单 (Unreliable Entity List)** - Ministry of Commerce (MOFCOM)
+* **反制裁清单 (Anti-Sanctions List)** - Ministry of Foreign Affairs (MFA)
+* **出口管制管控名单 (Export Control List)** - MOFCOM
+
+These are implemented through the Anti-Foreign Sanctions Law (2021) and
+various ministerial regulations.
+
+== Data Source
+
+China maintains multiple sanctions lists:
+
+.Unreliable Entity List (不可靠实体清单)
+* **Authority**: Ministry of Commerce (商务部)
+* **URL**: http://mofcom.gov.cn
+* **Effects**: Import/export ban, investment ban
+
+.Anti-Sanctions List (反制裁清单)
+* **Authority**: Ministry of Foreign Affairs (外交部)
+* **URL**: http://mfa.gov.cn
+* **Effects**: Asset freeze, transaction ban, entry ban
+
+.Export Control List (出口管制管控名单)
+* **Authority**: Ministry of Commerce
+* **Effects**: Export restrictions
+
+== Directory Structure
+
+```
+.
+├── downloaded/           # Raw HTML pages from Chinese government websites
+│   └── *.html
+├── processed/            # Individual YAML files per sanction entity
+│   └── {name}-{index}.yaml
+├── reference-docs/       # Reference documentation
+├── .github/workflows/    # GitHub Actions for automated updates
+├── README.adoc           # This file
+├── CLAUDE.md             # Guidance for Claude Code
+└── update.log            # Timestamps of data updates
+```
+
+== Special Considerations
+
+* **Format**: HTML announcements (not structured XML/JSON)
+* **Language**: Chinese with English transliterations
+* **Parsing**: Requires HTML extraction from official announcements
+* **Encoding**: UTF-8 with Chinese characters
+
+== Directory Descriptions
+
+downloaded/:: Contains raw HTML pages downloaded from Chinese government
+websites. Data must be parsed from official announcements.
+
+processed/:: Contains individual YAML files, one per sanction entity.
+Files are named using the pattern `{primary-name}-{index}.yaml` where
+index ensures uniqueness for entities with similar names.
+
+reference-docs/:: Contains reference documentation and translations.
+
+update.log:: Log file tracking when data was last updated with timestamps.
+
+== Updating Data
+
+Data is automatically updated daily via GitHub Actions.
+
+To manually update using the ammitto gem:
+
+[source,shell]
+----
+# From the ammitto gem directory
+bundle exec ruby exe/ammitto fetch cn --format yaml --output-dir ./processed
+----
+
+Or via the adapters repository:
+
+[source,shell]
+----
+# From the adapters/ directory
+ruby adapter.rb
+----
+
+== YAML Schema
+
+Each processed YAML file follows the schema defined in
+`ammitto/lib/ammitto/sources/cn/` using Lutaml::Model.
+
+.Example YAML structure
+[source,yaml]
+----
+names:
+  - "PRIMARY NAME (中文)"
+  - "PRIMARY NAME (English)"
+entity_type: person  # or "organization"
+source: cn
+country: Country Name
+list_type: "anti-sanctions"  # or "unreliable-entity", "export-control"
+sanction_measures:
+  - "Asset freeze"
+  - "Entry ban"
+----
+
+== Entity Types
+
+The Chinese sanctions lists contain the following entity types:
+
+Person:: Individual persons subject to sanctions
+Organization:: Legal entities, companies, and organizations
+
+== Related Repositories
+
+* https://github.com/ammitto/ammitto[ammitto] - Main Ruby gem
+* https://github.com/ammitto/adapters[adapters] - Data fetching adapters
+* https://github.com/ammitto/data-eu[data-eu] - EU sanctions data
+* https://github.com/ammitto/data-un[data-un] - UN sanctions data
+* https://github.com/ammitto/data-us[data-us] - US OFAC sanctions data
+
+== License
+
+Data in this repository is sourced from official Chinese government
+announcements. The data processing code is part of the Ammitto project.
