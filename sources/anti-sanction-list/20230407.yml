@@ -1,0 +1,236 @@
+---
+announcement:
+  title: 关于对美国哈德逊研究所、里根图书馆及其负责人采取反制措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202304/t20230407_11055802.shtml
+  publish_date: 2023-04-07
+  publish_time: 10:55
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第1号
+  signatory: 秦刚
+  signatory_title: 部长
+  content: |
+    现公布《关于对美国哈德逊研究所、里根图书馆及其负责人采取反制措施的决定》，自2023年4月7日起施行。
+
+    部长 秦刚
+
+    2023年4月7日
+
+    关于对美国哈德逊研究所、里根图书馆及其负责人采取反制措施的决定
+
+    美方不顾中方反复交涉和坚决反对，执意允许台湾地区领导人蔡英文于2023年3月29日
+    至31日和4月4日至6日“过境”窜美从事政治活动。美国哈德逊研究所、里根图书馆为蔡
+    英文在美从事“台独”分裂活动提供平台和便利，严重违反一个中国原则和中美三个联合
+    公报规定，严重损害中方主权和领土完整。
+
+    依据《中华人民共和国反外国制裁法》第四条、第五条、第六条、第十五条规定，中方
+    决定对美国哈德逊研究所、里根图书馆及其负责人等后附《反制清单》列明的机构和个
+    人采取以下反制措施：
+
+    一、对哈德逊研究所、里根图书馆等2家机构：
+
+    严格限制我国境内的高校、机构等组织和个人与其进行有关交易、交流、合作等活动。
+
+    二、对哈德逊研究所董事会主席萨拉·斯特恩、所长约翰·瓦特斯，负责里根图书馆日常
+    维护的里根基金会前执行主任约翰·希布斯奇、首席行政官乔安妮·德雷克等4名个人：
+
+    （一）冻结在我国境内的动产、不动产和其他各类财产；
+
+    （二）禁止我国境内的组织、个人与其进行有关交易、合作等活动；
+
+    （三）对其本人不予签发签证、不准入境。
+
+    本决定自2023年4月7日起施行。
+
+    附件：反制清单
+    外交部    
+    2023年4月7日
+
+    附件
+    反制清单
+
+    一、哈德逊研究所
+
+    二、里根图书馆
+
+    三、哈德逊研究所董事会主席萨拉·斯特恩（Sarah May Stern），女
+
+    四、哈德逊研究所所长约翰·瓦特斯（John P. Walters），男
+
+    五、里根基金会前执行主任约翰·希布斯奇（John Heubusch），男
+
+    六、里根基金会首席行政官乔安妮·德雷克（Joanne M. Drake），女
+
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第四条
+      - 第五条
+      - 第六条
+  entities:
+    - name:
+        zh-Hans: 哈德逊研究所
+        en: Hudson Institute
+      type: organization
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      reason:
+        - zh-Hans: |
+            美方不顾中方反复交涉和坚决反对，执意允许台湾地区领导人蔡英文于2023年3月29日
+            至31日和4月4日至6日“过境”窜美从事政治活动。美国哈德逊研究所、里根图书馆为蔡
+            英文在美从事“台独”分裂活动提供平台和便利，严重违反一个中国原则和中美三个联合
+            公报规定，严重损害中方主权和领土完整。
+          en: |
+            The US allowed Taiwan's leader Tsai Ing-wen to "transit" through the
+            US for political activities from March 29 to 31 and April 4 to 6,
+            despite repeated Chinese protests and strong opposition. The Hudson
+            Institute and the Reagan Library provided platforms and convenience
+            for Tsai Ing-wen's "Taiwan independence" activities in the US,
+            seriously violating the One-China principle and the three China-US
+            joint communiqués, seriously damaging China's sovereignty and
+            territorial integrity.
+      measures:
+        - type:
+          - prohibit_cooperation
+          zh-Hans: 严格限制我国境内的高校、机构等组织和个人与其进行有关交易、交流、合作等活动。
+          en: Strictly restrict Chinese universities, institutions, and individuals from engaging in relevant transactions, exchanges, and cooperation with them.
+    - name:
+        zh-Hans: 里根图书馆
+        en: Reagan Library
+      type: organization
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      reason:
+        - zh-Hans: |
+            美方不顾中方反复交涉和坚决反对，执意允许台湾地区领导人蔡英文于2023年3月29日
+            至31日和4月4日至6日“过境”窜美从事政治活动。美国哈德逊研究所、里根图书馆为蔡
+            英文在美从事“台独”分裂活动提供平台和便利，严重违反一个中国原则和中美三个联合
+            公报规定，严重损害中方主权和领土完整。
+          en: |
+            The US allowed Taiwan's leader Tsai Ing-wen to "transit" through the
+            US for political activities from March 29 to 31 and April 4 to 6,
+            despite repeated Chinese protests and strong opposition. The Hudson
+            Institute and the Reagan Library provided platforms and convenience
+            for Tsai Ing-wen's "Taiwan independence" activities in the US,
+            seriously violating the One-China principle and the three China-US
+            joint communiqués, seriously damaging China's sovereignty and
+            territorial integrity.
+      measures:
+        - type:
+          - prohibit_transactions
+          - prohibit_cooperation
+          zh-Hans: 严格限制我国境内的高校、机构等组织和个人与其进行有关交易、交流、合作等活动。
+          en: Strictly restrict Chinese universities, institutions, and individuals from engaging in relevant transactions, exchanges, and cooperation with them.
+
+    - name:
+        zh-Hans: 萨拉·斯特恩
+        en: Sarah May Stern
+      title:
+        zh-Hans: 哈德逊研究所董事会主席
+        en: Chair of the Board of the Hudson Institute
+      gender: female
+      type: individual
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易、合作等活动
+          en: Prohibit transactions, cooperation, and other activities with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人不予签发签证、不准入境。
+          en: Visa ban for the individual, prohibiting entry
+
+    # 四、哈德逊研究所所长约翰·瓦特斯（John P. Walters），男
+
+    - name:
+        zh-Hans: 约翰·瓦特斯
+        en: John P. Walters
+      title:
+        zh-Hans: 哈德逊研究所所长
+        en: Director of the Hudson Institute
+      gender: male
+      type: individual
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易、合作等活动
+          en: Prohibit transactions, cooperation, and other activities with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人不予签发签证、不准入境。
+          en: Visa ban for the individual, prohibiting entry
+
+
+    # 五、里根基金会前执行主任约翰·希布斯奇（John Heubusch），男
+
+    - name:
+        zh-Hans: 约翰·希布斯奇
+        en: John Heubusch
+      title:
+        zh-Hans: 里根基金会前执行主任
+        en: Former Executive Director of the Reagan Foundation
+      gender: male
+      type: individual
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易、合作等活动
+          en: Prohibit transactions, cooperation, and other activities with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人不予签发签证、不准入境。
+          en: Visa ban for the individual, prohibiting entry
+
+    # 六、里根基金会首席行政官乔安妮·德雷克（Joanne M. Drake），女
+
+    - name:
+        zh-Hans: 乔安妮·德雷克
+        en: Joanne M. Drake
+      title:
+        zh-Hans: 里根基金会首席行政官
+        en: Chief Executive Officer of the Reagan Foundation
+      gender: female
+      type: individual
+      effective_date: 2023-04-07
+      sanction_list: 反制裁清单
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易、合作等活动
+          en: Prohibit transactions, cooperation, and other activities with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人不予签发签证、不准入境。
+          en: Visa ban for the individual, prohibiting entry

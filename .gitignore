@@ -26,6 +26,9 @@ CLAUDE.md
 downloaded/*
 !downloaded/.gitkeep
 
-# Processed data (keep directory)
-processed/*
-!processed/.gitkeep
+# Processed data is tracked in git - only ignore temp files in processed/
+processed/*.tmp
+processed/*.log
+
+# Generated SQLite database
+*.db

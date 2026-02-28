@@ -37,20 +37,322 @@ China maintains multiple sanctions lists:
 * **Authority**: Ministry of Commerce
 * **Effects**: Export restrictions
 
-== Directory Structure
+== Normalized Knowledge Graph Structure
+
+The data follows a normalized structure where:
+
+* **Entities are LIST-AGNOSTIC** - A person or organization can appear on multiple lists
+* **Lists define sanctions regimes** - Each list has its own metadata
+* **Entries are junction records** - They link entities to lists with list-specific data
+
+=== Directory Structure
 
 ```
-.
-├── downloaded/           # Raw HTML pages from Chinese government websites
-│   └── *.html
-├── processed/            # Individual YAML files per sanction entity
-│   └── {name}-{index}.yaml
-├── reference-docs/       # Reference documentation
-├── .github/workflows/    # GitHub Actions for automated updates
-├── README.adoc           # This file
-├── CLAUDE.md             # Guidance for Claude Code
-└── update.log            # Timestamps of data updates
+data-cn/processed/
+├── entities/                      # NORMALIZED - unique per source
+│   ├── mitsubishi-heavy-industries.yaml    # No prefix, just local ID
+│   ├── kawasaki-heavy-industries.yaml
+│   └── ...
+├── entries/                       # Links entity to list via list_type field
+│   ├── entry-mitsubishi-import-export.yaml # For import-export-control-list
+│   ├── entry-mitsubishi-unreliable.yaml    # Same entity, different list!
+│   └── ...
+├── announcements/                 # NORMALIZED - can affect multiple lists
+│   ├── mofcom-2026-11.yaml
+│   ├── mfa-2025-01.yaml
+│   └── ...
+├── legal_instruments/             # NORMALIZED - can authorize multiple lists
+│   ├── export-control-law.yaml    # No cn- prefix
+│   ├── anti-sanction-law.yaml
+│   └── ...
+├── lists/                         # List definitions
+│   ├── anti-sanction-list.yaml
+│   ├── import-export-control-list.yaml
+│   └── unreliable-entity-list.yaml
+└── _index.yaml
 ```
+
+=== IRI Structure
+
+All resources use normalized IRIs:
+
+```
+# Entity (list-agnostic)
+https://www.ammitto.org/entity/cn/{local_id}
+
+# Entry (list-specific)
+https://www.ammitto.org/entry/cn/{list_type}/{local_id}
+
+# List
+https://www.ammitto.org/list/cn/{list_type}
+```
+
+Example IRIs:
+
+```
+https://www.ammitto.org/entity/cn/mitsubishi-heavy-industries
+https://www.ammitto.org/entry/cn/import-export-control-list/mitsubishi-heavy-industries
+https://www.ammitto.org/entry/cn/unreliable-entity-list/mitsubishi-heavy-industries
+https://www.ammitto.org/list/cn/import-export-control-list
+```
+
+=== Available List Types
+
+[cols="1,2,2"]
+|===
+| List Type | Name (English) | Name (Chinese)
+
+| `anti-sanction-list` | Anti-Sanction List | 反制裁清单
+| `import-export-control-list` | Import-Export Control List | 出口管制管控名单
+| `unreliable-entity-list` | Unreliable Entity List | 不可靠实体清单
+|===
+
+== Entity Schema
+
+=== Entity (List-Agnostic)
+
+[source,yaml]
+----
+# entities/mitsubishi-heavy-industries.yaml
+id: mitsubishi-heavy-industries      # NO cn- prefix
+type: organization
+names:
+  - english: Mitsubishi Heavy Industries, Ltd.
+    chinese: 三菱重工業株式会社
+    is_primary: true
+organization_details:
+  country_of_registration: Japan
+----
+
+=== Entry (List-Specific)
+
+[source,yaml]
+----
+# entries/entry-mitsubishi-import-export.yaml
+id: entry-mitsubishi-import-export
+entity_id: mitsubishi-heavy-industries   # Reference to entity
+list_type: import-export-control-list    # Which list this entry belongs to
+announcement_id: mofcom-2026-11
+legal_instrument_ids:
+  - export-control-law                   # NO cn- prefix
+  - dual-use-export-control-regulation
+measures:
+  - 禁止出口两用物项
+  - 禁止转移或提供两用物项
+status: active
+listed_date: '2024-05-01'
+----
+
+=== List Definition
+
+[source,yaml]
+----
+# lists/import-export-control-list.yaml
+id: import-export-control-list
+source: cn
+name: Import-Export Control List
+name_chinese: 出口管制管控名单
+authority: MOFCOM
+legal_instrument_ids:
+  - export-control-law
+  - foreign-trade-law
+----
+
+=== Announcement
+
+[source,yaml]
+----
+# announcements/mofcom-2026-11.yaml
+id: mofcom-2026-11                       # NO cn- prefix
+number: 商务部公告2026年第11号
+title: 公布将20家日本实体列入出口管制管控名单
+date: '2026-02-24'
+effective_date: '2026-02-24'
+issuing_authority: 商务部
+source_url: https://www.mofcom.gov.cn/...
+----
+
+== Source Data Format
+
+The processed YAML files follow these patterns:
+
+=== Organization Entity
+[source,yaml]
+----
+id: fujitsu-defense-national-security
+type: organization
+names:
+  - full_name: "Fujitsu Defense & National Security, Ltd."
+    is_primary: true
+    script: Latn
+  - full_name: "富士通防衛と国家安全株式会社"
+    is_primary: false
+    script: Hani
+source_references:
+  - source_code: cn
+    reference_number: mofcom-2026-11
+organization_details:
+  country_of_registration: Japan
+----
+
+=== Person Entity
+[source,yaml]
+----
+id: kathy-warden
+type: person
+names:
+  - full_name: "Kathy J. Warden"
+    is_primary: true
+    script: Latn
+  - full_name: "凯西·沃登"
+    is_primary: false
+    script: Hani
+source_references:
+  - source_code: cn
+    reference_number: mfa-2024-05-22
+person_details:
+  title: "Chairman, CEO and President of Northrop Grumman"
+  gender: female
+----
+
+=== Field Definitions
+
+[cols="1,4"]
+|===
+| Field | Description
+
+| `id`
+| Unique slug identifier (from English or Chinese name)
+
+| `type`
+| Entity type: `person` or `organization`
+
+| `names`
+| Array of name variants; Chinese names use `script: Hani`
+
+| `source_references`
+| Links to source announcement
+
+| `person_details`
+| Person-specific: title, gender
+
+| `organization_details`
+| Organization-specific: country_of_registration
+
+|===
+
+== Harmonized Data Format
+
+After harmonization, entities are transformed into JSON-LD format:
+
+=== Entity (JSON-LD)
+[source,json]
+----
+{
+  "@context": "https://www.ammitto.org/schema/v1/context.jsonld",
+  "@id": "https://www.ammitto.org/entity/cn/fujitsu-defense-national-security",
+  "@type": "OrganizationEntity",
+  "names": [
+    {
+      "@type": "NameVariant",
+      "fullName": "Fujitsu Defense & National Security, Ltd.",
+      "script": "Latn",
+      "isPrimary": true
+    },
+    {
+      "@type": "NameVariant",
+      "fullName": "富士通防衛と国家安全株式会社",
+      "script": "Hani",
+      "isPrimary": false
+    }
+  ],
+  "organizationDetails": {
+    "@type": "OrganizationDetails",
+    "countryOfRegistration": "JP"
+  },
+  "sanctionEntries": [
+    {
+      "@id": "https://www.ammitto.org/entry/cn/export-control-list/fujitsu-defense-national-security",
+      "@type": "SanctionEntry",
+      "authority": {
+        "@id": "https://www.ammitto.org/authority/cn",
+        "name": "China MOFCOM"
+      },
+      "regime": {
+        "@type": "SanctionRegime",
+        "code": "CN_EXPORT_CONTROL",
+        "name": "出口管制管控名单 (Export Control List)"
+      },
+      "effects": [
+        {
+          "@type": "SanctionEffect",
+          "effectType": "dual_use_export_ban",
+          "scope": "full",
+          "description": "禁止出口两用物项"
+        },
+        {
+          "@type": "SanctionEffect",
+          "effectType": "dual_use_transfer_ban",
+          "scope": "full",
+          "description": "禁止转移或提供两用物项"
+        }
+      ],
+      "status": "active",
+      "period": {
+        "@type": "TemporalPeriod",
+        "listedDate": "2026-02-24"
+      },
+      "legalInstruments": [
+        {
+          "@id": "https://www.ammitto.org/legal_instrument/cn/export-control-law",
+          "name": "Export Control Law of the PRC"
+        }
+      ],
+      "announcement": {
+        "@type": "OfficialAnnouncement",
+        "title": "商务部公告2026年第11号",
+        "url": "https://www.mofcom.gov.cn/...",
+        "publishedDate": "2026-02-24"
+      }
+    }
+  ]
+}
+----
+
+=== CN-Specific Effect Types
+
+[cols="1,3"]
+|===
+| Effect Type | Description
+
+| `import_export_ban`
+| 禁止从事与中国有关的进出口活动
+
+| `investment_ban`
+| 禁止在中国境内新增投资
+
+| `entry_ban`
+| 禁止高级管理人员入境
+
+| `work_permit_ban`
+| 不批准并取消高级管理人员工作许可
+
+| `asset_freeze`
+| 冻结在我国境内的动产、不动产和其他各类财产
+
+| `visa_ban`
+| 不予签发签证、不准入境
+
+| `dual_use_export_ban`
+| 禁止出口两用物项
+
+| `dual_use_transfer_ban`
+| 禁止转移或提供两用物项
+
+| `transaction_ban`
+| 禁止中国境内的组织、个人与其进行有关交易
+
+|===
 
 == Special Considerations
 
@@ -58,19 +360,7 @@ China maintains multiple sanctions lists:
 * **Language**: Chinese with English transliterations
 * **Parsing**: Requires HTML extraction from official announcements
 * **Encoding**: UTF-8 with Chinese characters
-
-== Directory Descriptions
-
-downloaded/:: Contains raw HTML pages downloaded from Chinese government
-websites. Data must be parsed from official announcements.
-
-processed/:: Contains individual YAML files, one per sanction entity.
-Files are named using the pattern `{primary-name}-{index}.yaml` where
-index ensures uniqueness for entities with similar names.
-
-reference-docs/:: Contains reference documentation and translations.
-
-update.log:: Log file tracking when data was last updated with timestamps.
+* **Multiple Lists**: China has 3 distinct sanctions lists - entities may appear on multiple
 
 == Updating Data
 
@@ -84,59 +374,35 @@ To manually update using the ammitto gem:
 bundle exec ruby exe/ammitto fetch cn --format yaml --output-dir ./processed
 ----
 
-Or via the adapters repository:
+To migrate existing data to normalized structure:
 
 [source,shell]
 ----
-# From the adapters/ directory
-ruby adapter.rb
+# Run the migration script
+ruby scripts/migrate_iri_structure.rb /path/to/data-cn/processed
 ----
-
-== YAML Schema
-
-Each processed YAML file follows the schema defined in
-`ammitto/lib/ammitto/sources/cn/` using Lutaml::Model.
-
-.Example YAML structure
-[source,yaml]
-----
-names:
-  - "PRIMARY NAME (中文)"
-  - "PRIMARY NAME (English)"
-entity_type: person  # or "organization"
-source: cn
-country: Country Name
-list_type: "anti-sanctions"  # or "unreliable-entity", "export-control"
-sanction_measures:
-  - "Asset freeze"
-  - "Entry ban"
-----
-
-== Entity Types
-
-The Chinese sanctions lists contain the following entity types:
-
-Person:: Individual persons subject to sanctions
-Organization:: Legal entities, companies, and organizations
 
 == Knowledge Graph Integration
 
 This repository's processed YAML data feeds into the Ammitto knowledge graph.
 
-When the harmonization process runs:
+When the export process runs:
 
 [source,shell]
 ----
-# Auto-detect all data-* repos and harmonize
-ammitto harmonize --scan --sources-dir /path/to/repos --output-dir ./api/v1
+# Export all knowledge graph data
+ruby scripts/export_knowledge_graph.rb /path/to/repos /path/to/output
 ----
 
 The cn data is transformed into:
 
-* Individual JSON-LD nodes in `api/v1/node/entity/cn/{id}.jsonld`
-* Sanction entries in `api/v1/node/entry/cn/{id}.jsonld`
-* Lightweight search index entries
-* Facet counts for filtering
+* Individual JSON-LD nodes:
+  - `api/v1/node/entity/cn/{id}.jsonld`
+  - `api/v1/node/entry/cn/{list_type}/{id}.jsonld`
+  - `api/v1/node/list/cn/{list_type}.jsonld`
+* Lightweight search index entries with `listType` field
+* List type facets for filtering
+* By-list slices: `api/v1/by-list/cn/{list_type}.jsonld`
 
 == Related Repositories
 
