@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 公布将16家美国实体列入出口管制管控名单
+  url: https://www.mofcom.gov.cn/zcfb/blgg/art/2025/art_eba76b74d5e147c99fd86bc8a47c5b57.html
+  publish_date: 2025-04-04
+  authority: 中华人民共和国商务部
+  type: 商务部公告
+  document_id: 2025年第21号
+  signatory: 商务部
+  content: |
+    根据《中华人民共和国出口管制法》和《中华人民共和国两用物项出口管制条例》等法律法规有关规定，为维护国家安全和利益，履行防扩散等国际义务，决定将高点航空技术公司等16家美国实体列入出口管制管控名单（见附件），并采取以下措施：
+
+    一、禁止向上述16家美国实体出口两用物项；正在开展的相关出口活动应当立即停止。
+    二、特殊情况下确需出口的，出口经营者应当向商务部提出申请。
+
+    本公告自公布之日起正式实施。
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国出口管制法
+    - law: 中华人民共和国两用物项出口管制条例
+  entities:
+    - name:
+        zh-Hans: 高点航空技术公司
+        en: High Point Aerotechnologies
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: &reason
+        - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
+          en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
+      measures: &measures
+        - type:
+          - prohibit_export_dual_use_items
+          zh-Hans: 禁止向上述美国实体出口两用物项；正在开展的相关出口活动应当立即停止
+          en: Prohibit the export of dual-use items to the above US entity; ongoing related export activities should be immediately ceased
+        - type:
+          - export_license_requirement
+          zh-Hans: 特殊情况下确需出口的，出口经营者应当向商务部提出申请
+          en: In special circumstances where export is necessary, exporters should apply to the Ministry of Commerce for approval
+
+    - name:
+        zh-Hans: 环球世界物流公司
+        en: Universal Logistics Holdings, Inc.
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: Source Intelligence公司
+        en: Source Intelligence, Inc.
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 美国繁荣联盟
+        en: Coalition For A Prosperous America
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 内华达山脉公司
+        en: Sierra Nevada Corporation
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 边缘自治运营公司
+        en: Edge Autonomy Operations LLC
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 赛博勒克斯公司
+        en: Cyberlux Corporation
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 哈德森技术公司
+        en: Hudson Technologies Co.
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 萨罗尼克科技公司
+        en: Saronic Technologies, Inc.
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 国际海洋工程公司
+        en: Oceaneering International, Inc.
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 摇杆舵公司
+        en: Stick Rudder Enterprises LLC
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 立方公司
+        en: Cubic Corporation
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: S3航空防务公司
+        en: S3 AeroDefense
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 特科姆公司
+        en: TCOM, Limited Partnership
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 文本矿公司
+        en: TextOre
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: ACT1联邦公司
+        en: ACT1 Federal
+      type: organization
+      effective_date: 2025-04-04
+      sanction_list: 出口管制管控名单
+      reason: *reason
+      measures: *measures

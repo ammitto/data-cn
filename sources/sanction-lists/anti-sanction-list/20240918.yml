@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 关于对美国军工企业采取反制措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202409/t20240918_11492303.shtml
+  publish_date: 2024-09-18
+  publish_time: "14:43"
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第12号
+  signatory: 外交部
+  content: |
+    （2024年9月18日中华人民共和国外交部令第12号公布，自2024年9月18日起施行）
+
+    美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。依据《中华人民共和国反外国制裁法》第三条、第四条、第六条、第九条、第十五条规定，中方决定对美国内华达山脉公司、摇杆舵公司、立方公司、S3航空防务公司、特科姆公司、文本矿公司、扁平地球管理公司、ACT1联邦公司、埃克索维拉公司等9家后附《反制清单》列明的企业采取以下反制措施：
+
+    一、冻结在我国境内的动产、不动产和其他各类财产；
+    二、禁止我国境内的组织、个人与其进行有关交易、合作等活动。
+
+    本决定自2024年9月18日起施行。
+
+    附件：反制清单
+
+    外交部
+    2024年9月18日
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第三条
+      - 第四条
+      - 第六条
+      - 第九条
+      - 第十五条
+  entities:
+    - name:
+        zh-Hans: 内华达山脉公司
+        en: Sierra Nevada Corporation
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: &reason
+        - zh-Hans: |
+            美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
+          en: |
+            The US recently announced again the sale of weapons to China's Taiwan region, seriously violating the One-China principle and the three China-US joint communiqués.
+      measures: &measures
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable property and other types of assets
+        - type:
+          - prohibit_transactions
+          - prohibit_cooperation
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易、合作等活动
+          en: Prohibit organizations and individuals in China from engaging in transactions, cooperation or related activities with the entity
+
+    - name:
+        zh-Hans: 摇杆舵公司
+        en: Stick Rudder Enterprises LLC
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 立方公司
+        en: Cubic Corporation
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: S3航空防务公司
+        en: S3 AeroDefense
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 特科姆公司
+        en: TCOM, Limited Partnership
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 文本矿公司
+        en: TextOre
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 扁平地球管理公司
+        en: Planate Management Group
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: ACT1联邦公司
+        en: ACT1 Federal
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 埃克索维拉公司
+        en: Exovera
+      type: organization
+      effective_date: 2024-09-18
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures

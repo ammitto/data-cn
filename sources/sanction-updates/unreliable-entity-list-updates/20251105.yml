@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../schemas/cn-measure-modification.yml
+---
+announcement:
+  title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
+  url: https://www.mofcom.gov.cn/syxwfb/art/2025/art_adc429fe09db443cb2e5837524bc2eda.html
+  publish_date: 2025-11-05
+  publish_time: "17:00"
+  authority: 商务部新闻办公室
+  content: |
+    问：有消息称，根据中美吉隆坡经贸磋商共识，中方将调整一批针对美国的非关税措施。请问在不可靠实体清单方面有什么考虑？
+
+    答：根据《中华人民共和国反外国制裁法》《不可靠实体清单规定》及有关规定，不可靠实体清单工作机制于2025年3月4日和4月4日发布公告，将一批美国实体列入不可靠实体清单，采取相应措施。为落实中美吉隆坡经贸磋商共识，中方决定自2025年11月10日起，继续暂停4月4日公告（不可靠实体清单工作机制公告〔2025〕7号）相关措施1年，停止3月4日公告（不可靠实体清单工作机制公告〔2025〕5号和6号）相关措施。根据《不可靠实体清单规定》相关规定，国内企业可申请与上述实体进行交易，不可靠实体清单工作机制将依法进行审核，对符合条件的申请予以批准。
+
+measure_modifications:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+    - law: 不可靠实体清单规定
+  modifications:
+    - action: suspend
+      target_announcement_id: 〔2025〕7号
+      target_announcement_date: 2025-04-04
+      effective_date: 2025-11-10
+      until_date: 2026-11-10
+      notes: 继续暂停4月4日公告（不可靠实体清单工作机制公告〔2025〕7号）相关措施1年
+
+    - action: stop
+      target_announcement_id: 〔2025〕5号
+      target_announcement_date: 2025-03-04
+      effective_date: 2025-11-10
+      notes: 停止3月4日公告（不可靠实体清单工作机制公告〔2025〕5号）相关措施。
+
+    - action: stop
+      target_announcement_id: 〔2025〕6号
+      target_announcement_date: 2025-03-04
+      effective_date: 2025-11-10
+      notes: 停止3月4日公告（不可靠实体清单工作机制公告〔2025〕6号）相关措施。

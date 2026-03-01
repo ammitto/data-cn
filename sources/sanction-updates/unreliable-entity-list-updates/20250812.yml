@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../../../schemas/cn-measure-modification.yml
+---
+announcement:
+  title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
+  url: https://www.mofcom.gov.cn/syxwfb/art/2025/art_adc429fe09db443cb2e5837524bc2eda.html
+  publish_date: 2025-08-12
+  publish_time: "09:00"
+  authority: 商务部新闻办公室
+  content: |
+    问：中美斯德哥尔摩经贸会谈联合声明提到中方将采取或者维持必要措施，暂停或取消针对美国的非关税反制措施。请问在不可靠实体清单方面有什么考虑？
+
+    答： 根据《中华人民共和国反外国制裁法》《不可靠实体清单规定》及有关规定，不可靠实体清单工作机制于2025年4月4日和9日，将17家美国实体列入不可靠实体清单，禁止上述企业从事与中国有关的进出口活动，以及在中国境内新增投资。为落实中美经贸高层会谈共识，自2025年8月12日起，继续暂停4月4日公告（不可靠实体清单工作机制〔2025〕7号）相关措施90天，停止4月9日公告（不可靠实体清单工作机制〔2025〕8号）相关措施。根据《不可靠实体清单规定》相关规定，国内企业可申请与上述实体进行交易，不可靠实体清单工作机制将依法进行审核，对符合条件的申请予以批准。
+
+measure_modifications:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+    - law: 不可靠实体清单规定
+  modifications:
+    - action: suspend
+      target_announcement_id: 〔2025〕7号
+      target_announcement_date: 2025-04-04
+      effective_date: 2025-08-12
+      until_date: 2025-11-10
+      notes: 继续暂停4月4日公告（不可靠实体清单工作机制〔2025〕7号）相关措施90天
+
+    - action: stop
+      target_announcement_id: 〔2025〕8号
+      target_announcement_date: 2025-04-09
+      effective_date: 2025-08-12
+      notes: 停止4月9日公告（不可靠实体清单工作机制〔2025〕8号）相关措施

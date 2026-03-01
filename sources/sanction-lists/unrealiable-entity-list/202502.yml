@@ -1,0 +1,115 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 不可靠实体清单工作机制关于对海岸间电子公司等7家美国企业采取不可靠实体清单措施的公告
+  url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2025/art_2aaf11cceb1c4986ad7c4c2a37725b0a.html
+  publish_date: 2025-01-14
+  authority: 不可靠实体清单工作机制
+  publisher: 商务部
+  type: 不可靠实体清单工作机制公告
+  document_id: 〔2025〕2号
+  signatory: 不可靠实体清单工作机制
+  content: |
+    为维护国家主权、安全和发展利益，根据《中华人民共和国对外贸易法》《中华人民共和国国家安全法》《中华人民共和国反外国制裁法》等有关法律，不可靠实体清单工作机制依据《不可靠实体清单规定》第二条、第八条和第十条等有关规定，决定将参与对台湾地区军售的海岸间电子公司（Inter-Coastal Electronics）、系统研究与模拟公司（System Studies & Simulation）、铁山解决方案公司 （IronMountain Solutions）、应用技术集团（Applied Technologies Group）、阿克西恩特公司（Axient）、安杜里尔公司（Anduril Industries）、海上战术系统公司（Maritime Tactical Systems）列入不可靠实体清单，并采取以下处理措施：
+
+    一、禁止上述企业从事与中国有关的进出口活动；
+    二、禁止上述企业在中国境内新增投资；
+    三、禁止上述企业高级管理人员入境；
+    四、不批准并取消上述企业高级管理人员在中国境内工作许可、停留或者居留资格。
+
+    本公告未尽事宜，按《不可靠实体清单规定》执行。
+    本公告自公布之日起实施。
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国对外贸易法
+    - law: 中华人民共和国国家安全法
+    - law: 中华人民共和国反外国制裁法
+    - law: 不可靠实体清单规定
+      articles:
+      - 第二条
+      - 第八条
+      - 第十条
+  entities:
+    - name:
+        zh-Hans: 海岸间电子公司
+        en: Inter-Coastal Electronics
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: &reason
+        - zh-Hans: 参与对台湾地区军售
+          en: Participating in arms sales to Taiwan region
+      measures: &measures
+        - type:
+          - prohibit_import_export
+          zh-Hans: 禁止上述企业从事与中国有关的进出口活动
+          en: Prohibit import and export activities related to China
+        - type:
+          - prohibit_investment_new
+          zh-Hans: 禁止上述企业在中国境内新增投资
+          en: Prohibit new investment activities in China
+        - type:
+          - entry_ban
+          zh-Hans: 禁止上述企业高级管理人员入境
+          en: Entry ban for senior executives
+        - type:
+          - visa_ban
+          - cancel_work_permit
+          - cancel_stay_residence
+          zh-Hans: 不批准并取消上述企业高级管理人员在中国境内工作许可、停留以及居留资格
+          en: Visa ban and cancellation of work permit, stay and residence qualifications in China for senior executives
+
+    - name:
+        zh-Hans: 系统研究与模拟公司
+        en: System Studies & Simulation
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 铁山解决方案公司
+        en: IronMountain Solutions
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 应用技术集团
+        en: Applied Technologies Group
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 阿克西恩特公司
+        en: Axient
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 安杜里尔公司
+        en: Anduril Industries
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures
+
+    - name:
+        zh-Hans: 海上战术系统公司
+        en: Maritime Tactical Systems
+      type: organization
+      effective_date: 2025-01-14
+      sanction_list: 不可靠实体清单
+      reason: *reason
+      measures: *measures

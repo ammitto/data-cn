@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 关于对美国国会议员麦戈文采取反制措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202407/t20240731_11463924.shtml
+  publish_date: 2024-07-31
+  publish_time: "18:21"
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第11号
+  signatory: 外交部
+  content: |
+    （2024年7月31日中华人民共和国外交部令第11号公布，自2024年7月31日起施行）
+
+    美国马萨诸塞州民主党联邦众议员吉姆·麦戈文近年来频繁采取干涉中国内政、损害中国主权安全发展利益的言行。依据《中华人民共和国反外国制裁法》第三条、第四条、第五条、第六条、第九条、第十五条规定，中方决定对麦戈文采取以下反制措施：
+
+    一、冻结在我国境内的动产、不动产和其他各类财产；
+    二、禁止我国境内的组织、个人与其本人进行有关交易、合作等活动；
+    三、对其本人及其配偶、子女不予签发签证、不准入境。
+
+    本决定自2024年7月31日起施行。
+
+    附件：反制清单
+
+    外交部
+    2024年7月31日
+
+    附件
+    反制清单
+
+    美国马萨诸塞州民主党联邦众议员吉姆·麦戈文（Jim McGovern）
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第三条
+      - 第四条
+      - 第五条
+      - 第六条
+      - 第九条
+      - 第十五条
+  entities:
+    - name:
+        zh-Hans: 吉姆·麦戈文
+        en: Jim McGovern
+      title:
+        zh-Hans: 美国马萨诸塞州民主党联邦众议员
+        en: U.S. Representative for Massachusetts's 2nd congressional district
+      type: individual
+      effective_date: 2024-07-31
+      sanction_list: 反制裁清单
+      reason:
+        - zh-Hans: |
+            近年来频繁采取干涉中国内政、损害中国主权安全发展利益的言行。
+          en: |
+            Frequently engaged in actions interfering in China's internal affairs and damaging China's sovereignty, security and development interests.
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable property and other types of assets
+        - type:
+          - prohibit_transactions
+          - prohibit_cooperation
+          zh-Hans: 禁止我国境内的组织、个人与其本人进行有关交易、合作等活动
+          en: Prohibit organizations and individuals in China from engaging in transactions, cooperation or related activities with the entity
+        - type:
+          - visa_ban
+          - entry_ban
+          zh-Hans: 对其本人及其配偶、子女不予签发签证、不准入境
+          en: Visa ban and entry prohibition for the individual and his spouse and children

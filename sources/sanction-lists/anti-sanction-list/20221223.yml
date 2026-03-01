@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 关于对余茂春、托德·斯坦恩采取反制裁措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202212/t20221222_10993979.shtml
+  publish_date: 2022-12-23
+  publish_time: "08:00"
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第4号
+  signatory: 王毅
+  signatory_title: 部长
+  content: |
+    现公布《关于对余茂春、托德·斯坦恩采取反制裁措施的决定》，自2022年12月23日起施行。
+
+    部长 王毅
+
+    2022年12月23日
+
+    12月9日，美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁。依据《中华人
+    民共和国反外国制裁法》第四条、第五条、第六条规定，中方决定对余茂春、托德·斯坦
+    恩等后附《反制裁清单》列明的个人采取以下反制裁措施：
+
+    一、冻结在我国境内的动产、不动产和其他各类财产；
+    二、禁止我国境内的组织、个人与其进行有关交易活动；
+    三、对其本人及直系亲属不予签发签证、不准入境。
+
+    本决定自2022年12月23日起施行。
+
+    附件：反制裁清单
+
+    外交部
+    2022年12月23日
+
+    附件
+    反制裁清单
+
+    一、余茂春，男
+    二、托德·斯坦恩（Todd Stein），男
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第四条
+      - 第五条
+      - 第六条
+  entities:
+    - name:
+        zh-Hans: 余茂春
+      type: individual
+      effective_date: 2022-12-23
+      sanction_list: 反制裁清单
+      reason:
+        - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁
+          en: The US imposed illegal sanctions on two Chinese officials under the pretext of "Tibet human rights" issues.
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易活动
+          en: Prohibit transactions with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人及直系亲属不予签发签证、不准入境
+          en: Visa ban for the individual and their immediate family members
+    - name:
+        zh-Hans: 托德·斯坦恩
+        en: Todd Stein
+      type: individual
+      effective_date: 2022-12-23
+      sanction_list: 反制裁清单
+      reason:
+        - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁
+          en: The US imposed illegal sanctions on two Chinese officials under the pretext of "Tibet human rights" issues.
+      measures:
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable
+            property and other types of assets
+        - type:
+          - prohibit_transactions
+          zh-Hans: 禁止我国境内的组织、个人与其进行有关交易活动
+          en: Prohibit transactions with Chinese organizations and individuals
+        - type:
+          - entry_ban
+          - visa_ban
+          zh-Hans: 对其本人及直系亲属不予签发签证、不准入境
+          en: Visa ban for the individual and their immediate family members

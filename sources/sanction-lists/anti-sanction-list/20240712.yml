@@ -1,0 +1,178 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 关于对美国军工企业及高级管理人员采取反制措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202407/t20240712_11453049.shtml
+  publish_date: 2024-07-12
+  publish_time: "18:10"
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第10号
+  signatory: 外交部
+  content: |
+    （2024年7月12日中华人民共和国外交部令第10号公布，自2024年7月12日起施行）
+
+    美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。依据《中华人民共和国反外国制裁法》第三条、第四条、第五条、第六条、第九条、第十五条规定，中方决定对以下美国军工企业及高级管理人员采取反制措施：
+
+    一、对安杜里尔公司、海上战术系统公司、环太平洋防务公司、AEVEX航天公司、LKD航天公司、顶峰科技公司等6家后附《反制清单》列明的企业，冻结在我国境内的动产、不动产和其他各类财产。
+
+    二、对宇航环境公司董事长、总裁、首席执行官瓦希德·纳瓦比、宇航环境公司高级副总裁、首席财务官凯文·麦克唐奈、安杜里尔公司首席执行官布赖恩·申普夫、安杜里尔公司首席运营官马修·格里姆、安杜里尔公司负责全球防务的高级副总裁格雷戈里·考斯纳等5名后附《反制清单》列明的企业高级管理人员，冻结在我国境内的动产、不动产和其他各类财产；禁止我国境内的组织、个人与其本人进行有关交易、合作等活动；对其本人不予签发签证、不准入境（包括香港、澳门）。
+
+    本决定自2024年7月12日起施行。
+
+    附件：反制清单
+
+    外交部
+    2024年7月12日
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第三条
+      - 第四条
+      - 第五条
+      - 第六条
+      - 第九条
+      - 第十五条
+  entities:
+    - name:
+        zh-Hans: 安杜里尔公司
+        en: Anduril Industries
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: &reason
+        - zh-Hans: |
+            美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
+          en: |
+            The US recently announced again the sale of weapons to China's Taiwan region, seriously violating the One-China principle and the three China-US joint communiqués.
+      measures: &measures_org
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable property and other types of assets
+
+    - name:
+        zh-Hans: 海上战术系统公司
+        en: Maritime Tactical Systems
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_org
+
+    - name:
+        zh-Hans: 环太平洋防务公司
+        en: Pacific Rim Defense
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_org
+
+    - name:
+        zh-Hans: AEVEX航天公司
+        en: AEVEX Aerospace
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_org
+
+    - name:
+        zh-Hans: LKD航天公司
+        en: LKD Aerospace
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_org
+
+    - name:
+        zh-Hans: 顶峰科技公司
+        en: Summit Technologies Inc.
+      type: organization
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_org
+
+    - name:
+        zh-Hans: 瓦希德·纳瓦比
+        en: Wahid Nawabi
+      title:
+        zh-Hans: 宇航环境公司董事长、总裁、首席执行官
+        en: Chairman, President and CEO of AeroVironment, Inc.
+      gender: male
+      type: individual
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: &measures_ind
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable property and other types of assets
+        - type:
+          - prohibit_transactions
+          - prohibit_cooperation
+          zh-Hans: 禁止我国境内的组织、个人与其本人进行有关交易、合作等活动
+          en: Prohibit organizations and individuals in China from engaging in transactions, cooperation or related activities with the entity
+        - type:
+          - visa_ban
+          - entry_ban
+          zh-Hans: 对其本人不予签发签证、不准入境（包括香港、澳门）
+          en: Visa ban and entry prohibition for the individual (including Hong Kong and Macao)
+
+    - name:
+        zh-Hans: 凯文·麦克唐奈
+        en: Kevin McDonnell
+      title:
+        zh-Hans: 宇航环境公司高级副总裁、首席财务官
+        en: Senior VP and CFO of AeroVironment, Inc.
+      gender: male
+      type: individual
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_ind
+
+    - name:
+        zh-Hans: 布赖恩·申普夫
+        en: Brian William Schimpf
+      title:
+        zh-Hans: 安杜里尔公司首席执行官
+        en: CEO of Anduril Industries
+      gender: male
+      type: individual
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_ind
+
+    - name:
+        zh-Hans: 马修·格里姆
+        en: Matthew Marley Grimm
+      title:
+        zh-Hans: 安杜里尔公司首席运营官
+        en: COO of Anduril Industries
+      gender: male
+      type: individual
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_ind
+
+    - name:
+        zh-Hans: 格雷戈里·考斯纳
+        en: Gregory Michael Kausner
+      title:
+        zh-Hans: 安杜里尔公司负责全球防务的高级副总裁
+        en: Senior VP of Global Defense at Anduril Industries
+      gender: male
+      type: individual
+      effective_date: 2024-07-12
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures_ind

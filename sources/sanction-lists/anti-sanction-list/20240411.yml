@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+announcement:
+  title: 关于对美国通用原子航空系统公司、通用动力陆地系统公司采取反制措施的决定
+  url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202404/t20240411_11280056.shtml
+  publish_date: 2024-04-11
+  publish_time: "17:00"
+  authority: 中华人民共和国外交部
+  type: 中华人民共和国外交部令
+  document_id: 第5号
+  signatory: 外交部
+  content: |
+    （2024年4月11日中华人民共和国外交部令第5号公布，自2024年4月11日起施行）
+
+    美国持续向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报规定，严重干涉中国内政，严重损害中国主权和领土完整。依据《中华人民共和国反外国制裁法》第三条、第四条、第五条、第六条、第九条、第十五条规定，中方决定对参与向中国台湾地区出售武器的美国通用原子航空系统公司、通用动力陆地系统公司等后附《反制清单》列明的企业采取以下反制措施：
+
+    一、冻结在我国境内的动产、不动产和其他各类财产；
+    二、对高级管理人员不予签发签证、不准入境。
+
+    本决定自2024年4月11日起施行。
+
+    附件：反制清单
+
+    外交部
+    2024年4月11日
+
+    附件
+    反制清单
+
+    一、通用原子航空系统公司（General Atomics Aeronautical Systems)
+    二、通用动力陆地系统公司（General Dynamics Land Systems)
+
+sanction_details:
+  instruments:
+    - law: 中华人民共和国反外国制裁法
+      articles:
+      - 第三条
+      - 第四条
+      - 第五条
+      - 第六条
+      - 第九条
+      - 第十五条
+  entities:
+    - name:
+        zh-Hans: 通用原子航空系统公司
+        en: General Atomics Aeronautical Systems
+      type: organization
+      effective_date: 2024-04-11
+      sanction_list: 反制裁清单
+      reason: &reason
+        - zh-Hans: |
+            美国持续向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报规定，严重干涉中国内政，严重损害中国主权和领土完整。中方决定对参与向中国台湾地区出售武器的美国企业采取反制措施。
+          en: |
+            The US continues to sell weapons to China's Taiwan region, seriously violating the One-China principle and the three China-US joint communiqués, seriously interfering in China's internal affairs, and seriously damaging China's sovereignty and territorial integrity. China has decided to take countermeasures against US companies involved in selling weapons to China's Taiwan region.
+      measures: &measures
+        - type:
+          - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, including movable and immovable property and other types of assets
+        - type:
+          - visa_ban
+          - entry_ban
+          zh-Hans: 对高级管理人员不予签发签证、不准入境
+          en: Visa ban and entry prohibition for senior management personnel
+
+    - name:
+        zh-Hans: 通用动力陆地系统公司
+        en: General Dynamics Land Systems
+      type: organization
+      effective_date: 2024-04-11
+      sanction_list: 反制裁清单
+      reason: *reason
+      measures: *measures

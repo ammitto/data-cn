@@ -1,0 +1,114 @@
+# JSON Schema for China Measure Modifications
+# For IDE yaml-language-server support, keep the comment reference above
+---
+title: China Measure Modification
+description: Schema for validating Chinese measure modification YAML files (suspensions, continuations, terminations)
+type: object
+required:
+  - announcement
+  - measure_modifications
+properties:
+  announcement:
+    type: object
+    required:
+      - title
+      - publish_date
+      - authority
+      - content
+    properties:
+      title:
+        type: string
+        description: Title of the announcement
+      url:
+        type: string
+        format: uri
+        description: URL of the official announcement (optional for press releases)
+      publish_date:
+        type: string
+        format: date
+        description: Date of publication (YYYY-MM-DD)
+      publish_time:
+        type: string
+        pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+        description: Time of publication (HH:MM)
+      authority:
+        type: string
+        description: Authority issuing the announcement
+      publisher:
+        type: string
+        description: Publisher of the announcement
+      content:
+        type: string
+        description: Full text content of the announcement
+    additionalProperties: false
+  measure_modifications:
+    type: object
+    required:
+      - instruments
+      - modifications
+    properties:
+      instruments:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          required:
+            - law
+          properties:
+            law:
+              type: string
+              description: Name of the law
+            articles:
+              type: array
+              items:
+                type: string
+              description: List of articles referenced
+          additionalProperties: false
+      modifications:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          required:
+            - action
+            - target_announcement_id
+            - effective_date
+          properties:
+            action:
+              type: string
+              enum:
+                - suspend
+                - stop
+              description: |
+                Type of modification action:
+                - suspend: Temporarily suspend measures for a period until a specified or unspecified date
+                - stop: Permanently stop/terminate measures
+            target_announcement_id:
+              type: string
+              description: Document ID of the original announcement being modified (e.g., "〔2025〕7号")
+            target_announcement_date:
+              type: string
+              format: date
+              description: Date of the original announcement being modified
+            effective_date:
+              type: string
+              format: date
+              description: Date when this modification takes effect
+            effective_time:
+              type: string
+              pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+              description: Time when this modification takes effect (HH:MM)
+            until_date:
+              type: string
+              format: date
+              description: Date when the suspension ends (only for suspend actions)
+            until_time:
+              type: string
+              pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+              description: Time when the suspension ends (HH:MM, only for suspend actions)
+            notes:
+              type: string
+              description: Additional notes about the modification
+          additionalProperties: false
+    additionalProperties: false
+additionalProperties: false
