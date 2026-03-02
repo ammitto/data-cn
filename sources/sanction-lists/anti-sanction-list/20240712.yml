@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202407/t20240712_11453049.shtml
-  publish_date: 2024-07-12
+  publish_date: '2024-07-12'
   publish_time: "18:10"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -40,7 +40,7 @@ sanction_details:
         zh-Hans: 安杜里尔公司
         en: Anduril Industries
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -57,7 +57,7 @@ sanction_details:
         zh-Hans: 海上战术系统公司
         en: Maritime Tactical Systems
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -66,7 +66,7 @@ sanction_details:
         zh-Hans: 环太平洋防务公司
         en: Pacific Rim Defense
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -75,7 +75,7 @@ sanction_details:
         zh-Hans: AEVEX航天公司
         en: AEVEX Aerospace
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -84,7 +84,7 @@ sanction_details:
         zh-Hans: LKD航天公司
         en: LKD Aerospace
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -93,7 +93,7 @@ sanction_details:
         zh-Hans: 顶峰科技公司
         en: Summit Technologies Inc.
       type: organization
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -106,7 +106,7 @@ sanction_details:
         en: Chairman, President and CEO of AeroVironment, Inc.
       gender: male
       type: individual
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -133,7 +133,7 @@ sanction_details:
         en: Senior VP and CFO of AeroVironment, Inc.
       gender: male
       type: individual
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -146,7 +146,7 @@ sanction_details:
         en: CEO of Anduril Industries
       gender: male
       type: individual
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -159,7 +159,7 @@ sanction_details:
         en: COO of Anduril Industries
       gender: male
       type: individual
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -172,7 +172,7 @@ sanction_details:
         en: Senior VP of Global Defense at Anduril Industries
       gender: male
       type: individual
-      effective_date: 2024-07-12
+      effective_date: '2024-07-12'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

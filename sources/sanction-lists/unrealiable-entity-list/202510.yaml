@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于将反无人机技术公司等外国实体列入不可靠实体清单的公告
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_9b662990fa4a4d26ba3984ab5d826960.html
-  publish_date: 2025-10-09
+  publish_date: '2025-10-09'
   publish_time: "16:00"
   authority: 不可靠实体清单工作机制
   publisher: 中华人民共和国商务部产业安全与进出口管制局
@@ -78,7 +78,7 @@ sanction_details:
         zh-Hans: 反无人机技术公司
         en: Dedrone by Axon
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: |
@@ -110,7 +110,7 @@ sanction_details:
         zh-Hans: 迪杰恩技术公司
         en: DZYNE Technologies
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -120,7 +120,7 @@ sanction_details:
         zh-Hans: 埃比特系统美国分公司
         en: Elbit Systems of America, LLC
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -130,7 +130,7 @@ sanction_details:
         zh-Hans: 伊比鲁斯公司
         en: Epirus, Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -140,7 +140,7 @@ sanction_details:
         zh-Hans: 宇航环境公司
         en: AeroVironment, Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -150,7 +150,7 @@ sanction_details:
         zh-Hans: Exelis公司
         en: Exelis Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -160,7 +160,7 @@ sanction_details:
         zh-Hans: 联合技术系统运营公司
         en: Alliant Techsystems Operations LLC
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -170,7 +170,7 @@ sanction_details:
         zh-Hans: 贝宜系统股份有限公司
         en: BAE Systems, Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -180,7 +180,7 @@ sanction_details:
         zh-Hans: Teledyne FLIR公司
         en: Teledyne FLIR, LLC
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -190,7 +190,7 @@ sanction_details:
         zh-Hans: VSE公司
         en: VSE Corporation
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -200,7 +200,7 @@ sanction_details:
         zh-Hans: 立方全球防务公司
         en: Cubic Global Defense
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -210,7 +210,7 @@ sanction_details:
         zh-Hans: Recorded Future公司
         en: Recorded Future, Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -220,7 +220,7 @@ sanction_details:
         zh-Hans: 哈利法克斯国际安全论坛
         en: Halifax International Security Forum
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -231,7 +231,7 @@ sanction_details:
         zh-Hans: TechInsights公司
         en: TechInsights Inc.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -241,7 +241,7 @@ sanction_details:
         zh-Hans: TechInsights 欧洲有限公司
         en: TechInsights Europe Limited
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -251,7 +251,7 @@ sanction_details:
         zh-Hans: TechInsights 欧洲 Sp zo.o
         en: TechInsights Europe Sp zo.o
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -261,7 +261,7 @@ sanction_details:
         zh-Hans: TechInsights 日本 KK
         en: TechInsights Japan KK
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -271,7 +271,7 @@ sanction_details:
         zh-Hans: TechInsights 美国公司
         en: TechInsights USA Inc
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -281,7 +281,7 @@ sanction_details:
         zh-Hans: TechInsights 韩国有限公司
         en: TechInsights Korea Co. Ltd.
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -291,7 +291,7 @@ sanction_details:
         zh-Hans: TechInsights 市场分析有限公司
         en: TechInsights Market Analysis Limited
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -301,7 +301,7 @@ sanction_details:
         zh-Hans: SARL Strategy Analytics
         en: SARL Strategy Analytics
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -311,7 +311,7 @@ sanction_details:
         zh-Hans: Strategy Analytics GmbH 市场研究与管理咨询
         en: Strategy Analytics GmbH Market Research and Management Consulting
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -321,7 +321,7 @@ sanction_details:
         zh-Hans: SARI Strategy Analytics 私人有限公司
         en: SARI Strategy Analytics Private Limited
       type: organization
-      effective_date: 2025-10-09
+      effective_date: '2025-10-09'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures

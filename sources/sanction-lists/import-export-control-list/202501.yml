@@ -3,7 +3,7 @@
 announcement:
   title: 关布将28家美国实体列入出口管制管控名单
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_1ee79b1b7f21444ebf4797c0ff8500fd.html
-  publish_date: 2025-01-02
+  publish_date: '2025-01-02'
   publish_time: "16:00"
   authority: 中华人民共和国商务部
   type: 商务部公告
@@ -67,7 +67,7 @@ sanction_details:
         zh-Hans: 通用动力公司
         en: General Dynamics
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -93,7 +93,7 @@ sanction_details:
         zh-Hans: L3哈里斯公司
         en: L3 Harris Technologies
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -103,7 +103,7 @@ sanction_details:
         zh-Hans: 英特磊公司
         en: Intelligent Epitaxy Technology
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -113,7 +113,7 @@ sanction_details:
         zh-Hans: 可利尔阿莱恩公司
         en: Clear Align LLC
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -123,7 +123,7 @@ sanction_details:
         zh-Hans: 波音防务、空间与安全集团
         en: Boeing Defense, Space & Security
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -133,7 +133,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁公司
         en: Lockheed Martin Corporation
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -143,7 +143,7 @@ sanction_details:
         zh-Hans: 雷神导弹与防务公司
         en: Raytheon Missiles & Defense
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -153,7 +153,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁导弹与火控公司
         en: Lockheed Martin Missiles and Fire Control
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -163,7 +163,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁航空公司
         en: Lockheed Martin Aeronautics
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -173,7 +173,7 @@ sanction_details:
         zh-Hans: 标枪合资公司
         en: Raytheon/Lockheed Martin Javelin Joint Venture
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -183,7 +183,7 @@ sanction_details:
         zh-Hans: 雷神导弹系统公司
         en: Raytheon Missile Systems
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -193,7 +193,7 @@ sanction_details:
         zh-Hans: 通用动力军械与战术系统公司
         en: General Dynamics Ordnance and Tactical Systems
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -202,7 +202,7 @@ sanction_details:
         zh-Hans: 通用动力信息技术公司
         en: General Dynamics Information Technology
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -211,7 +211,7 @@ sanction_details:
         zh-Hans: 通用动力任务系统公司
         en: General Dynamics Mission Systems
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -220,7 +220,7 @@ sanction_details:
         zh-Hans: 海岸间电子公司
         en: Inter-Coastal Electronics
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -229,7 +229,7 @@ sanction_details:
         zh-Hans: 系统研究与模拟公司
         en: System Studies & Simulation
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -238,7 +238,7 @@ sanction_details:
         zh-Hans: 铁山解决方案公司
         en: IronMountain Solutions
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -247,7 +247,7 @@ sanction_details:
         zh-Hans: 应用技术集团
         en: Applied Technologies Group
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -256,7 +256,7 @@ sanction_details:
         zh-Hans: 阿克西恩特公司
         en: Axient
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -265,7 +265,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁导弹系统集成实验室
         en: Lockheed Martin Missile System Integration Lab
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -274,7 +274,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁先进技术实验室
         en: Lockheed Martin Advanced Technology Laboratories
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -283,7 +283,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁风险投资公司
         en: Lockheed Martin Ventures
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -292,7 +292,7 @@ sanction_details:
         zh-Hans: 安杜里尔公司
         en: Anduril Industries
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -301,7 +301,7 @@ sanction_details:
         zh-Hans: 海上战术系统公司
         en: Maritime Tactical Systems
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -310,7 +310,7 @@ sanction_details:
         zh-Hans: 环太平洋防务公司
         en: Pacific Rim Defense
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -319,7 +319,7 @@ sanction_details:
         zh-Hans: AEVEX航天公司
         en: AEVEX Aerospace
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -328,7 +328,7 @@ sanction_details:
         zh-Hans: LKD航天公司
         en: LKD Aerospace
       type: organization
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -340,4 +340,4 @@ sanction_details:
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
-      effective_date: 2025-01-02
+      effective_date: '2025-01-02'

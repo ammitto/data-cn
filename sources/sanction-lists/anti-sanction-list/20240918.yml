@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202409/t20240918_11492303.shtml
-  publish_date: 2024-09-18
+  publish_date: '2024-09-18'
   publish_time: "14:43"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -38,7 +38,7 @@ sanction_details:
         zh-Hans: 内华达山脉公司
         en: Sierra Nevada Corporation
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -60,7 +60,7 @@ sanction_details:
         zh-Hans: 摇杆舵公司
         en: Stick Rudder Enterprises LLC
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -69,7 +69,7 @@ sanction_details:
         zh-Hans: 立方公司
         en: Cubic Corporation
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -78,7 +78,7 @@ sanction_details:
         zh-Hans: S3航空防务公司
         en: S3 AeroDefense
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -87,7 +87,7 @@ sanction_details:
         zh-Hans: 特科姆公司
         en: TCOM, Limited Partnership
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -96,7 +96,7 @@ sanction_details:
         zh-Hans: 文本矿公司
         en: TextOre
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -105,7 +105,7 @@ sanction_details:
         zh-Hans: 扁平地球管理公司
         en: Planate Management Group
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -114,7 +114,7 @@ sanction_details:
         zh-Hans: ACT1联邦公司
         en: ACT1 Federal
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -123,7 +123,7 @@ sanction_details:
         zh-Hans: 埃克索维拉公司
         en: Exovera
       type: organization
-      effective_date: 2024-09-18
+      effective_date: '2024-09-18'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures

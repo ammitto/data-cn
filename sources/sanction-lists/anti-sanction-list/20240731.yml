@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国国会议员麦戈文采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202407/t20240731_11463924.shtml
-  publish_date: 2024-07-31
+  publish_date: '2024-07-31'
   publish_time: "18:21"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -48,7 +48,7 @@ sanction_details:
         zh-Hans: 美国马萨诸塞州民主党联邦众议员
         en: U.S. Representative for Massachusetts's 2nd congressional district
       type: individual
-      effective_date: 2024-07-31
+      effective_date: '2024-07-31'
       sanction_list: 反制裁清单
       reason:
         - zh-Hans: |

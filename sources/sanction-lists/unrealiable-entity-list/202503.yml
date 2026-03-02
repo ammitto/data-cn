@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于对环太平洋防务公司等4家美国企业采取不可靠实体清单措施的公告
   url: https://www.mofcom.gov.cn/zcfb/blgg/gg/2025/art/2025/art_a4e1d7ae955d409780b01fa4a08a1331.html
-  publish_date: 2025-01-15
+  publish_date: '2025-01-15'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 环太平洋防务公司
         en: Pacific Rim Defense
       type: organization
-      effective_date: 2025-01-15
+      effective_date: '2025-01-15'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
@@ -64,7 +64,7 @@ sanction_details:
         zh-Hans: AEVEX航天公司
         en: AEVEX Aerospace
       type: organization
-      effective_date: 2025-01-15
+      effective_date: '2025-01-15'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: LKD航天公司
         en: LKD Aerospace
       type: organization
-      effective_date: 2025-01-15
+      effective_date: '2025-01-15'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -82,7 +82,7 @@ sanction_details:
         zh-Hans: 顶峰科技公司
         en: Summit Technologies Inc.
       type: organization
-      effective_date: 2025-01-15
+      effective_date: '2025-01-15'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures

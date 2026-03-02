@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国哈德逊研究所、里根图书馆及其负责人采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202304/t20230407_11055802.shtml
-  publish_date: 2023-04-07
+  publish_date: '2023-04-07'
   publish_time: "10:55"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -74,7 +74,7 @@ sanction_details:
         zh-Hans: 哈德逊研究所
         en: Hudson Institute
       type: organization
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -101,7 +101,7 @@ sanction_details:
         zh-Hans: 里根图书馆
         en: Reagan Library
       type: organization
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -114,7 +114,7 @@ sanction_details:
         en: Chair of the Board of the Hudson Institute
       gender: female
       type: individual
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -143,7 +143,7 @@ sanction_details:
         en: Director of the Hudson Institute
       gender: male
       type: individual
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -158,7 +158,7 @@ sanction_details:
         en: Former Executive Director of the Reagan Foundation
       gender: male
       type: individual
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -173,7 +173,7 @@ sanction_details:
         en: Chief Executive Officer of the Reagan Foundation
       gender: female
       type: individual
-      effective_date: 2023-04-07
+      effective_date: '2023-04-07'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

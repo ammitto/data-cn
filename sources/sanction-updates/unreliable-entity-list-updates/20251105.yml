@@ -3,7 +3,7 @@
 announcement:
   title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
   url: https://www.mofcom.gov.cn/syxwfb/art/2025/art_adc429fe09db443cb2e5837524bc2eda.html
-  publish_date: 2025-11-05
+  publish_date: '2025-11-05'
   publish_time: "17:00"
   authority: 商务部新闻办公室
   content: |
@@ -18,19 +18,19 @@ measure_modifications:
   modifications:
     - action: suspend
       target_announcement_id: 〔2025〕7号
-      target_announcement_date: 2025-04-04
-      effective_date: 2025-11-10
-      until_date: 2026-11-10
+      target_announcement_date: '2025-04-04'
+      effective_date: '2025-11-10'
+      until_date: '2026-11-10'
       notes: 继续暂停4月4日公告（不可靠实体清单工作机制公告〔2025〕7号）相关措施1年
 
     - action: stop
       target_announcement_id: 〔2025〕5号
-      target_announcement_date: 2025-03-04
-      effective_date: 2025-11-10
+      target_announcement_date: '2025-03-04'
+      effective_date: '2025-11-10'
       notes: 停止3月4日公告（不可靠实体清单工作机制公告〔2025〕5号）相关措施。
 
     - action: stop
       target_announcement_id: 〔2025〕6号
-      target_announcement_date: 2025-03-04
-      effective_date: 2025-11-10
+      target_announcement_date: '2025-03-04'
+      effective_date: '2025-11-10'
       notes: 停止3月4日公告（不可靠实体清单工作机制公告〔2025〕6号）相关措施。

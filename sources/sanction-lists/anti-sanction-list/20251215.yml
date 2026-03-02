@@ -3,7 +3,7 @@
 announcement:
   title: 关于对岩崎茂采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202512/t20251215_11772517.shtml
-  publish_date: 2025-12-15
+  publish_date: '2025-12-15'
   publish_time: "09:39"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -39,7 +39,7 @@ sanction_details:
         en: Former Chief of Staff of the Japanese Self-Defense Forces
       gender: male
       type: individual
-      effective_date: 2025-12-15
+      effective_date: '2025-12-15'
       sanction_list: 反制裁清单
       reason:
         - zh-Hans: |

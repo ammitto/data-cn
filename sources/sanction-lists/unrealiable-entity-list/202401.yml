@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于对通用原子航空系统公司等三家美国企业采取不可靠实体清单措施的公告
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2024/art_e78af9c314b2466daa7f96b49766a158.html
-  publish_date: 2024-05-20
+  publish_date: '2024-05-20'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -34,7 +34,7 @@ sanction_details:
         zh-Hans: 通用原子航空系统公司
         en: General Atomics Aeronautical Systems
       type: organization
-      effective_date: 2024-05-20
+      effective_date: '2024-05-20'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
@@ -63,7 +63,7 @@ sanction_details:
         zh-Hans: 通用动力陆地系统公司
         en: General Dynamics Land Systems
       type: organization
-      effective_date: 2024-05-20
+      effective_date: '2024-05-20'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures

@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241217_11495202.shtml
-  publish_date: 2024-12-05
+  publish_date: '2024-12-05'
   publish_time: "15:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 特励达·布朗工程公司
         en: Teledyne Brown Engineering, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: 美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
@@ -55,7 +55,7 @@ sanction_details:
         zh-Hans: BRINC无人机公司
         en: BRINC Drones, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -64,7 +64,7 @@ sanction_details:
         zh-Hans: 急速飞行公司
         en: Rapid Flight LLC
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: 红色六方案公司
         en: Red Six Solutions
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -82,7 +82,7 @@ sanction_details:
         zh-Hans: 护盾人工智能公司
         en: Shield AI, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -91,7 +91,7 @@ sanction_details:
         zh-Hans: 赛尼克斯公司
         en: SYNEXXUS, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -100,7 +100,7 @@ sanction_details:
         zh-Hans: 火风暴实验室公司
         en: Firestorm Labs, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -109,7 +109,7 @@ sanction_details:
         zh-Hans: 奎托斯无人机系统公司
         en: Kratos Unmanned Aerial Systems, Inc.
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -118,7 +118,7 @@ sanction_details:
         zh-Hans: 浩劫人工智能公司
         en: HavocAI
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -127,7 +127,7 @@ sanction_details:
         zh-Hans: 尼罗斯科技公司
         en: Neros Technologies
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -136,7 +136,7 @@ sanction_details:
         zh-Hans: 赛博勒克斯公司
         en: Cyberlux Corporation
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -145,7 +145,7 @@ sanction_details:
         zh-Hans: 多莫战术通信公司
         en: Domo Tactical Communications
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -154,7 +154,7 @@ sanction_details:
         zh-Hans: Group W公司
         en: Group W
       type: organization
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -167,7 +167,7 @@ sanction_details:
         en: President of Naval Power Strategic Business Unit at Raytheon
       gender: female
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -194,7 +194,7 @@ sanction_details:
         en: Vice President of Naval Power Strategic Business Unit at Raytheon
       gender: male
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -207,7 +207,7 @@ sanction_details:
         en: CEO of BAE Systems Land and Armaments
       gender: male
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -220,7 +220,7 @@ sanction_details:
         en: Founder and CEO of Alliant Techsystems Operations LLC
       gender: male
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -233,7 +233,7 @@ sanction_details:
         en: Director at Data Link Solutions LLC
       gender: female
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -246,7 +246,7 @@ sanction_details:
         en: Founder and CEO of BRINC Drones, Inc.
       gender: male
       type: individual
-      effective_date: 2024-12-05
+      effective_date: '2024-12-05'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

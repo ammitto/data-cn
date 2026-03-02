@@ -3,7 +3,7 @@
 announcement:
   title: 公布将20家日本实体列入出口管制管控名单
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_b5159a773124428a9813884015d1b8b3.html
-  publish_date: 2026-02-24
+  publish_date: '2026-02-24'
   authority: 中华人民共和国商务部
   type: 商务部公告
   document_id: 2026年第11号
@@ -25,7 +25,7 @@ sanction_details:
         zh-Hans: 三菱造船株式会社
         en: Mitsubishi Heavy Industries Shipbuilding Co.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
@@ -46,7 +46,7 @@ sanction_details:
         zh-Hans: 三菱重工航空发动机株式会社
         en: Mitsubishi Heavy Industries Aero Engines, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -55,7 +55,7 @@ sanction_details:
         zh-Hans: 三菱重工海洋机械株式会社
         en: Mitsubishi Heavy Industries Marine Machinery & Equipment Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -64,7 +64,7 @@ sanction_details:
         zh-Hans: 三菱重工发动机与涡轮增压器株式会社
         en: Mitsubishi Heavy Industries Engine & Turbocharger, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: 三菱重工海事系统株式会社
         en: Mitsubishi Heavy Industries Maritime Systems, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -82,7 +82,7 @@ sanction_details:
         zh-Hans: 川崎重工航空宇宙系统公司
         en: Kawasaki Heavy Industries Aerospace Systems Company
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -91,7 +91,7 @@ sanction_details:
         zh-Hans: 川重岐阜工程株式会社
         en: KAWAJU Gifu Engineering Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -100,7 +100,7 @@ sanction_details:
         zh-Hans: 富士通防卫与国家安全株式会社
         en: Fujitsu Defense & National Security, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -109,7 +109,7 @@ sanction_details:
         zh-Hans: IHI原动机株式会社
         en: IHI Power Systems Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -118,7 +118,7 @@ sanction_details:
         zh-Hans: IHI主要金属株式会社
         en: IHI Master Metal Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -127,7 +127,7 @@ sanction_details:
         zh-Hans: IHI喷气机服务株式会社
         en: IHI Jet Service Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -136,7 +136,7 @@ sanction_details:
         zh-Hans: IHI宇航株式会社
         en: IHI Aerospace Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -145,7 +145,7 @@ sanction_details:
         zh-Hans: IHI航空制造株式会社
         en: IHI Aero Manufacturing Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -154,7 +154,7 @@ sanction_details:
         zh-Hans: IHI宇航工程株式会社
         en: IHI Aerospace Engineering Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -163,7 +163,7 @@ sanction_details:
         zh-Hans: 日本电气网络传感器株式会社
         en: NEC Network and Sensor Systems, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -172,7 +172,7 @@ sanction_details:
         zh-Hans: 日本电气航空宇宙系统株式会社
         en: NEC Aerospace Systems, Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -181,7 +181,7 @@ sanction_details:
         zh-Hans: 日本海洋联合株式会社
         en: Japan Marine United Corporation
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -190,7 +190,7 @@ sanction_details:
         zh-Hans: JMU防务系统株式会社
         en: JMU Defense Systems Co., Ltd.
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -199,7 +199,7 @@ sanction_details:
         zh-Hans: 防卫大学
         en: National Defense Academy of Japan
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -208,7 +208,7 @@ sanction_details:
         zh-Hans: 日本宇宙航空研究开发机构
         en: Japan Aerospace Exploration Agency
       type: organization
-      effective_date: 2026-02-24
+      effective_date: '2026-02-24'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures

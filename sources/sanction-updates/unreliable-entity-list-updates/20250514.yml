@@ -3,7 +3,7 @@
 announcement:
   title: 商务部新闻发言人就暂停17家美国实体不可靠实体清单措施答记者问
   url: https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2025/art_53ec1f591dba49a39b65fd89b6d73e6f.html
-  publish_date: 2025-05-14
+  publish_date: '2025-05-14'
   publish_time: "22:00"
   authority: 商务部新闻办公室
   content: |
@@ -18,13 +18,13 @@ measure_modifications:
   modifications:
     - action: suspend
       target_announcement_id: 〔2025〕7号
-      target_announcement_date: 2025-04-04
-      effective_date: 2025-05-14
-      until_date: 2025-08-12
+      target_announcement_date: '2025-04-04'
+      effective_date: '2025-05-14'
+      until_date: '2025-08-12'
       notes: 暂停4月4日公告（不可靠实体清单工作机制〔2025〕7号）相关措施90天
 
     - action: suspend
       target_announcement_id: 〔2025〕8号
-      target_announcement_date: 2025-04-09
-      effective_date: 2025-05-14
+      target_announcement_date: '2025-04-09'
+      effective_date: '2025-05-14'
       notes: 暂停4月9日公告（不可靠实体清单工作机制〔2025〕8号）相关措施

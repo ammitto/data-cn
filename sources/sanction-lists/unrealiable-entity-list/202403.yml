@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于对美国PVH集团启动不可靠实体清单调查的公告
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2024/art_f5ac8919a05743f78a3c25f3d0c138f5.html
-  publish_date: 2024-09-24
+  publish_date: '2024-09-24'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -38,7 +38,7 @@ sanction_details:
         zh-Hans: PVH集团
         en: PVH Corp.
       type: organization
-      effective_date: 2024-09-24
+      effective_date: '2024-09-24'
       sanction_list: 不可靠实体清单
       reason:
         - zh-Hans: 针对涉疆产品涉嫌违反正常的市场交易原则，中断与中国企业、其他组织或者个人的正常交易、采取歧视性措施

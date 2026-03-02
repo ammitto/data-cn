@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工相关企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202512/t20251226_11787617.shtml
-  publish_date: 2025-12-26
+  publish_date: '2025-12-26'
   publish_time: "17:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 诺斯罗普·格鲁曼系统公司
         en: Northrop Grumman Systems Corporation
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: 美国近日宣布向中国台湾地区大规模出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
@@ -55,7 +55,7 @@ sanction_details:
         zh-Hans: L3哈里斯海事服务公司
         en: L3Harris Maritime Services
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -64,7 +64,7 @@ sanction_details:
         zh-Hans: 波音密苏里州圣路易斯市分公司
         en: Boeing in St. Louis
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: 吉布斯与考克斯公司
         en: Gibbs & Cox, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -82,7 +82,7 @@ sanction_details:
         zh-Hans: 先进声学概念有限责任公司
         en: Advanced Acoustic Concepts
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -91,7 +91,7 @@ sanction_details:
         zh-Hans: VSE公司
         en: VSE Corporation
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -100,7 +100,7 @@ sanction_details:
         zh-Hans: 塞拉技术服务公司
         en: Sierra Technical Services, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -109,7 +109,7 @@ sanction_details:
         zh-Hans: 红猫控股公司
         en: Red Cat Holdings, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -118,7 +118,7 @@ sanction_details:
         zh-Hans: 蒂尔无人机公司
         en: Teal Drones, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -127,7 +127,7 @@ sanction_details:
         zh-Hans: 侦察艇有限责任公司
         en: ReconCraft
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -136,7 +136,7 @@ sanction_details:
         zh-Hans: 高点航空技术公司
         en: High Point Aerotechnologies
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -145,7 +145,7 @@ sanction_details:
         zh-Hans: 伊庇鲁斯公司
         en: Epirus, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -154,7 +154,7 @@ sanction_details:
         zh-Hans: 迪德罗恩公司
         en: Dedrone Holdings Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -163,7 +163,7 @@ sanction_details:
         zh-Hans: I领域公司
         en: Area-I
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -172,7 +172,7 @@ sanction_details:
         zh-Hans: 蓝力技术公司
         en: Blue Force Technologies
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -181,7 +181,7 @@ sanction_details:
         zh-Hans: 潜航技术公司
         en: Dive Technologies
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -190,7 +190,7 @@ sanction_details:
         zh-Hans: 万拓公司
         en: Vantor
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -199,7 +199,7 @@ sanction_details:
         zh-Hans: 英特磊公司
         en: Intelligent Epitaxy Technology, Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -208,7 +208,7 @@ sanction_details:
         zh-Hans: 菱形力量公司
         en: Rhombus Power Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -217,7 +217,7 @@ sanction_details:
         zh-Hans: 拉撒路人工智能公司
         en: Lazarus Enterprises Inc.
       type: organization
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -230,7 +230,7 @@ sanction_details:
         en: Founder of Anduril Industries
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -257,7 +257,7 @@ sanction_details:
         en: VP of L3Harris Technologies and VP/CFO of L3Harris Maritime Services
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -270,7 +270,7 @@ sanction_details:
         en: President and CEO of Advanced Acoustic Concepts
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -283,7 +283,7 @@ sanction_details:
         en: President and CEO of VSE Corporation
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -296,7 +296,7 @@ sanction_details:
         en: President of Teal Drones, Inc.
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -309,7 +309,7 @@ sanction_details:
         en: Founder and CEO of Rhombus Power Inc.
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -322,7 +322,7 @@ sanction_details:
         en: President and CEO of Vantor
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -335,7 +335,7 @@ sanction_details:
         en: CEO of Dedrone Holdings Inc.
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -348,7 +348,7 @@ sanction_details:
         en: President of High Point Aerotechnologies
       gender: female
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -361,7 +361,7 @@ sanction_details:
         en: Co-founder and CEO of ReconCraft
       gender: male
       type: individual
-      effective_date: 2025-12-26
+      effective_date: '2025-12-26'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

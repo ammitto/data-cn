@@ -3,7 +3,7 @@
 announcement:
   title: 关于对石平采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202509/t20250908_11704050.shtml
-  publish_date: 2025-09-08
+  publish_date: '2025-09-08'
   publish_time: "10:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -38,7 +38,7 @@ sanction_details:
         zh-Hans: 日本参议员
         en: Member of the House of Councillors of Japan
       type: individual
-      effective_date: 2025-09-08
+      effective_date: '2025-09-08'
       sanction_list: 反制裁清单
       reason:
         - zh-Hans: |

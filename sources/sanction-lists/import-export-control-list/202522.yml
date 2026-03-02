@@ -3,7 +3,7 @@
 announcement:
   title: 公布将12家美国实体列入出口管制管控名单
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_c6b190344a154e6f831e0fdfc190e41e.html
-  publish_date: 2025-04-09
+  publish_date: '2025-04-09'
   authority: 中华人民共和国商务部
   type: 商务部公告
   document_id: 2025年第22号
@@ -25,7 +25,7 @@ sanction_details:
         zh-Hans: 美国光子公司
         en: American Photonics
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: &reason
@@ -45,7 +45,7 @@ sanction_details:
         zh-Hans: 诺沃特公司
         en: Novotech, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -55,7 +55,7 @@ sanction_details:
         zh-Hans: 埃科达因公司
         en: Echodyne
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -65,7 +65,7 @@ sanction_details:
         zh-Hans: 马文工程公司
         en: Marvin Engineering Company, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -75,7 +75,7 @@ sanction_details:
         zh-Hans: 埃克索维拉公司
         en: Exovera
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -85,7 +85,7 @@ sanction_details:
         zh-Hans: 特励达·布朗工程公司
         en: Teledyne Brown Engineering, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -95,7 +95,7 @@ sanction_details:
         zh-Hans: BRINC无人机公司
         en: BRINC Drones, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -105,7 +105,7 @@ sanction_details:
         zh-Hans: 赛尼克斯公司
         en: SYNEXXUS, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -115,7 +115,7 @@ sanction_details:
         zh-Hans: 火风暴实验室公司
         en: Firestorm Labs, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -125,7 +125,7 @@ sanction_details:
         zh-Hans: 奎托斯无人机系统公司
         en: Kratos Unmanned Aerial Systems, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -135,7 +135,7 @@ sanction_details:
         zh-Hans: 多莫战术通信公司
         en: Domo Tactical Communications
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason
@@ -145,7 +145,7 @@ sanction_details:
         zh-Hans: 英斯图公司
         en: Insitu, Inc.
       type: organization
-      effective_date: 2025-04-10
+      effective_date: '2025-04-10'
       effective_time: "00:01"
       sanction_list: 出口管制管控名单
       reason: *reason

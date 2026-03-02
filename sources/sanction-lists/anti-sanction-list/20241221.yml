@@ -3,7 +3,7 @@
 announcement:
   title: 关于对加拿大机构及人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241222_11514801.shtml
-  publish_date: 2024-12-21
+  publish_date: '2024-12-21'
   publish_time: "16:50"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -34,7 +34,7 @@ sanction_details:
         zh-Hans: 维吾尔人权倡导项目
         en: Uyghur Rights Advocacy Project
       type: organization
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: 依据《中华人民共和国反外国制裁法》相关规定
@@ -54,7 +54,7 @@ sanction_details:
         zh-Hans: 加拿大西藏委员会
         en: Canada-Tibet Committee
       type: organization
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -66,7 +66,7 @@ sanction_details:
         zh-Hans: 维吾尔人权倡导项目执行主任
         en: Executive Director of Uyghur Rights Advocacy Project
       type: individual
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -92,7 +92,7 @@ sanction_details:
         zh-Hans: 维吾尔人权倡导项目政策及宣传主任
         en: Policy and Advocacy Director of Uyghur Rights Advocacy Project
       type: individual
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -104,7 +104,7 @@ sanction_details:
         zh-Hans: 加拿大西藏委员会主席
         en: Chair of Canada-Tibet Committee
       type: individual
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -116,7 +116,7 @@ sanction_details:
         zh-Hans: 加拿大西藏委员会副主席
         en: Vice Chair of Canada-Tibet Committee
       type: individual
-      effective_date: 2024-12-21
+      effective_date: '2024-12-21'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

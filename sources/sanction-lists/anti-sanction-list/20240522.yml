@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202405/t20240522_11309756.shtml
-  publish_date: 2024-05-22
+  publish_date: '2024-05-22'
   publish_time: "17:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -43,7 +43,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁导弹与火控公司
         en: Lockheed Martin Missiles and Fire Control
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: &reason_org
         - zh-Hans: |
@@ -60,7 +60,7 @@ sanction_details:
         zh-Hans: 洛克希德·马丁航空公司
         en: Lockheed Martin Aeronautics
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -69,7 +69,7 @@ sanction_details:
         zh-Hans: 标枪合资公司
         en: Raytheon/Lockheed Martin Javelin Joint Venture
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -78,7 +78,7 @@ sanction_details:
         zh-Hans: 雷神导弹系统公司
         en: Raytheon Missile Systems
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -87,7 +87,7 @@ sanction_details:
         zh-Hans: 通用动力军械与战术系统公司
         en: General Dynamics Ordnance and Tactical Systems
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -96,7 +96,7 @@ sanction_details:
         zh-Hans: 通用动力信息技术公司
         en: General Dynamics Information Technology
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -105,7 +105,7 @@ sanction_details:
         zh-Hans: 通用动力任务系统公司
         en: General Dynamics Mission Systems
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -114,7 +114,7 @@ sanction_details:
         zh-Hans: 海岸间电子公司
         en: Inter-Coastal Electronics
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -123,7 +123,7 @@ sanction_details:
         zh-Hans: 系统研究与模拟公司
         en: System Studies & Simulation
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -132,7 +132,7 @@ sanction_details:
         zh-Hans: 铁山解决方案公司
         en: IronMountain Solutions
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -141,7 +141,7 @@ sanction_details:
         zh-Hans: 应用技术集团
         en: Applied Technologies Group
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -150,7 +150,7 @@ sanction_details:
         zh-Hans: 阿克西恩特公司
         en: Axient
       type: organization
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_org
@@ -164,7 +164,7 @@ sanction_details:
         en: Chairman, CEO and President of Northrop Grumman
       gender: female
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: &measures_ind
@@ -182,7 +182,7 @@ sanction_details:
         en: Vice President of Global Operations at Northrop Grumman
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -195,7 +195,7 @@ sanction_details:
         en: VP and GM of Strategic Deterrent Systems at Northrop Grumman
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -208,7 +208,7 @@ sanction_details:
         en: VP and President of Aeronautics Systems at Northrop Grumman
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -221,7 +221,7 @@ sanction_details:
         en: VP and Chief Global Business Development Officer at Northrop Grumman
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -234,7 +234,7 @@ sanction_details:
         en: VP and President of Defense Systems at Northrop Grumman
       gender: female
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -247,7 +247,7 @@ sanction_details:
         en: VP of General Dynamics and President of General Dynamics Ordnance and Tactical Systems
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -260,7 +260,7 @@ sanction_details:
         en: Executive Vice President of Technologies at General Dynamics
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -273,7 +273,7 @@ sanction_details:
         en: Senior VP of General Dynamics and President of General Dynamics Information Technology
       gender: female
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind
@@ -286,7 +286,7 @@ sanction_details:
         en: VP of General Dynamics and President of General Dynamics Mission Systems
       gender: male
       type: individual
-      effective_date: 2024-05-22
+      effective_date: '2024-05-22'
       sanction_list: 反制裁清单
       reason: *reason_org
       measures: *measures_ind

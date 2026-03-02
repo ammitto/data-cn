@@ -3,7 +3,7 @@
 announcement:
   title: 公布将8家台湾地区实体列入出口管制管控名单
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_53c6b5ab958841dfb90b77c00f8602cf.html
-  publish_date: 2025-07-09
+  publish_date: '2025-07-09'
   authority: 中华人民共和国商务部
   type: 商务部公告
   document_id: 2025年第35号
@@ -25,7 +25,7 @@ sanction_details:
         zh-Hans: 汉翔航空工业股份有限公司
         en: Aerospace Industrial Development Corp.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
@@ -44,7 +44,7 @@ sanction_details:
         zh-Hans: 经纬航太科技公司
         en: GEOSAT Aerospace & Technology Inc.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -53,7 +53,7 @@ sanction_details:
         zh-Hans: 中山科学研究院
         en: National Chung-Shan Institute of Science & Technology
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -62,7 +62,7 @@ sanction_details:
         zh-Hans: 仲硕科技股份有限公司
         en: JC Technology Inc.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -71,7 +71,7 @@ sanction_details:
         zh-Hans: 国际造船股份有限公司
         en: CSBC Corporation, Taiwan
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -80,7 +80,7 @@ sanction_details:
         zh-Hans: 中信造船股份有限公司
         en: Jong Shyn Shipbuilding Co., Ltd.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -89,7 +89,7 @@ sanction_details:
         zh-Hans: 龙德造船工业股份有限公司
         en: Lungteh Shipbuilding Co., Ltd.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -98,7 +98,7 @@ sanction_details:
         zh-Hans: 攻卫股份有限公司
         en: Gong Wei Co., Ltd.
       type: organization
-      effective_date: 2025-07-09
+      effective_date: '2025-07-09'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures

@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于将萨罗尼克科技公司等3家美国企业列入不可靠实体清单的公告
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_aaf924786f9747b481583abe9cf19e7c.html
-  publish_date: 2025-09-25
+  publish_date: '2025-09-25'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -33,7 +33,7 @@ sanction_details:
         zh-Hans: 萨罗尼克科技公司
         en: Saronic Technologies, Inc.
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: 为维护国家主权、安全和发展利益
@@ -52,7 +52,7 @@ sanction_details:
         zh-Hans: 爱尔康公司
         en: Aerkomm Inc.
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -61,7 +61,7 @@ sanction_details:
         zh-Hans: 国际海洋工程公司
         en: Oceaneering International, Inc.
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures

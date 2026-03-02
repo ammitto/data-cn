@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于将波音防务、空间与安全集团列入不可靠实体清单的公告
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2024/art_41f74ffdff914c6dafb548617919d1dd.html
-  publish_date: 2024-05-20
+  publish_date: '2024-05-20'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 波音防务、空间与安全集团
         en: Boeing Defense, Space & Security
       type: organization
-      effective_date: 2024-05-20
+      effective_date: '2024-05-20'
       sanction_list: 不可靠实体清单
       reason:
         - zh-Hans: 参与对台湾地区军售

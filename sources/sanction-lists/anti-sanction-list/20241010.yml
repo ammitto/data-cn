@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241217_11494912.shtml
-  publish_date: 2024-10-10
+  publish_date: '2024-10-10'
   publish_time: "17:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 边缘自治运营公司
         en: Edge Autonomy Operations LLC
       type: organization
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -57,7 +57,7 @@ sanction_details:
         zh-Hans: 亨廷顿·英格尔斯工业公司
         en: Huntington Ingalls Industries Inc.
       type: organization
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -66,7 +66,7 @@ sanction_details:
         zh-Hans: 斯凯迪奥公司
         en: Skydio Inc.
       type: organization
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_org
@@ -79,7 +79,7 @@ sanction_details:
         en: Founder of Stick Rudder Enterprises LLC
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: &measures_ind
@@ -106,7 +106,7 @@ sanction_details:
         en: Vice President of Sierra Nevada Corporation
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -119,7 +119,7 @@ sanction_details:
         en: Director of Asia Region at Lockheed Martin
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -132,7 +132,7 @@ sanction_details:
         en: Vice President of AeroVironment, Inc.
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -145,7 +145,7 @@ sanction_details:
         en: Director of Indo-Pacific Programs at Northrop Grumman
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -158,7 +158,7 @@ sanction_details:
         en: Former CEO of Edge Autonomy Operations LLC
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -171,7 +171,7 @@ sanction_details:
         en: COO of Edge Autonomy Operations LLC
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -184,7 +184,7 @@ sanction_details:
         en: President and CEO of Huntington Ingalls Industries Inc.
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -197,7 +197,7 @@ sanction_details:
         en: Co-founder and CEO of Skydio Inc.
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind
@@ -210,7 +210,7 @@ sanction_details:
         en: General Manager of Asia-Pacific at Skydio Inc.
       gender: male
       type: individual
-      effective_date: 2024-10-10
+      effective_date: '2024-10-10'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures_ind

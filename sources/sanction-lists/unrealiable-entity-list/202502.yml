@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于对海岸间电子公司等7家美国企业采取不可靠实体清单措施的公告
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2025/art_2aaf11cceb1c4986ad7c4c2a37725b0a.html
-  publish_date: 2025-01-14
+  publish_date: '2025-01-14'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -35,7 +35,7 @@ sanction_details:
         zh-Hans: 海岸间电子公司
         en: Inter-Coastal Electronics
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
@@ -64,7 +64,7 @@ sanction_details:
         zh-Hans: 系统研究与模拟公司
         en: System Studies & Simulation
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: 铁山解决方案公司
         en: IronMountain Solutions
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -82,7 +82,7 @@ sanction_details:
         zh-Hans: 应用技术集团
         en: Applied Technologies Group
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -91,7 +91,7 @@ sanction_details:
         zh-Hans: 阿克西恩特公司
         en: Axient
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -100,7 +100,7 @@ sanction_details:
         zh-Hans: 安杜里尔公司
         en: Anduril Industries
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -109,7 +109,7 @@ sanction_details:
         zh-Hans: 海上战术系统公司
         en: Maritime Tactical Systems
       type: organization
-      effective_date: 2025-01-14
+      effective_date: '2025-01-14'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures

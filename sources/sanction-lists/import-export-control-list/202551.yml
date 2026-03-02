@@ -3,7 +3,7 @@
 announcement:
   title: 公布将3家美国实体列入出口管制管控名单决定
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_113cfe1ef91740c9a0e92a5a91e779d9.html
-  publish_date: 2025-09-25
+  publish_date: '2025-09-25'
   authority: 中华人民共和国商务部
   type: 商务部公告
   document_id: 2025年第51号
@@ -25,7 +25,7 @@ sanction_details:
         zh-Hans: 亨廷顿·英格尔斯工业公司
         en: Huntington Ingalls Industries, Inc.
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 出口管制管控名单
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
@@ -44,7 +44,7 @@ sanction_details:
         zh-Hans: 扁平地球管理公司
         en: Planate Management Group
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures
@@ -53,7 +53,7 @@ sanction_details:
         zh-Hans: 全球维度公司
         en: Global Dimensions LLC
       type: organization
-      effective_date: 2025-09-25
+      effective_date: '2025-09-25'
       sanction_list: 出口管制管控名单
       reason: *reason
       measures: *measures

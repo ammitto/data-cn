@@ -3,7 +3,7 @@
 announcement:
   title: 关于对余茂春、托德·斯坦恩采取反制裁措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202212/t20221222_10993979.shtml
-  publish_date: 2022-12-23
+  publish_date: '2022-12-23'
   publish_time: "08:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -49,7 +49,7 @@ sanction_details:
     - name:
         zh-Hans: 余茂春
       type: individual
-      effective_date: 2022-12-23
+      effective_date: '2022-12-23'
       sanction_list: 反制裁清单
       reason:
         - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁
@@ -73,7 +73,7 @@ sanction_details:
         zh-Hans: 托德·斯坦恩
         en: Todd Stein
       type: individual
-      effective_date: 2022-12-23
+      effective_date: '2022-12-23'
       sanction_list: 反制裁清单
       reason:
         - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁

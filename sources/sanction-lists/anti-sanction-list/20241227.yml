@@ -3,7 +3,7 @@
 announcement:
   title: 关于对美国军工企业及高级管理人员采取反制措施的决定
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241227_11520050.shtml
-  publish_date: 2024-12-27
+  publish_date: '2024-12-27'
   publish_time: "15:00"
   authority: 中华人民共和国外交部
   type: 中华人民共和国外交部令
@@ -36,7 +36,7 @@ sanction_details:
         zh-Hans: 英斯图公司
         en: Insitu, Inc.
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: &reason
         - zh-Hans: |
@@ -58,7 +58,7 @@ sanction_details:
         zh-Hans: 哈德森技术公司
         en: Hudson Technologies Co.
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -67,7 +67,7 @@ sanction_details:
         zh-Hans: 萨罗尼克科技公司
         en: Saronic Technologies, Inc.
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -76,7 +76,7 @@ sanction_details:
         zh-Hans: 雷神加拿大公司
         en: Raytheon Canada
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -85,7 +85,7 @@ sanction_details:
         zh-Hans: 雷神澳大利亚公司
         en: Raytheon Australia
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -94,7 +94,7 @@ sanction_details:
         zh-Hans: 爱尔康公司
         en: Aerkomm Inc.
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures
@@ -103,7 +103,7 @@ sanction_details:
         zh-Hans: 国际海洋工程公司
         en: Oceaneering International, Inc.
       type: organization
-      effective_date: 2024-12-27
+      effective_date: '2024-12-27'
       sanction_list: 反制裁清单
       reason: *reason
       measures: *measures

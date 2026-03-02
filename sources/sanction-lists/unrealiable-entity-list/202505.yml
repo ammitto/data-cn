@@ -3,7 +3,7 @@
 announcement:
   title: 不可靠实体清单工作机制关于将特科姆公司等10家美国企业列入不可靠实体清单的公告
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_beb25dc3bf9447f9ba7a34b25cca8f64.html
-  publish_date: 2025-03-04
+  publish_date: '2025-03-04'
   authority: 不可靠实体清单工作机制
   publisher: 商务部
   type: 不可靠实体清单工作机制公告
@@ -33,7 +33,7 @@ sanction_details:
         zh-Hans: 特科姆公司
         en: TCOM, Limited Partnership
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: &reason
         - zh-Hans: 为维护国家主权、安全和发展利益
@@ -52,7 +52,7 @@ sanction_details:
         zh-Hans: 摇杆舵公司
         en: Stick Rudder Enterprises LLC
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -61,7 +61,7 @@ sanction_details:
         zh-Hans: 特励达·布朗工程公司
         en: Teledyne Brown Engineering, Inc.
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -70,7 +70,7 @@ sanction_details:
         zh-Hans: 亨廷顿·英格尔斯工业公司
         en: Huntington Ingalls Industries Inc.
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -79,7 +79,7 @@ sanction_details:
         zh-Hans: S3航空防务公司
         en: S3 AeroDefense
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -88,7 +88,7 @@ sanction_details:
         zh-Hans: 立方公司
         en: Cubic Corporation
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -97,7 +97,7 @@ sanction_details:
         zh-Hans: 文本矿公司
         en: TextOre
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -106,7 +106,7 @@ sanction_details:
         zh-Hans: ACT1联邦公司
         en: ACT1 Federal
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -115,7 +115,7 @@ sanction_details:
         zh-Hans: 埃克索维拉公司
         en: Exovera
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
@@ -124,7 +124,7 @@ sanction_details:
         zh-Hans: 扁平地球管理公司
         en: Planate Management Group
       type: organization
-      effective_date: 2025-03-04
+      effective_date: '2025-03-04'
       sanction_list: 不可靠实体清单
       reason: *reason
       measures: *measures
