@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
+id: npc-anti-foreign-sanctions-law
 title: 中华人民共和国反外国制裁法
 url: http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311892.html
 type: 全国人民代表大会常务委员会公告

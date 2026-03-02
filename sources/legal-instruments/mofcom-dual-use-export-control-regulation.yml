@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
+id: mofcom-dual-use-export-control-regulation
 title: 中华人民共和国两用物项出口管制条例
 url: https://wb.flk.npc.gov.cn/xzfg/WORD/8cc0803ca0a44e299a232b4636b1e5bc.docx
 type: 中华人民共和国国务院令

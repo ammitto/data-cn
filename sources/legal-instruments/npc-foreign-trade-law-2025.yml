@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
+id: npc-foreign-trade-law-2025
 title: 中华人民共和国对外贸易法
-url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_03fbae1ec4bd48459099930e803bce5e.html
+url: http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450709.html
 type: 全国人民代表大会常务委员会公告
 document_id: 中华人民共和国对外贸易法 2025
 published_date: '2025-12-27'
