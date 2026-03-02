@@ -13,8 +13,8 @@ announcement:
 
 measure_modifications:
   instruments:
-    - law: 中华人民共和国反外国制裁法
-    - law: 不可靠实体清单规定
+    - law: cn/npc-anti-foreign-sanctions-law
+    - law: cn/mofcom-unreliable-entity-list-provisions
   modifications:
     - action: suspend
       target_announcement_id: 〔2025〕7号

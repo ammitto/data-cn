@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
-id: mofcom-unreliable-entity-list-provisions
+id: cn/mofcom-unreliable-entity-list-provisions
 title: 不可靠实体清单规定
 url: https://www.mofcom.gov.cn/dl/file/20211203230795.pdf
 type: 商务部规章

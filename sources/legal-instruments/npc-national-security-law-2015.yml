@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
-id: npc-national-security-law-2015
+id: cn/npc-national-security-law-2015
 title: 中华人民共和国国家安全法
 url: http://www.npc.gov.cn/c2/c10134/201905/t20190521_259980.html
 type: 全国人民代表大会常务委员会公告

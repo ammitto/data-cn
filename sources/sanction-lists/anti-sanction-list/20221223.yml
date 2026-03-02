@@ -40,7 +40,7 @@ announcement:
 
 sanction_details:
   instruments:
-    - law: 中华人民共和国反外国制裁法
+    - id: cn/npc-anti-foreign-sanctions-law
       articles:
       - 第四条
       - 第五条

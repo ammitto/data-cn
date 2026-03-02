@@ -25,10 +25,10 @@ announcement:
 
 sanction_details:
   instruments:
-    - law: 中华人民共和国对外贸易法
-    - law: 中华人民共和国国家安全法
-    - law: 中华人民共和国反外国制裁法
-    - law: 不可靠实体清单规定
+    - id: cn/npc-foreign-trade-law-2025
+    - id: cn/npc-national-security-law-2015
+    - id: cn/npc-anti-foreign-sanctions-law
+    - id: cn/mofcom-unreliable-entity-list-provisions
       articles:
       - 第二条
       - 第五条

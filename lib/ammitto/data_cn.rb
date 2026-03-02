@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 # DataCn module for validating China sanctions data
-module DataCn
+module Ammitto
+  module DataCn
+
+  end
 end
 
 require_relative 'data_cn/schema_loader'

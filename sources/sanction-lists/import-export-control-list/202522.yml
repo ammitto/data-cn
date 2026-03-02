@@ -18,8 +18,8 @@ announcement:
 
 sanction_details:
   instruments:
-    - law: 中华人民共和国出口管制法
-    - law: 中华人民共和国两用物项出口管制条例
+    - id: cn/npc-export-control-law
+    - id: cn/mofcom-dual-use-export-control-regulation
   entities:
     - name:
         zh-Hans: 美国光子公司
