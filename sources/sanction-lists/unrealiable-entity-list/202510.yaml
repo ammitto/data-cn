@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于将反无人机技术公司等外国实体列入不可靠实体清单的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于将反无人机技术公司等外国实体列入不可靠实体清单的公告
+    en: Announcement on Adding Dedrone by Axon and Other Foreign Entities to the Unreliable Entity List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_9b662990fa4a4d26ba3984ab5d826960.html
   publish_date: '2025-10-09'
   publish_time: "16:00"

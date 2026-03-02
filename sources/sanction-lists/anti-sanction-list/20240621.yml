@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关于对洛克希德·马丁公司实体和高级管理人员采取反制措施的决定
+  title:
+  - zh-Hans: 关于对洛克希德·马丁公司实体和高级管理人员采取反制措施的决定
+    en: Decision on Countermeasures against Lockheed Martin Corporation Entities and Senior Executives
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202406/t20240621_11439508.shtml
   publish_date: '2024-06-21'
   publish_time: "17:00"

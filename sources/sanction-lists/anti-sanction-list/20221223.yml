@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关于对余茂春、托德·斯坦恩采取反制裁措施的决定
+  title:
+  - zh-Hans: 关于对余茂春、托德·斯坦恩采取反制裁措施的决定
+  - en: Decision on Countermeasures against Todd Stein and Yu Maocun
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202212/t20221222_10993979.shtml
   publish_date: '2022-12-23'
   publish_time: "08:00"

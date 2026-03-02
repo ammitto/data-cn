@@ -58,7 +58,7 @@ RSpec.describe DataCn::SchemaResolver do
           .to eq(:announcement)
         expect(described_class.resolve('sources/sanction-lists/import-export-control-list/test.yml'))
           .to eq(:announcement)
-        expect(described_class.resolve('sources/sanction-lists/unrealiable-entity-list/test.yml'))
+        expect(described_class.resolve('sources/sanction-lists/unreliable-entity-list/test.yml'))
           .to eq(:announcement)
       end
     end

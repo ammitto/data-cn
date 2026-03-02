@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于对海岸间电子公司等7家美国企业采取不可靠实体清单措施的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于对海岸间电子公司等7家美国企业采取不可靠实体清单措施的公告
+    en: Announcement on Unreliable Entity List Measures for Inter-Coastal Electronics and Six Other U.S. Companies
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2025/art_2aaf11cceb1c4986ad7c4c2a37725b0a.html
   publish_date: '2025-01-14'
   authority: 不可靠实体清单工作机制

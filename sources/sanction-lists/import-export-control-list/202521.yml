@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 公布将16家美国实体列入出口管制管控名单
+  title:
+  - zh-Hans: 公布将16家美国实体列入出口管制管控名单
+    en: Announcement on Listing 16 U.S. Entities on Export Control List
   url: https://www.mofcom.gov.cn/zcfb/blgg/art/2025/art_eba76b74d5e147c99fd86bc8a47c5b57.html
   publish_date: '2025-04-04'
   authority: 中华人民共和国商务部

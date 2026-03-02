@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关于对美国通用原子航空系统公司、通用动力陆地系统公司采取反制措施的决定
+  title:
+  - zh-Hans: 关于对美国通用原子航空系统公司、通用动力陆地系统公司采取反制措施的决定
+    en: Decision on Countermeasures against General Atomics Aeronautical Systems and General Dynamics Land Systems
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202404/t20240411_11280056.shtml
   publish_date: '2024-04-11'
   publish_time: "17:00"

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于对美国PVH集团启动不可靠实体清单调查的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于对美国PVH集团启动不可靠实体清单调查的公告
+    en: Announcement on Launching Unreliable Entity List Investigation on PVH Corp.
   url: https://aqygzj.mofcom.gov.cn/flzc/gzjgfxwj/art/2024/art_f5ac8919a05743f78a3c25f3d0c138f5.html
   publish_date: '2024-09-24'
   authority: 不可靠实体清单工作机制

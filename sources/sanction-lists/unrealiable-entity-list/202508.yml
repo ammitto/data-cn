@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于将护盾人工智能公司等6家美国企业列入不可靠实体清单的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于将护盾人工智能公司等6家美国企业列入不可靠实体清单的公告
+    en: Announcement on Adding Shield AI, Inc. and Five Other U.S. Companies to the Unreliable Entity List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_c29bed8111a5406ea44f363694865ac2.html
   publish_date: '2025-04-09'
   authority: 不可靠实体清单工作机制

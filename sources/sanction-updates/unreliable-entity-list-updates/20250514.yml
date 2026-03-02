@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-measure-modification.yml
 ---
 announcement:
-  title: 商务部新闻发言人就暂停17家美国实体不可靠实体清单措施答记者问
+  title:
+  - zh-Hans: 商务部新闻发言人就暂停17家美国实体不可靠实体清单措施答记者问
+    en: Ministry of Commerce Spokesperson Answers Questions on Suspending Measures for 17 U.S. Entities on the Unreliable Entity List
   url: https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2025/art_53ec1f591dba49a39b65fd89b6d73e6f.html
   publish_date: '2025-05-14'
   publish_time: "22:00"
@@ -13,8 +15,8 @@ announcement:
 
 measure_modifications:
   instruments:
-    - law: cn/npc-anti-foreign-sanctions-law
-    - law: cn/mofcom-unreliable-entity-list-provisions
+    - id: cn/npc-anti-foreign-sanctions-law
+    - id: cn/mofcom-unreliable-entity-list-provisions
   modifications:
     - action: suspend
       target_announcement_id: 〔2025〕7号

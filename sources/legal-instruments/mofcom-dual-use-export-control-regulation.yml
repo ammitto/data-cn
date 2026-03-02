@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
 id: cn/mofcom-dual-use-export-control-regulation
-title: 中华人民共和国两用物项出口管制条例
+title:
+- zh-Hans: 中华人民共和国两用物项出口管制条例
+- en: Regulations on the Export Control of Dual-use Items of the People's Republic of China
 url: https://wb.flk.npc.gov.cn/xzfg/WORD/8cc0803ca0a44e299a232b4636b1e5bc.docx
 type: 中华人民共和国国务院令
 document_id: 中华人民共和国国务院令 第792号

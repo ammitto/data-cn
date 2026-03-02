@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
 ---
 id: cn/mofcom-unreliable-entity-list-provisions
-title: 不可靠实体清单规定
+title:
+- zh-Hans: 不可靠实体清单规定
+- en: Provisions on the Unreliable Entity List
 url: https://www.mofcom.gov.cn/dl/file/20211203230795.pdf
 type: 商务部规章
 document_id: 商务部令第4号

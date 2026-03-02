@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于对美国因美纳公司采取不可靠实体清单处理措施的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于对美国因美纳公司采取不可靠实体清单处理措施的公告
+    en: Announcement on Unreliable Entity List Measures for Illumina, Inc.
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_205cf5fddd1645a7be68d132cdb38cc3.html
   publish_date: '2025-03-04'
   authority: 不可靠实体清单工作机制

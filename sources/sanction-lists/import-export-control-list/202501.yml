@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关布将28家美国实体列入出口管制管控名单
+  title:
+  - zh-Hans: 公布将28家美国实体列入出口管制管控名单
+    en: Announcement on Listing 28 U.S. Entities on Export Control List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_1ee79b1b7f21444ebf4797c0ff8500fd.html
   publish_date: '2025-01-02'
   publish_time: "16:00"

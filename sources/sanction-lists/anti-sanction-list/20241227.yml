@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关于对美国军工企业及高级管理人员采取反制措施的决定
+  title:
+  - zh-Hans: 关于对美国军工企业及高级管理人员采取反制措施的决定
+    en: Decision on Countermeasures against U.S. Defense Companies and Senior Executives
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241227_11520050.shtml
   publish_date: '2024-12-27'
   publish_time: "15:00"

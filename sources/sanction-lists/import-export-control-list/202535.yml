@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 公布将8家台湾地区实体列入出口管制管控名单
+  title:
+  - zh-Hans: 公布将8家台湾地区实体列入出口管制管控名单
+    en: Announcement on Listing 8 Taiwan Entities on Export Control List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_53c6b5ab958841dfb90b77c00f8602cf.html
   publish_date: '2025-07-09'
   authority: 中华人民共和国商务部

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 关于对加拿大机构及人员采取反制措施的决定
+  title:
+  - zh-Hans: 关于对加拿大机构及人员采取反制措施的决定
+    en: Decision on Countermeasures against Canadian Institutions and Personnel
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241222_11514801.shtml
   publish_date: '2024-12-21'
   publish_time: "16:50"

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于将洛克希德·马丁公司、雷神导弹与防务公司列入不可靠实体清单的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于将洛克希德·马丁公司、雷神导弹与防务公司列入不可靠实体清单的公告
+    en: Announcement on Listing Lockheed Martin Corporation and Raytheon Missiles & Defense on Unreliable Entity List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2023/art_123456.html
   publish_date: '2023-02-16'
   publish_time: "17:00"

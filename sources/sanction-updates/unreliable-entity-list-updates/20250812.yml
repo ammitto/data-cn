@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-measure-modification.yml
 ---
 announcement:
-  title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
+  title:
+  - zh-Hans: 商务部新闻发言人就调整不可靠实体清单措施答记者问
+    en: Ministry of Commerce Spokesperson Answers Questions on Adjusting Measures for the Unreliable Entity List
   url: https://www.mofcom.gov.cn/syxwfb/art/2025/art_adc429fe09db443cb2e5837524bc2eda.html
   publish_date: '2025-08-12'
   publish_time: "09:00"
@@ -13,8 +15,8 @@ announcement:
 
 measure_modifications:
   instruments:
-    - law: cn/npc-anti-foreign-sanctions-law
-    - law: cn/mofcom-unreliable-entity-list-provisions
+    - id: cn/npc-anti-foreign-sanctions-law
+    - id: cn/mofcom-unreliable-entity-list-provisions
   modifications:
     - action: suspend
       target_announcement_id: 〔2025〕7号

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 不可靠实体清单工作机制关于将美国PVH集团和因美纳公司列入不可靠实体清单的公告
+  title:
+  - zh-Hans: 不可靠实体清单工作机制关于将美国PVH集团和因美纳公司列入不可靠实体清单的公告
+    en: Announcement on Adding PVH Corp. and Illumina, Inc. to the Unreliable Entity List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_ab15d2258dda4e93b8ad1ec4776d37c3.html
   publish_date: '2025-02-04'
   authority: 不可靠实体清单工作机制

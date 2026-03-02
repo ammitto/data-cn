@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../../schemas/cn-announcement.yml
 ---
 announcement:
-  title: 公布将20家日本实体列入出口管制管控名单
+  title:
+  - zh-Hans: 公布将20家日本实体列入出口管制管控名单
+    en: Announcement on Listing 20 Japanese Entities on Export Control List
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_b5159a773124428a9813884015d1b8b3.html
   publish_date: '2026-02-24'
   authority: 中华人民共和国商务部
