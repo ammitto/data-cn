@@ -7,7 +7,11 @@ announcement:
   url: https://www.mofcom.gov.cn/syxwfb/art/2025/art_adc429fe09db443cb2e5837524bc2eda.html
   publish_date: '2025-11-05'
   publish_time: "17:00"
-  authority: 商务部新闻办公室
+  authority: cn/ministry-of-commerce
+  publisher: cn/ministry-of-commerce-information-office
+  type: cn/ministry-of-commerce-spokesperson-speech
+  document_id: 2025-11-05-17-00
+  signatory: cn/ministry-of-commerce
   content: |
     问：有消息称，根据中美吉隆坡经贸磋商共识，中方将调整一批针对美国的非关税措施。请问在不可靠实体清单方面有什么考虑？
 

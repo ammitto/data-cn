@@ -7,8 +7,9 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202212/t20221222_10993979.shtml
   publish_date: '2022-12-23'
   publish_time: "08:00"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第4号
   signatory: 王毅
   signatory_title: 部长

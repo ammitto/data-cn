@@ -7,10 +7,11 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202412/t20241217_11494912.shtml
   publish_date: '2024-10-10'
   publish_time: "17:00"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第13号
-  signatory: 外交部
+  signatory: cn/ministry-of-foreign-affairs
   content: |
     （2024年10月10日中华人民共和国外交部令第13号公布，自2024年10月10日起施行）
 

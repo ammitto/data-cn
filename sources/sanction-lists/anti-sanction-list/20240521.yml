@@ -7,10 +7,11 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202405/t20240521_11308990.shtml
   publish_date: '2024-05-21'
   publish_time: "16:30"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第6号
-  signatory: 外交部
+  signatory: cn/ministry-of-foreign-affairs
   content: |
     （2024年5月21日中华人民共和国外交部令第6号公布，自2024年5月21日起施行）
 

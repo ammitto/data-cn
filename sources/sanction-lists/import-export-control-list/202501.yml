@@ -7,10 +7,11 @@ announcement:
   url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_1ee79b1b7f21444ebf4797c0ff8500fd.html
   publish_date: '2025-01-02'
   publish_time: "16:00"
-  authority: 中华人民共和国商务部
-  type: 商务部公告
+  authority: cn/ministry-of-commerce
+  publisher: cn/ministry-of-commerce
+  type: cn/ministry-of-commerce-announcement
   document_id: 第1号
-  signatory: 商务部
+  signatory: cn/ministry-of-commerce
   # signatory_title: 部长
   content: |
     根据《中华人民共和国出口管制法》和《中华人民共和国两用物项出口管制条例》等法

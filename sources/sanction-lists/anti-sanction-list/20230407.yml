@@ -7,8 +7,9 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202304/t20230407_11055802.shtml
   publish_date: '2023-04-07'
   publish_time: "10:55"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第1号
   signatory: 秦刚
   signatory_title: 部长

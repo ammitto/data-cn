@@ -7,10 +7,11 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202512/t20251215_11772517.shtml
   publish_date: '2025-12-15'
   publish_time: "09:39"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第18号
-  signatory: 外交部
+  signatory: cn/ministry-of-foreign-affairs
   content: |
     （2025年12月15日中华人民共和国外交部令第18号公布，自2025年12月15日起施行）
 

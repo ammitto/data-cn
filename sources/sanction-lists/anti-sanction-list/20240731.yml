@@ -7,10 +7,11 @@ announcement:
   url: https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202407/t20240731_11463924.shtml
   publish_date: '2024-07-31'
   publish_time: "18:21"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第11号
-  signatory: 外交部
+  signatory: cn/ministry-of-foreign-affairs
   content: |
     （2024年7月31日中华人民共和国外交部令第11号公布，自2024年7月31日起施行）
 

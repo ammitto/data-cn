@@ -7,10 +7,11 @@ announcement:
   url: https://www.mfa.gov.cn/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/202304/t20230413_11058780.shtml
   publish_date: '2023-04-13'
   publish_time: "17:36"
-  authority: 中华人民共和国外交部
-  type: 中华人民共和国外交部令
+  authority: cn/ministry-of-foreign-affairs
+  publisher: cn/ministry-of-foreign-affairs
+  type: cn/ministry-of-foreign-affairs-order
   document_id: 第3号
-  signatory: 外交部
+  signatory: cn/ministry-of-foreign-affairs
   content: |
     美国得克萨斯州共和党联邦众议员迈克·麦考尔（Michael McCaul）近年来频繁采取干涉中国内政、损害中方利益的言行，并于近期率团窜访中国台湾地区，严重违反一个中国原则和中美三个联合公报规定，严重损害中国主权和领土完整，向"台独"分裂势力发出严重错误信号。
 
