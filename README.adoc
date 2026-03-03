@@ -52,7 +52,7 @@ sources/
 │   │   ├── 202501.yml
 │   │   ├── 202522.yml
 │   │   └── ...
-│   └── unrealiable-entity-list/             # 不可靠实体清单 (MOFCOM) - 14 files
+│   └── unreliable-entity-list/             # 不可靠实体清单 (MOFCOM) - 14 files
 │       ├── 202301.yml
 │       ├── 202501.yml
 │       └── ...
@@ -96,22 +96,22 @@ Measure modification files track temporal changes to sanctions:
 announcement:
   title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
   url: https://www.mofcom.gov.cn/...
-  publish_date: 2025-05-14
+  publish_date: '2025-05-14'
   publish_time: "22:00"
-  authority: 商务部新闻办公室
+  authority: 中华人民共和国商务部新闻办公室
   content: |
     有记者问：...
 
 measure_modifications:
   instruments:
-    - law: 中华人民共和国反外国制裁法
-    - law: 不可靠实体清单规定
+    - id: cn/npc-anti-foreign-sanctions-law
+    - id: cn/mofcom-unreliable-entity-list-provisions
   modifications:
     - action: suspend                      # or "stop"
       target_announcement_id: 〔2025〕7号
-      target_announcement_date: 2025-04-04
-      effective_date: 2025-05-14
-      until_date: 2025-08-12               # Optional: when suspension ends
+      target_announcement_date: '2025-04-04'
+      effective_date: '2025-05-14'
+      until_date: '2025-08-12'               # Optional: when suspension ends
       notes: 暂停4月4日公告相关措施90天
 ----
 
@@ -142,8 +142,8 @@ title: 中华人民共和国反外国制裁法
 url: http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311892.html
 type: 全国人民代表大会常务委员会公告
 document_id: 中华人民共和国反外国制裁法
-published_date: 2021-06-10
-effective_date: 2021-06-10
+published_date: '2021-06-10'
+effective_date: '2021-06-10'
 approval_history:
   - 2021年6月10日第十三届全国人民代表大会常务委员会第二十九次会议通过
 
@@ -342,7 +342,7 @@ number: 商务部公告2026年第11号
 title: 公布将20家日本实体列入出口管制管控名单
 date: '2026-02-24'
 effective_date: '2026-02-24'
-issuing_authority: 商务部
+issuing_authority: 中华人民共和国商务部
 source_url: https://www.mofcom.gov.cn/...
 ----
 
@@ -433,7 +433,7 @@ Standard sanction announcements with `sanction_details`:
 announcement:
   title: 关于对...采取反制裁措施的决定
   url: https://www.mfa.gov.cn/...
-  publish_date: 2022-12-23
+  publish_date: '2022-12-23'
   publish_time: "08:00"                  # Optional: HH:MM format
   authority: 中华人民共和国外交部
   publisher: 外交部                       # Optional
@@ -446,7 +446,7 @@ announcement:
 
 sanction_details:
   instruments:
-    - law: 中华人民共和国反外国制裁法
+    - id: cn/npc-anti-foreign-sanctions-law
       articles:                          # Optional
         - 第四条
         - 第五条
@@ -455,7 +455,7 @@ sanction_details:
         zh-Hans: 余茂春
         en: Miles Yu                     # Optional
       type: individual                   # or organization
-      effective_date: 2022-12-23
+      effective_date: '2022-12-23'
       effective_time: "08:00"            # Optional: HH:MM format
       sanction_list: 反制裁清单
       reason:
@@ -481,19 +481,19 @@ Temporal modifications (suspend/continue/stop) with `measure_modifications`:
 ----
 announcement:
   title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
-  publish_date: 2025-05-14
+  publish_date: '2025-05-14'
   publish_time: "22:00"
-  authority: 商务部新闻办公室
+  authority: 中华人民共和国商务部新闻办公室
   content: |
 
 measure_modifications:
   instruments:
-    - law: 中华人民共和国反外国制裁法
+    - id: cn/npc-anti-foreign-sanctions-law
   modifications:
     - action: suspend                     # or continue_suspend, stop
       target_announcement_id: 〔2025〕7号
-      target_announcement_date: 2025-04-04
-      effective_date: 2025-05-14
+      target_announcement_date: '2025-04-04'
+      effective_date: '2025-05-14'
       effective_time: "22:00"             # Optional: HH:MM format
       duration_days: 90                   # Optional
       duration_description: 1年           # Optional
@@ -886,7 +886,7 @@ authority:
   name: Ministry of Commerce of China
 list_type: primary
 status: active
-established_date: 2020-09-19
+established_date: '2020-09-19'
 ----
 
 Fields:
@@ -958,7 +958,7 @@ entry_ids:
   - https://www.ammitto.org/entry/cn/uel-2025-001
   - https://www.ammitto.org/entry/cn/uel-2025-002
 entity_count: 2
-effective_date: 2025-01-02
+effective_date: '2025-01-02'
 ----
 
 Fields:
@@ -1015,8 +1015,8 @@ id: https://www.ammitto.org/modification/cn/2025-001
 target_type: entry
 target_id: https://www.ammitto.org/entry/cn/uel-2024-015
 action: suspend
-effective_date: 2025-01-01
-until_date: 2025-04-01
+effective_date: '2025-01-01'
+until_date: '2025-04-01'
 duration_days: 90
 duration_description: 90天
 announcement_id: https://www.ammitto.org/announcement/cn/2025-001
@@ -1244,25 +1244,225 @@ ruby scripts/migrate_iri_structure.rb /path/to/data-cn/processed
 
 == Knowledge Graph Integration
 
-This repository's processed YAML data feeds into the Ammitto knowledge graph.
+This repository's source YAML data feeds into the Ammitto knowledge graph.
 
-When the export process runs:
+=== Data Flow Architecture
+
+The harmonization process transforms source YAML data into JSON-LD knowledge graph nodes:
+
+....
+┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+│   Source YAML       │     │   Ammitto Gem       │     │   JSON-LD Output    │
+│   (sources/)        │────▶│   Transformer       │────▶│   (api/)            │
+│                     │     │                     │     │                     │
+│ • Announcement      │     │ • CnAnnouncement    │     │ • Entity nodes      │
+│ • Sanction details  │     │ • CnEntity          │     │ • Entry nodes       │
+│ • Legal instruments │     │ • CnMeasure         │     │ • Regime nodes      │
+│ • Modifications     │     │ • Transformer       │     │ • Authority nodes   │
+└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
+....
+
+=== Rake Tasks
+
+The repository provides rake tasks for managing the knowledge graph generation:
 
 [source,shell]
 ----
-# Export all knowledge graph data
-ruby scripts/export_knowledge_graph.rb /path/to/repos /path/to/output
+# Clean all generated API files
+bundle exec rake clean
+
+# Generate API files from source YAML
+bundle exec rake generate
+
+# Clean and regenerate (recommended for updates)
+bundle exec rake regenerate
+
+# Generate with verbose output
+VERBOSE=true bundle exec rake generate
+....
+
+=== Output Directory Structure
+
+The `api/` directory contains the generated JSON-LD knowledge graph:
+
+....
+api/
+├── node/
+│   ├── entity/
+│   │   └── cn/
+│   │       └── {local_id}.jsonld         # Entity identity data
+│   ├── entry/
+│   │   └── cn/
+│   │       ├── anti-sanction-list/
+│   │       │   └── {local_id}.jsonld     # Anti-sanction entries
+│   │       ├── import-export-control-list/
+│   │       │   └── {local_id}.jsonld     # Export control entries
+│   │       └── unreliable-entity-list/
+│   │           └── {local_id}.jsonld     # Unreliable entity entries
+│   ├── regime/
+│   │   ├── cn_anti_sanctions.jsonld
+│   │   ├── cn_export_control.jsonld
+│   │   └── cn_unreliable_entity.jsonld
+│   └── authority/
+│       └── cn.jsonld
+├── by-list/                               # Entries grouped by list
+├── by-authority/                          # Entries grouped by authority
+├── by-type/                               # Entities grouped by type
+├── all.jsonld                             # Aggregated graph
+├── search-index.json                      # Search index
+└── stats.json                             # Statistics
+....
+
+=== Entity-Entry Relationship
+
+The architecture follows a normalized pattern where entities and entries are separate but linked:
+
+....
+┌──────────────────────────────────────────────────────────────────────────┐
+│                           ENTITY (List-Agnostic)                          │
+│                                                                           │
+│  id: https://www.ammitto.org/entity/cn/202535-csbc-corporation-taiwan    │
+│  entity_type: organization                                                │
+│  names:                                                                   │
+│    - full_name: CSBC Corporation, Taiwan (Latn, primary)                 │
+│    - full_name: 国际造船股份有限公司 (Hani)                              │
+│  sanction_entry_ids:                                                      │
+│    - https://www.ammitto.org/entry/cn/import-export-control-list/...     │
+│                                                                           │
+└───────────────────────────────────┬──────────────────────────────────────┘
+                                    │
+                                    │ sanction_entry_ids
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│                        ENTRY (List-Specific)                              │
+│                                                                           │
+│  id: .../entry/cn/import-export-control-list/202535-csbc-corporation...  │
+│  entity_id: .../entity/cn/202535-csbc-corporation-taiwan                 │
+│  authority: { "@id": ".../authority/cn" }                                │
+│  regime: { "@id": ".../regime/cn_export_control" }                       │
+│  effects:                                                                 │
+│    - effect_type: prohibit_export_dual_use_items                         │
+│      description: 禁止向上述台湾地区实体出口两用物项...                   │
+│    - effect_type: export_license_requirement                             │
+│      description: 特殊情况下确需出口的...                                │
+│  period:                                                                  │
+│    effective_date: '2025-07-09'                                             │
+│  status: active                                                           │
+│  announcement:                                                            │
+│    title: 公布将8家台湾地区实体列入出口管制管控名单                       │
+│    url: https://www.mofcom.gov.cn/...                                    │
+│    document_id: 2025年第35号                                              │
+│    content: 根据《中华人民共和国出口管制法》...                          │
+│                                                                           │
+└──────────────────────────────────────────────────────────────────────────┘
+....
+
+=== IRI Patterns
+
+All resources use normalized IRIs following these patterns:
+
+[cols="1,3"]
+|===
+| Resource Type | IRI Pattern
+
+| Entity
+| `https://www.ammitto.org/entity/cn/{local_id}`
+
+| Entry
+| `https://www.ammitto.org/entry/cn/{list_type}/{local_id}`
+
+| Regime
+| `https://www.ammitto.org/regime/{regime_code}`
+
+| Authority
+| `https://www.ammitto.org/authority/cn`
+
+| List
+| `https://www.ammitto.org/list/cn/{list_type}`
+
+|===
+
+=== List Type Mapping
+
+The transformer maps Chinese list names to URL-safe slugs:
+
+[cols="2,2,2"]
+|===
+| Chinese Name | Internal Code | URL Slug
+
+| 反制裁清单
+| anti_sanctions
+| anti-sanction-list
+
+| 出口管制管控名单
+| export_control
+| import-export-control-list
+
+| 不可靠实体清单
+| unreliable_entity
+| unreliable-entity-list
+
+|===
+
+=== Usage Examples
+
+==== Loading Entity Data
+
+[source,ruby]
+----
+require 'json'
+
+# Load entity
+entity = JSON.parse(File.read('api/node/entity/cn/202535-csbc-corporation-taiwan.jsonld'))
+
+# Get entity identity
+puts entity['entity_type']  # => "organization"
+puts entity['names'].first['full_name']  # => "CSBC Corporation, Taiwan"
+
+# Get associated entries
+entry_id = entity['sanction_entry_ids'].first
+entry = JSON.parse(File.read("api/node/entry/cn/import-export-control-list/#{File.basename(entry_id)}.jsonld"))
+
+# Get sanction effects
+entry['effects'].each do |effect|
+  puts "#{effect['effect_type']}: #{effect['description']}"
+end
 ----
 
-The cn data is transformed into:
+==== Querying by List Type
 
-* Individual JSON-LD nodes:
-  - `api/v1/node/entity/cn/{id}.jsonld`
-  - `api/v1/node/entry/cn/{list_type}/{id}.jsonld`
-  - `api/v1/node/list/cn/{list_type}.jsonld`
-* Lightweight search index entries with `listType` field
-* List type facets for filtering
-* By-list slices: `api/v1/by-list/cn/{list_type}.jsonld`
+[source,ruby]
+----
+# Get all import-export control list entries
+entries = Dir.glob('api/node/entry/cn/import-export-control-list/*.jsonld')
+
+entries.each do |path|
+  entry = JSON.parse(File.read(path))
+  puts "#{entry['reference_number']}: #{entry['status']}"
+end
+----
+
+=== Regime Codes
+
+Each sanctions regime has a unique code for consistent referencing:
+
+[cols="1,2,2"]
+|===
+| Code | English Name | Chinese Name
+
+| CN_ANTI_SANCTIONS
+| Anti-Sanctions List
+| 反制裁清单
+
+| CN_EXPORT_CONTROL
+| Export Control List
+| 出口管制管控名单
+
+| CN_UNRELIABLE_ENTITY
+| Unreliable Entity List
+| 不可靠实体清单
+
+|===
 
 == Related Repositories
 

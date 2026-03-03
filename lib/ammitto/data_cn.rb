@@ -3,7 +3,6 @@
 # DataCn module for validating China sanctions data
 module Ammitto
   module DataCn
-
   end
 end
 

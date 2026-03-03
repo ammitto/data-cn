@@ -4,11 +4,14 @@ module Ammitto
   module DataCn
     # Loads and caches JSON schemas for validation
     class SchemaLoader
-      SCHEMAS_DIR = File.join(File.dirname(__FILE__), '..', '..', 'schemas')
+      # Path to schemas directory (data-cn/schemas)
+      SCHEMAS_DIR = File.expand_path('../../../schemas', __dir__)
 
       ANNOUNCEMENT_SCHEMA = 'cn-announcement.yml'
       MODIFICATION_SCHEMA = 'cn-measure-modification.yml'
       LEGAL_INSTRUMENT_SCHEMA = 'cn-legal-instrument.yml'
+      DOCUMENT_TYPES_SCHEMA = 'document-types.yml'
+      ORGANIZATIONS_SCHEMA = 'organizations.yml'
 
       class << self
         def load_announcement_schema
@@ -21,6 +24,14 @@ module Ammitto
 
         def load_legal_instrument_schema
           load_schema(LEGAL_INSTRUMENT_SCHEMA)
+        end
+
+        def load_document_types_schema
+          load_schema(DOCUMENT_TYPES_SCHEMA)
+        end
+
+        def load_organizations_schema
+          load_schema(ORGANIZATIONS_SCHEMA)
         end
 
         private

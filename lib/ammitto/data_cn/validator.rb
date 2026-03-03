@@ -72,6 +72,10 @@ module Ammitto
             SchemaLoader.load_modification_schema
           when :legal_instrument
             SchemaLoader.load_legal_instrument_schema
+          when :document_types
+            SchemaLoader.load_document_types_schema
+          when :organizations
+            SchemaLoader.load_organizations_schema
           end
         rescue SchemaNotFoundError
           nil
