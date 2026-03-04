@@ -39,7 +39,7 @@ sanction_details:
         en: General Atomics Aeronautical Systems
       type: organization
       effective_date: '2024-05-20'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
           en: Participating in arms sales to Taiwan region
@@ -68,6 +68,6 @@ sanction_details:
         en: General Dynamics Land Systems
       type: organization
       effective_date: '2024-05-20'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures

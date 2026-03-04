@@ -72,7 +72,7 @@ sanction_details:
         en: General Dynamics
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             为维护国家安全和利益，履行防扩散等国际义务
@@ -98,7 +98,7 @@ sanction_details:
         en: L3 Harris Technologies
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -108,7 +108,7 @@ sanction_details:
         en: Intelligent Epitaxy Technology
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -118,7 +118,7 @@ sanction_details:
         en: Clear Align LLC
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -128,7 +128,7 @@ sanction_details:
         en: Boeing Defense, Space & Security
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -138,7 +138,7 @@ sanction_details:
         en: Lockheed Martin Corporation
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -148,7 +148,7 @@ sanction_details:
         en: Raytheon Missiles & Defense
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -158,7 +158,7 @@ sanction_details:
         en: Lockheed Martin Missiles and Fire Control
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -168,7 +168,7 @@ sanction_details:
         en: Lockheed Martin Aeronautics
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -178,7 +178,7 @@ sanction_details:
         en: Raytheon/Lockheed Martin Javelin Joint Venture
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -188,7 +188,7 @@ sanction_details:
         en: Raytheon Missile Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -198,7 +198,7 @@ sanction_details:
         en: General Dynamics Ordnance and Tactical Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -207,7 +207,7 @@ sanction_details:
         en: General Dynamics Information Technology
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -216,7 +216,7 @@ sanction_details:
         en: General Dynamics Mission Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -225,7 +225,7 @@ sanction_details:
         en: Inter-Coastal Electronics
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -234,7 +234,7 @@ sanction_details:
         en: System Studies & Simulation
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -243,7 +243,7 @@ sanction_details:
         en: IronMountain Solutions
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -252,7 +252,7 @@ sanction_details:
         en: Applied Technologies Group
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -261,7 +261,7 @@ sanction_details:
         en: Axient
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -270,7 +270,7 @@ sanction_details:
         en: Lockheed Martin Missile System Integration Lab
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -279,7 +279,7 @@ sanction_details:
         en: Lockheed Martin Advanced Technology Laboratories
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -288,7 +288,7 @@ sanction_details:
         en: Lockheed Martin Ventures
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -297,7 +297,7 @@ sanction_details:
         en: Anduril Industries
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -306,7 +306,7 @@ sanction_details:
         en: Maritime Tactical Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -315,7 +315,7 @@ sanction_details:
         en: Pacific Rim Defense
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -324,7 +324,7 @@ sanction_details:
         en: AEVEX Aerospace
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -333,7 +333,7 @@ sanction_details:
         en: LKD Aerospace
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -341,7 +341,7 @@ sanction_details:
         zh-Hans: 顶峰科技公司
         en: Summit Technologies Inc.
       type: organization
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
       effective_date: '2025-01-02'

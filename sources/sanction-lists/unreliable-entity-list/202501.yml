@@ -40,7 +40,7 @@ sanction_details:
         en: Lockheed Martin Missiles and Fire Control
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
           en: Participating in arms sales to Taiwan region
@@ -69,7 +69,7 @@ sanction_details:
         en: Lockheed Martin Aeronautics
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -78,7 +78,7 @@ sanction_details:
         en: Lockheed Martin Missile System Integration Lab
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -87,7 +87,7 @@ sanction_details:
         en: Lockheed Martin Advanced Technology Laboratories
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -96,7 +96,7 @@ sanction_details:
         en: Lockheed Martin Ventures
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -105,7 +105,7 @@ sanction_details:
         en: Raytheon/Lockheed Martin Javelin Joint Venture
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -114,7 +114,7 @@ sanction_details:
         en: Raytheon Missile Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -123,7 +123,7 @@ sanction_details:
         en: General Dynamics Ordnance and Tactical Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -132,7 +132,7 @@ sanction_details:
         en: General Dynamics Information Technology
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 
@@ -141,6 +141,6 @@ sanction_details:
         en: General Dynamics Mission Systems
       type: organization
       effective_date: '2025-01-02'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures

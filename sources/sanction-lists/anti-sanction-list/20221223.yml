@@ -54,7 +54,7 @@ sanction_details:
         zh-Hans: 余茂春
       type: individual
       effective_date: '2022-12-23'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁
           en: The US imposed illegal sanctions on two Chinese officials under the pretext of "Tibet human rights" issues.
@@ -78,7 +78,7 @@ sanction_details:
         en: Todd Stein
       type: individual
       effective_date: '2022-12-23'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: 美方借口所谓“西藏人权”问题，对两名中方官员进行非法制裁
           en: The US imposed illegal sanctions on two Chinese officials under the pretext of "Tibet human rights" issues.

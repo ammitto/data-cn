@@ -30,7 +30,7 @@ sanction_details:
         en: High Point Aerotechnologies
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
           en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
@@ -49,7 +49,7 @@ sanction_details:
         en: Universal Logistics Holdings, Inc.
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -58,7 +58,7 @@ sanction_details:
         en: Source Intelligence, Inc.
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -67,7 +67,7 @@ sanction_details:
         en: Coalition For A Prosperous America
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -76,7 +76,7 @@ sanction_details:
         en: Sierra Nevada Corporation
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -85,7 +85,7 @@ sanction_details:
         en: Edge Autonomy Operations LLC
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -94,7 +94,7 @@ sanction_details:
         en: Cyberlux Corporation
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -103,7 +103,7 @@ sanction_details:
         en: Hudson Technologies Co.
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -112,7 +112,7 @@ sanction_details:
         en: Saronic Technologies, Inc.
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -121,7 +121,7 @@ sanction_details:
         en: Oceaneering International, Inc.
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -130,7 +130,7 @@ sanction_details:
         en: Stick Rudder Enterprises LLC
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -139,7 +139,7 @@ sanction_details:
         en: Cubic Corporation
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -148,7 +148,7 @@ sanction_details:
         en: S3 AeroDefense
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -157,7 +157,7 @@ sanction_details:
         en: TCOM, Limited Partnership
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -166,7 +166,7 @@ sanction_details:
         en: TextOre
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -175,6 +175,6 @@ sanction_details:
         en: ACT1 Federal
       type: organization
       effective_date: '2025-04-04'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures

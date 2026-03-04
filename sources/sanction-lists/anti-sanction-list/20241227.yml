@@ -41,7 +41,7 @@ sanction_details:
         en: Insitu, Inc.
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             美国近日再次宣布向中国台湾地区提供大额武器援助并出售武器，美国"2025财年国防授权法案"包括多项涉华消极条款，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
@@ -63,7 +63,7 @@ sanction_details:
         en: Hudson Technologies Co.
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -72,7 +72,7 @@ sanction_details:
         en: Saronic Technologies, Inc.
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -81,7 +81,7 @@ sanction_details:
         en: Raytheon Canada
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -90,7 +90,7 @@ sanction_details:
         en: Raytheon Australia
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -99,7 +99,7 @@ sanction_details:
         en: Aerkomm Inc.
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -108,6 +108,6 @@ sanction_details:
         en: Oceaneering International, Inc.
       type: organization
       effective_date: '2024-12-27'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures

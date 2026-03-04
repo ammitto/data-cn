@@ -39,7 +39,7 @@ sanction_details:
         en: Uyghur Rights Advocacy Project
       type: organization
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: 依据《中华人民共和国反外国制裁法》相关规定
           en: According to relevant provisions of the Law of the People's Republic of China on Countering Foreign Sanctions
@@ -59,7 +59,7 @@ sanction_details:
         en: Canada-Tibet Committee
       type: organization
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -71,7 +71,7 @@ sanction_details:
         en: Executive Director of Uyghur Rights Advocacy Project
       type: individual
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: &measures_ind
         - type:
@@ -97,7 +97,7 @@ sanction_details:
         en: Policy and Advocacy Director of Uyghur Rights Advocacy Project
       type: individual
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -109,7 +109,7 @@ sanction_details:
         en: Chair of Canada-Tibet Committee
       type: individual
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -121,6 +121,6 @@ sanction_details:
         en: Vice Chair of Canada-Tibet Committee
       type: individual
       effective_date: '2024-12-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind

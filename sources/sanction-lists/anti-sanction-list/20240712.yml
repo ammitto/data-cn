@@ -45,7 +45,7 @@ sanction_details:
         en: Anduril Industries
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
@@ -62,7 +62,7 @@ sanction_details:
         en: Maritime Tactical Systems
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -71,7 +71,7 @@ sanction_details:
         en: Pacific Rim Defense
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -80,7 +80,7 @@ sanction_details:
         en: AEVEX Aerospace
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -89,7 +89,7 @@ sanction_details:
         en: LKD Aerospace
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -98,7 +98,7 @@ sanction_details:
         en: Summit Technologies Inc.
       type: organization
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -111,7 +111,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: &measures_ind
         - type:
@@ -138,7 +138,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -151,7 +151,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -164,7 +164,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -177,6 +177,6 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-07-12'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind

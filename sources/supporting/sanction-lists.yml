@@ -1,0 +1,14 @@
+---
+sanction_lists:
+- id: cn/anti-sanction-list
+  name:
+    zh-Hans: 反制裁清单
+    en: Anti-Sanction List
+- id: cn/unreliable-entity-list
+  name:
+    zh-Hans: 不可靠实体清单
+    en: Unreliable Entity List
+- id: cn/export-control-list
+  name:
+    zh-Hans: 出口管制管控名单
+    en: Export Control List

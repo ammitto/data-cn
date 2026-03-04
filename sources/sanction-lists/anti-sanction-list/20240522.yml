@@ -48,7 +48,7 @@ sanction_details:
         en: Lockheed Martin Missiles and Fire Control
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason_org
         - zh-Hans: |
             美国无视中方在乌克兰危机上的客观公正立场和建设性作用，以所谓涉俄罗斯因素为由对多家中国实体滥施非法单边制裁。同时，美国持续向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报规定。
@@ -65,7 +65,7 @@ sanction_details:
         en: Lockheed Martin Aeronautics
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -74,7 +74,7 @@ sanction_details:
         en: Raytheon/Lockheed Martin Javelin Joint Venture
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -83,7 +83,7 @@ sanction_details:
         en: Raytheon Missile Systems
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -92,7 +92,7 @@ sanction_details:
         en: General Dynamics Ordnance and Tactical Systems
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -101,7 +101,7 @@ sanction_details:
         en: General Dynamics Information Technology
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -110,7 +110,7 @@ sanction_details:
         en: General Dynamics Mission Systems
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -119,7 +119,7 @@ sanction_details:
         en: Inter-Coastal Electronics
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -128,7 +128,7 @@ sanction_details:
         en: System Studies & Simulation
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -137,7 +137,7 @@ sanction_details:
         en: IronMountain Solutions
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -146,7 +146,7 @@ sanction_details:
         en: Applied Technologies Group
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -155,7 +155,7 @@ sanction_details:
         en: Axient
       type: organization
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_org
 
@@ -169,7 +169,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: &measures_ind
         - type:
@@ -187,7 +187,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -200,7 +200,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -213,7 +213,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -226,7 +226,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -239,7 +239,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -252,7 +252,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -265,7 +265,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -278,7 +278,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind
 
@@ -291,6 +291,6 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-05-22'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason_org
       measures: *measures_ind

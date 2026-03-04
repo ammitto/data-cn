@@ -40,7 +40,7 @@ sanction_details:
         en: Northrop Grumman Systems Corporation
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: 美国近日宣布向中国台湾地区大规模出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
           en: The US recently announced large-scale arms sales to China's Taiwan region, seriously violating the One-China principle and the three China-US joint communiqués, seriously interfering in China's internal affairs, and seriously damaging China's sovereignty and territorial integrity.
@@ -60,7 +60,7 @@ sanction_details:
         en: L3Harris Maritime Services
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -69,7 +69,7 @@ sanction_details:
         en: Boeing in St. Louis
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -78,7 +78,7 @@ sanction_details:
         en: Gibbs & Cox, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -87,7 +87,7 @@ sanction_details:
         en: Advanced Acoustic Concepts
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -96,7 +96,7 @@ sanction_details:
         en: VSE Corporation
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -105,7 +105,7 @@ sanction_details:
         en: Sierra Technical Services, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -114,7 +114,7 @@ sanction_details:
         en: Red Cat Holdings, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -123,7 +123,7 @@ sanction_details:
         en: Teal Drones, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -132,7 +132,7 @@ sanction_details:
         en: ReconCraft
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -141,7 +141,7 @@ sanction_details:
         en: High Point Aerotechnologies
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -150,7 +150,7 @@ sanction_details:
         en: Epirus, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -159,7 +159,7 @@ sanction_details:
         en: Dedrone Holdings Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -168,7 +168,7 @@ sanction_details:
         en: Area-I
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -177,7 +177,7 @@ sanction_details:
         en: Blue Force Technologies
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -186,7 +186,7 @@ sanction_details:
         en: Dive Technologies
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -195,7 +195,7 @@ sanction_details:
         en: Vantor
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -204,7 +204,7 @@ sanction_details:
         en: Intelligent Epitaxy Technology, Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -213,7 +213,7 @@ sanction_details:
         en: Rhombus Power Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -222,7 +222,7 @@ sanction_details:
         en: Lazarus Enterprises Inc.
       type: organization
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -235,7 +235,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: &measures_ind
         - type:
@@ -262,7 +262,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -275,7 +275,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -288,7 +288,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -301,7 +301,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -314,7 +314,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -327,7 +327,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -340,7 +340,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -353,7 +353,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -366,6 +366,6 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-26'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind

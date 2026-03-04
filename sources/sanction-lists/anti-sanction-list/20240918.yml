@@ -43,7 +43,7 @@ sanction_details:
         en: Sierra Nevada Corporation
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
@@ -65,7 +65,7 @@ sanction_details:
         en: Stick Rudder Enterprises LLC
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -74,7 +74,7 @@ sanction_details:
         en: Cubic Corporation
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -83,7 +83,7 @@ sanction_details:
         en: S3 AeroDefense
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -92,7 +92,7 @@ sanction_details:
         en: TCOM, Limited Partnership
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -101,7 +101,7 @@ sanction_details:
         en: TextOre
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -110,7 +110,7 @@ sanction_details:
         en: Planate Management Group
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -119,7 +119,7 @@ sanction_details:
         en: ACT1 Federal
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures
 
@@ -128,6 +128,6 @@ sanction_details:
         en: Exovera
       type: organization
       effective_date: '2024-09-18'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures

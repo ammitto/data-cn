@@ -40,7 +40,7 @@ sanction_details:
         en: Boeing Defense, Space & Security
       type: organization
       effective_date: '2024-05-20'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason:
         - zh-Hans: 参与对台湾地区军售
           en: Participating in arms sales to Taiwan region

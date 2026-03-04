@@ -43,7 +43,7 @@ sanction_details:
         en: PVH Corp.
       type: organization
       effective_date: '2024-09-24'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason:
         - zh-Hans: 针对涉疆产品涉嫌违反正常的市场交易原则，中断与中国企业、其他组织或者个人的正常交易、采取歧视性措施
           en: Potentially violating normal market transaction principles by taking discriminatory measures against Xinjiang-related products, disrupting normal transactions with Chinese enterprises, other organizations or individuals

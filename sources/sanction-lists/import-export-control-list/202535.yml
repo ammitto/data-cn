@@ -30,7 +30,7 @@ sanction_details:
         en: Aerospace Industrial Development Corp.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
           en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
@@ -49,7 +49,7 @@ sanction_details:
         en: GEOSAT Aerospace & Technology Inc.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -58,7 +58,7 @@ sanction_details:
         en: National Chung-Shan Institute of Science & Technology
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -67,7 +67,7 @@ sanction_details:
         en: JC Technology Inc.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -76,7 +76,7 @@ sanction_details:
         en: CSBC Corporation, Taiwan
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -85,7 +85,7 @@ sanction_details:
         en: Jong Shyn Shipbuilding Co., Ltd.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -94,7 +94,7 @@ sanction_details:
         en: Lungteh Shipbuilding Co., Ltd.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -103,6 +103,6 @@ sanction_details:
         en: Gong Wei Co., Ltd.
       type: organization
       effective_date: '2025-07-09'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures

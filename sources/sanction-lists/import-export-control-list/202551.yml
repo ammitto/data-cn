@@ -30,7 +30,7 @@ sanction_details:
         en: Huntington Ingalls Industries, Inc.
       type: organization
       effective_date: '2025-09-25'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
           en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
@@ -49,7 +49,7 @@ sanction_details:
         en: Planate Management Group
       type: organization
       effective_date: '2025-09-25'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -58,6 +58,6 @@ sanction_details:
         en: Global Dimensions LLC
       type: organization
       effective_date: '2025-09-25'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures

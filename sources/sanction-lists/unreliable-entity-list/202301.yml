@@ -40,7 +40,7 @@ sanction_details:
         en: Lockheed Martin Corporation
       type: organization
       effective_date: '2023-02-16'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: &reason
         - zh-Hans: 参与对台湾地区军售
           en: Participating in arms sales to Taiwan region
@@ -73,7 +73,7 @@ sanction_details:
         en: Raytheon Missiles & Defense
       type: organization
       effective_date: '2023-02-16'
-      sanction_list: 不可靠实体清单
+      sanction_list: cn/unreliable-entity-list
       reason: *reason
       measures: *measures
 

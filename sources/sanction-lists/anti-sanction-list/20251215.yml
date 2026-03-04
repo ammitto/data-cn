@@ -44,7 +44,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2025-12-15'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: |
             公然同"台独"分裂势力勾连，严重违背一个中国原则和中日四个政治文件精神，严重干涉中国内政，严重损害中国主权和领土完整。
