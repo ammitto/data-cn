@@ -1,0 +1,1052 @@
+# Ammitto Source Data Instructions Pack
+
+:toc: macro
+:toclevels: 3
+:source-highlighter: rouge
+:icons: font
+
+This document provides comprehensive instructions for adding a new sanctions data source to the Ammitto ecosystem.
+
+== Overview
+
+The Ammitto sanctions data system follows the **Open/Closed Principle**:
+
+* **Open for Extension**: New sources can be added without modifying existing code
+* **Closed for Modification**: The core harmonization engine remains unchanged
+
+=== Repository Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        AMMITTO ECOSYSTEM                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+│   data-{source}     │     │      ammitto        │     │  ammitto.github.io  │
+│   (Data Repo)       │     │      (Gem)          │     │     (Website)       │
+├─────────────────────┤     ├─────────────────────┤     ├─────────────────────┤
+│ - YAML source files │     │ - Source parsers    │     │ - Vue components    │
+│ - JSON schemas      │     │ - Transformers      │     │ - API endpoints     │
+│ - Supporting data   │     │ - Ontology models   │     │ - Search index      │
+│ - Generated API     │     │ - Exporters         │     │ - Static pages      │
+└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
+```
+
+=== Data Flow Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DATA FLOW PIPELINE                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────┐    ┌────────────────┐    ┌────────────────┐    ┌────────────────┐
+│   1. FETCH     │───►│  2. VALIDATE   │───►│ 3. HARMONIZE   │───►│   4. EXPORT    │
+│                │    │                │    │                │    │                │
+│ Source website │    │ JSON Schema    │    │ Transformer    │    │ JSON-LD/Turtle │
+│ PDF/HTML/CSV   │    │ validation     │    │ Source→Ontol.  │    │ Search Index   │
+└────────────────┘    └────────────────┘    └────────────────┘    └────────────────┘
+        │                     │                     │                     │
+        ▼                     ▼                     ▼                     ▼
+┌────────────────┐    ┌────────────────┐    ┌────────────────┐    ┌────────────────┐
+│ sources/*.yml  │    │ schemas/*.yml  │    │ models/*.rb    │    │ api/v1/*.jsonld│
+│ (raw YAML)     │    │ (schemas)      │    │ (ontology)     │    │ (output)       │
+└────────────────┘    └────────────────┘    └────────────────┘    └────────────────┘
+```
+
+== Step 1: Create Data Repository
+
+Create a new Git repository named `data-{source}` where `{source}` is the lowercase source code (e.g., `data-uk`, `data-eu`, `data-jp`).
+
+=== Directory Structure
+
+```
+data-{source}/
+├── sources/
+│   ├── sanction-lists/           # Main sanction list data
+│   │   ├── {list-type-1}/        # e.g., "consolidated-list", "asset-freeze"
+│   │   │   ├── {entry-id}.yml    # Individual sanction entries
+│   │   │   └── ...
+│   │   └── {list-type-2}/
+│   │       └── ...
+│   ├── legal-instruments/        # Legal instruments (laws, regulations)
+│   │   ├── {instrument-id}.yml   # Individual legal instrument
+│   │   └── ...
+│   ├── supporting/               # Reference data
+│   │   ├── document-types.yml    # Document type definitions
+│   │   └── organizations.yml     # Organization definitions
+│   └── fetch/                    # (Optional) Fetched raw data
+│       └── {date}/               # Dated fetch results
+├── schemas/                      # JSON Schema definitions
+│   ├── {source}-announcement.yml # Schema for announcements
+│   ├── {source}-legal-instrument.yml
+│   ├── document-types.yml
+│   └── organizations.yml
+├── lib/
+│   └── ammitto/
+│       └── data_{source}/        # Validation library
+│           ├── file_finder.rb
+│           ├── schema_loader.rb
+│           ├── validator.rb
+│           └── validation_report.rb
+├── scripts/
+│   └── validate_{source}_data.rb
+├── api/                          # Generated output (DO NOT EDIT)
+│   ├── v1/
+│   │   ├── node/
+│   │   │   ├── entity/
+│   │   │   ├── entry/
+│   │   │   ├── legal-instrument/
+│   │   │   └── ...
+│   │   ├── all.jsonld
+│   │   ├── search-index.json
+│   │   └── stats.json
+│   └── ontology/
+├── Rakefile                      # Build tasks
+├── Gemfile
+├── Gemfile.lock
+└── README.adoc                   # Documentation
+```
+
+== Step 2: Define Source Schemas
+
+Create JSON Schema files that validate your source-specific YAML structure.
+
+=== Example: Sanction Announcement Schema
+
+[source,yaml]
+----
+# schemas/{source}-announcement.yml
+---
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://www.ammitto.org/schemas/{source}-announcement.yml
+title: Sanction Announcement
+description: Schema for sanction announcement from {source}
+type: object
+required:
+  - id
+  - announcement
+  - sanction_details
+properties:
+  id:
+    type: string
+    description: Unique identifier for this announcement
+    pattern: "^{source}/[a-z0-9-]+$"
+
+  announcement:
+    type: object
+    required:
+      - title
+      - publish_date
+    properties:
+      title:
+        type: string
+        description: Title of the announcement
+      url:
+        type: string
+        format: uri
+        description: URL to official source
+      publish_date:
+        type: string
+        format: date
+        description: Publication date (YYYY-MM-DD)
+      publish_time:
+        type: string
+        pattern: "^[0-2][0-9]:[0-5][0-9]$"
+        description: Publication time (HH:MM)
+      document_id:
+        type: string
+        description: Official document identifier
+      document_type:
+        type: string
+        description: Type of document (links to document-types.yml)
+      authority:
+        type: string
+        description: Issuing authority (links to organizations.yml)
+      publisher:
+        type: string
+        description: Publisher (links to organizations.yml)
+      signatory:
+        type: string
+        description: Signatory (links to organizations.yml)
+      content:
+        type: string
+        description: Full text content
+      lang:
+        type: string
+        pattern: "^[a-z]{2,3}(-[A-Za-z]{4})?(-[A-Z]{2})?$"
+        description: Language code (e.g., "zh-Hans", "en")
+        default: en
+
+  sanction_details:
+    type: array
+    items:
+      type: object
+      required:
+        - entity
+        - measures
+      properties:
+        entity:
+          type: object
+          required:
+            - type
+            - name
+          properties:
+            type:
+              type: string
+              enum: [person, organization, vessel, aircraft]
+            name:
+              type: object
+              properties:
+                full_name:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                script:
+                  type: string
+                  description: ISO 15924 script code
+            aliases:
+              type: array
+              items:
+                type: string
+            identifiers:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  value:
+                    type: string
+                  issuing_country:
+                    type: string
+        measures:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                enum:
+                  - asset_freeze
+                  - travel_ban
+                  - arms_embargo
+                  - trade_restriction
+                  - import_ban
+                  - export_ban
+                  - investment_ban
+                  - sectoral_sanction
+                  - other
+              description:
+                type: object
+                description: Localized description
+        reasons:
+          type: array
+          items:
+            type: object
+            properties:
+              category:
+                type: string
+              description:
+                type: object
+        period:
+          type: object
+          properties:
+            effective_date:
+              type: string
+              format: date
+            expiry_date:
+              type: string
+              format: date
+            is_indefinite:
+              type: boolean
+
+  legal_citations:
+    type: array
+    description: Legal instruments cited as basis
+    items:
+      type: object
+      properties:
+        legal_instrument_id:
+          type: string
+          description: Reference to legal instrument
+        articles:
+          type: array
+          items:
+            type: string
+        citation_type:
+          type: string
+          enum: [legal_basis, reference, amendment]
+----
+
+== Step 3: Create Source Data Files
+
+=== Example: Sanction Entry YAML
+
+[source,yaml]
+----
+# sources/sanction-lists/consolidated-list/2025-001.yml
+---
+id: uk/2025-001
+announcement:
+  title: "Sanctions imposed on Entity X"
+  url: "https://www.gov.uk/government/publications/..."
+  publish_date: "2025-01-15"
+  document_id: "2025-001"
+  document_type: "uk/regulation"
+  authority: "uk/ofsi"
+  publisher: "uk/hmt"
+  lang: "en"
+
+sanction_details:
+  - entity:
+      type: organization
+      name:
+        full_name: "Example Corporation Ltd"
+        script: "Latn"
+      aliases:
+        - "Example Corp"
+        - "ExCorp"
+      identifiers:
+        - type: "registration_number"
+          value: "12345678"
+          issuing_country: "GB"
+      addresses:
+        - street: "123 Main Street"
+          city: "London"
+          country: "United Kingdom"
+          country_code: "GB"
+          postal_code: "SW1A 1AA"
+
+    measures:
+      - type: asset_freeze
+        description:
+          en: "All funds and economic resources are frozen"
+      - type: trade_restriction
+        description:
+          en: "Trade restrictions apply"
+
+    reasons:
+      - category: "national_security"
+        description:
+          en: "Activities supporting hostile actions"
+
+    period:
+      effective_date: "2025-01-15"
+      is_indefinite: true
+
+legal_citations:
+  - legal_instrument_id: "uk/russia-sanctions-regulation-2019"
+    articles: ["4", "5", "8"]
+    citation_type: legal_basis
+----
+
+=== Example: Legal Instrument YAML
+
+[source,yaml]
+----
+# sources/legal-instruments/russia-sanctions-regulation-2019.yml
+---
+id: uk/russia-sanctions-regulation-2019
+title:
+  - en: "The Russia (Sanctions) (EU Exit) Regulations 2019"
+type: uk/regulation
+authority: uk/hmt
+publisher: uk/hmso
+document_id: "2019 No. 855"
+url: "https://www.legislation.gov.uk/uksi/2019/855/contents"
+lang: en
+publish_date: "2019-03-14"
+effective_date: "2019-03-14"
+content:
+  - type: section
+    number: "1"
+    title: "Citation and commencement"
+    text: "These Regulations may be cited as the Russia (Sanctions) (EU Exit) Regulations 2019..."
+----
+
+=== Example: Supporting Data Files
+
+==== Document Types
+
+[source,yaml]
+----
+# sources/supporting/document-types.yml
+---
+document_types:
+  - id: uk/regulation
+    name:
+      en: "Regulation"
+      zh-Hans: "法规"
+    description:
+      en: "Statutory instrument with legal force"
+
+  - id: uk/order
+    name:
+      en: "Order"
+      zh-Hans: "命令"
+    description:
+      en: "Ministerial order or direction"
+----
+
+==== Organizations
+
+[source,yaml]
+----
+# sources/supporting/organizations.yml
+---
+organizations:
+  - id: uk/hmt
+    name:
+      en: "Her Majesty's Treasury"
+      zh-Hans: "英国财政部"
+    type: ministry
+    url: "https://www.gov.uk/government/organisations/hm-treasury"
+
+  - id: uk/ofsi
+    name:
+      en: "Office of Financial Sanctions Implementation"
+      zh-Hans: "金融制裁实施办公室"
+    type: agency
+    parent_id: uk/hmt
+    url: "https://www.gov.uk/government/collections/ofsi-guidance"
+----
+
+== Step 4: Create Ammitto Gem Source Module
+
+In the `ammitto` gem, create a new source module.
+
+=== Directory Structure
+
+```
+ammitto/lib/ammitto/sources/{source}/
+├── source.rb              # Base source configuration
+├── transformer.rb         # Transforms source models to harmonized
+├── announcement.rb        # (Optional) Announcement model
+├── entity.rb              # (Optional) Entity model
+├── parser.rb              # (Optional) Web/fetch parser
+└── scraper.rb             # (Optional) Web scraper
+```
+
+=== Transformer Implementation
+
+[source,ruby]
+----
+# ammitto/lib/ammitto/sources/{source}/transformer.rb
+# frozen_string_literal: true
+
+require_relative '../../transformers/base_transformer'
+
+module Ammitto
+  module Sources
+    module NewSource
+      # Transformer converts source-specific models to harmonized ontology
+      #
+      # @example
+      #   transformer = Ammitto::Sources::NewSource::Transformer.new
+      #   result = transformer.transform(source_model)
+      #   entity = result[:entity]
+      #   entry = result[:entry]
+      #
+      class Transformer < Ammitto::Transformers::BaseTransformer
+        # Map source-specific regime names to codes
+        REGIME_CODES = {
+          'Regime A' => 'REGIME_A',
+          'Regime B' => 'REGIME_B'
+        }.freeze
+
+        def initialize
+          super(:new_source)  # Pass source code to base
+        end
+
+        # Transform source announcement to harmonized models
+        # @param announcement [Announcement] source announcement model
+        # @return [Hash] { entities:, entries:, group:, official_announcement: }
+        def transform_announcement(announcement)
+          entities = []
+          entries = []
+
+          announcement.sanction_details.each do |detail|
+            entity = create_entity(detail.entity)
+            entry = create_entry(detail, entity.id)
+
+            entity.add_sanction_entry(entry)
+            entities << entity
+            entries << entry
+          end
+
+          group = create_group(announcement, entries)
+          official_announcement = create_official_announcement(announcement)
+
+          {
+            entities: entities,
+            entries: entries,
+            group: group,
+            official_announcement: official_announcement,
+            legal_citations: extract_legal_citations(announcement)
+          }
+        end
+
+        private
+
+        def create_entity(entity_data)
+          case entity_data.type
+          when 'person'
+            create_person_entity(entity_data)
+          when 'organization'
+            create_organization_entity(entity_data)
+          when 'vessel'
+            create_vessel_entity(entity_data)
+          else
+            create_organization_entity(entity_data)
+          end
+        end
+
+        def create_person_entity(data)
+          Ammitto::PersonEntity.new(
+            id: generate_entity_id(data),
+            entity_type: 'person',
+            names: transform_names(data.name),
+            gender: data.gender,
+            birth_info: transform_birth_info(data.birth_info),
+            nationalities: data.nationalities,
+            # ... other fields
+          )
+        end
+
+        def create_organization_entity(data)
+          Ammitto::OrganizationEntity.new(
+            id: generate_entity_id(data),
+            entity_type: 'organization',
+            names: transform_names(data.name),
+            registration_number: data.registration_number,
+            country: data.country,
+            # ... other fields
+          )
+        end
+
+        def create_entry(detail, entity_id)
+          Ammitto::SanctionEntry.new(
+            id: generate_entry_id(detail),
+            entity_id: entity_id,
+            authority: authority,
+            regime: create_regime(detail.regime),
+            effects: transform_effects(detail.measures),
+            reasons: transform_reasons(detail.reasons),
+            period: create_temporal_period(detail.period),
+            status: 'active',
+            announcement: create_announcement_reference(detail)
+          )
+        end
+
+        # ... additional helper methods
+      end
+    end
+  end
+end
+----
+
+=== Register Transformer
+
+[source,ruby]
+----
+# ammitto/lib/ammitto/transformers/registry.rb
+
+require_relative '../sources/new_source/transformer'
+
+module Ammitto
+  module Transformers
+    module Registry
+      TRANSFORMERS = {
+        # ... existing sources
+        uk: Ammitto::Sources::Uk::Transformer,
+        eu: Ammitto::Sources::Eu::Transformer,
+        cn: Ammitto::Sources::Cn::Transformer,
+        # Add new source here:
+        new_source: Ammitto::Sources::NewSource::Transformer,
+      }.freeze
+    end
+  end
+end
+----
+
+== Step 5: Create Rakefile for Data Generation
+
+[source,ruby]
+----
+# Rakefile
+# frozen_string_literal: true
+
+require 'fileutils'
+
+desc 'Clean generated API files'
+task :clean do
+  api_dir = File.expand_path('api', __dir__)
+  # ... clean logic
+end
+
+desc 'Generate API files from source YAML data'
+task :generate do
+  ammitto_path = File.expand_path('../ammitto/lib', __dir__)
+  $LOAD_PATH.unshift(ammitto_path) if Dir.exist?(ammitto_path)
+
+  require 'ammitto'
+  require 'ammitto/cli/harmonize_command'
+
+  sources_dir = File.expand_path('..', __dir__)
+  output_dir = File.expand_path('api', __dir__)
+
+  options = {
+    sources_dir: sources_dir,
+    output_dir: output_dir,
+    verbose: ENV['VERBOSE'] == 'true'
+  }
+
+  command = Ammitto::Cmd::HarmonizeCommand.new(options, [:new_source])
+  command.run
+end
+
+desc 'Clean and regenerate all API files'
+task regenerate: [:clean, :generate]
+
+task default: :generate
+----
+
+== Step 6: Website Integration
+
+The website (`ammitto.github.io`) automatically displays data from the generated JSON-LD files.
+
+=== Vue Component Data Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     WEBSITE COMPONENT ARCHITECTURE                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Page View     │     │   Composable    │     │   API Endpoint  │
+│  (*.vue)        │────►│  (useXxxData)   │────►│   (*.jsonld)    │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+        │                       │                       │
+        │                       │                       │
+        ▼                       ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Template        │     │ Computed        │     │ JSON-LD         │
+│ Rendering       │     │ Properties      │     │ Knowledge Graph │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+```
+
+=== Key API Endpoints
+
+[cols="1,2"]
+|===
+| Endpoint | Description
+
+| `/api/v1/node/entity/{source}/{id}.jsonld`
+| Individual entity
+
+| `/api/v1/node/entry/{source}/{list}/{id}.jsonld`
+| Individual sanction entry
+
+| `/api/v1/node/legal-instrument/{source}/{id}.jsonld`
+| Legal instrument
+
+| `/api/v1/node/group/{source}/{id}.jsonld`
+| Sanction group
+
+| `/api/v1/node/document-type/{source}/{id}.jsonld`
+| Document type
+
+| `/api/v1/node/organization/{source}/{id}.jsonld`
+| Organization
+
+| `/api/v1/node/entity/index.jsonld`
+| Entity index
+
+| `/api/v1/search-index.json`
+| Search index
+
+|===
+
+== IRI Patterns
+
+All entities use stable, list-agnostic IRIs:
+
+```
+Entity (LIST-AGNOSTIC):
+  https://www.ammitto.org/entity/{source}/{local_id}
+  Example: https://www.ammitto.org/entity/uk/12345
+
+Entry (LIST-SPECIFIC):
+  https://www.ammitto.org/entry/{source}/{list_type}/{local_id}
+  Example: https://www.ammitto.org/entry/uk/consolidated-list/12345
+
+Legal Instrument:
+  https://www.ammitto.org/legal-instrument/{source}/{local_id}
+  Example: https://www.ammitto.org/legal-instrument/uk/russia-regulation-2019
+
+Announcement:
+  https://www.ammitto.org/announcement/{source}/{document_id}
+
+Group:
+  https://www.ammitto.org/group/{source}/{document_id}
+```
+
+== Checklist for New Source
+
+[cols="1,1"]
+|===
+| Repository | Task
+
+| `data-{source}` | Create repository with directory structure
+| `data-{source}` | Create JSON schemas in `schemas/`
+| `data-{source}` | Add source YAML files in `sources/`
+| `data-{source}` | Create supporting data files
+| `data-{source}` | Create validation library in `lib/`
+| `data-{source}` | Create Rakefile
+| `ammitto` | Create source module in `sources/{source}/`
+| `ammitto` | Implement transformer
+| `ammitto` | Register transformer in Registry
+| `ammitto` | Add tests for transformer
+| `data-{source}` | Run `rake regenerate` to generate API
+| `ammitto.github.io` | Copy generated API to website
+| `ammitto.github.io` | Verify website displays data correctly
+
+|===
+
+== Troubleshooting
+
+=== Common Issues
+
+1. **Transformer not found**: Ensure the transformer is registered in `Registry::TRANSFORMERS`
+
+2. **Schema validation fails**: Check YAML structure matches schema definition
+
+3. **Missing fields in output**: Ensure transformer maps all required fields
+
+4. **Duplicate entities**: Use stable, list-agnostic entity IDs
+
+5. **Language not displaying**: Ensure `lang` field is included in source data and exported
+
+=== Debug Mode
+
+Run generation with verbose output:
+
+[source,bash]
+----
+VERBOSE=true bundle exec rake regenerate
+----
+
+== Contact
+
+For questions or issues, please open an issue on the relevant repository.
+
+== Appendix A: Complete Architecture Diagram
+
+=== Full System Architecture
+
+....
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                        AMMITTO ECOSYSTEM - COMPLETE ARCHITECTURE                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           LAYER 1: DATA REPOSITORIES                             │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   data-cn/          data-uk/          data-eu/          data-un/                │
+│   ┌────────┐       ┌────────┐       ┌────────┐       ┌────────┐                │
+│   │sources/│       │sources/│       │sources/│       │sources/│                │
+│   │schemas/│       │schemas/│       │schemas/│       │schemas/│                │
+│   │lib/    │       │lib/    │       │lib/    │       │lib/    │                │
+│   │api/    │       │api/    │       │api/    │       │api/    │                │
+│   └────────┘       └────────┘       └────────┘       └────────┘                │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        │ YAML + JSON Schema
+                                        ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           LAYER 2: AMMITTO GEM                                   │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   ┌─────────────────────────────────────────────────────────────────────┐      │
+│   │                    TRANSFORMER REGISTRY                              │      │
+│   │  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐          │      │
+│   │  │Cn::Trans  │ │Uk::Trans  │ │Eu::Trans  │ │Un::Trans  │ ...      │      │
+│   │  └─────┬─────┘ └─────┬─────┘ └─────┬─────┘ └─────┬─────┘          │      │
+│   └────────┼─────────────┼─────────────┼─────────────┼─────────────────┘      │
+│            │             │             │             │                         │
+│            └─────────────┴──────┬──────┴─────────────┘                         │
+│                                 │                                              │
+│                                 ▼                                              │
+│   ┌─────────────────────────────────────────────────────────────────────┐      │
+│   │                    HARMONIZED ONTOLOGY                               │      │
+│   │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐   │      │
+│   │  │Entity       │ │SanctionEntry│ │LegalInstr.  │ │Authority    │   │      │
+│   │  │(Person/Org/ │ │(junction)   │ │(law/reg)    │ │(issuer)     │   │      │
+│   │  │Vessel/Air)  │ │             │ │             │ │             │   │      │
+│   │  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘   │      │
+│   └─────────────────────────────────────────────────────────────────────┘      │
+│                                 │                                              │
+│                                 ▼                                              │
+│   ┌─────────────────────────────────────────────────────────────────────┐      │
+│   │                    EXPORTERS                                         │      │
+│   │  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐              │      │
+│   │  │JsonLdGraph    │ │SearchIndex    │ │Ontology       │              │      │
+│   │  │Exporter       │ │Exporter       │ │Exporter       │              │      │
+│   │  └───────────────┘ └───────────────┘ └───────────────┘              │      │
+│   └─────────────────────────────────────────────────────────────────────┘      │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        │ JSON-LD + Search Index
+                                        ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           LAYER 3: WEBSITE (ammitto.github.io)                   │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   ┌─────────────────────────────────────────────────────────────────────┐      │
+│   │                    VUE 3 APPLICATION                                 │      │
+│   │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐   │      │
+│   │  │Router       │ │Composables  │ │Components   │ │Views/Pages  │   │      │
+│   │  │(routes)     │ │(data layer) │ │(UI parts)   │ │(full pages) │   │      │
+│   │  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘   │      │
+│   └─────────────────────────────────────────────────────────────────────┘      │
+│                                                                                 │
+│   Pages:                                                                        │
+│   • EntityPage.vue      - Display entity details                               │
+│   • GroupPage.vue       - Display sanction groups                              │
+│   • AnnouncementPage.vue- Display full announcements                           │
+│   • LegalInstrumentPage - Display legal instruments                            │
+│   • BrowseEntitiesPage  - List/filter entities                                 │
+│   • BrowseGroupsPage    - List/filter groups                                   │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+....
+
+=== IRI Relationship Diagram
+
+....
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           IRI RELATIONSHIPS                                      │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+                         ┌──────────────────┐
+                         │   Authority      │
+                         │ /authority/cn    │
+                         └────────┬─────────┘
+                                  │ maintains
+                                  ▼
+┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
+│ SanctionRegime   │◄───│   SanctionList   │───►│  LegalInstrument │
+│ /regime/cn_uel   │ has│ /list/cn/uel     │ has│ /legal-instrument│
+└──────────────────┘    └────────┬─────────┘    └────────┬─────────┘
+                                 │ cites                  │ cited_by
+                                 ▼                        │
+                        ┌──────────────────┐              │
+                        │  SanctionGroup   │◄─────────────┘
+                        │ /group/cn/202501 │
+                        └────────┬─────────┘
+                                 │ contains
+                                 ▼
+┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
+│     Entity       │◄───│  SanctionEntry   │───►│ OfficialAnnounce │
+│ /entity/cn/123   │ is │ /entry/cn/uel/123│ has│ /announcement/...│
+│ (list-agnostic)  │    │ (list-specific)  │    │                  │
+└──────────────────┘    └──────────────────┘    └──────────────────┘
+....
+
+== Appendix B: Key Files Reference
+
+=== Ammitto Gem Key Files
+
+[cols="1,3"]
+|===
+| File | Purpose
+
+| `lib/ammitto/transformers/registry.rb`
+| Transformer registry - add new sources here
+
+| `lib/ammitto/transformers/base_transformer.rb`
+| Base class with IRI generation, factory methods
+
+| `lib/ammitto/ontology/entities/entity.rb`
+| Base entity class
+
+| `lib/ammitto/sanction_entry.rb`
+| SanctionEntry junction model
+
+| `lib/ammitto/serialization/json_ld_graph_exporter.rb`
+| JSON-LD graph exporter
+
+| `lib/ammitto/serialization/search_index_exporter.rb`
+| Search index generator
+
+| `lib/ammitto/cli/harmonize_command.rb`
+| CLI harmonize command
+
+|===
+
+=== Website Key Files
+
+[cols="1,3"]
+|===
+| File | Purpose
+
+| `src/composables/useEntityData.ts`
+| Entity/entry data loading
+
+| `src/composables/useSearchIndex.ts`
+| Search index loading and search
+
+| `src/composables/useSanctionsData.ts`
+| Source-based data loading
+
+| `src/config/index.ts`
+| Site configuration including sources
+
+| `src/router/index.ts`
+| Route definitions
+
+| `src/views/EntityPage.vue`
+| Entity detail page
+
+| `src/views/GroupPage.vue`
+| Group detail page
+
+| `src/views/AnnouncementPage.vue`
+| Announcement detail page
+
+| `src/views/LegalInstrumentPage.vue`
+| Legal instrument detail page
+
+|===
+
+== Appendix C: Sample Source Files
+
+=== Complete Announcement Example (China)
+
+[source,yaml]
+----
+# sources/sanction-lists/unreliable-entity-list/2025-01-02.yml
+# yaml-language-server: $schema=../../../schemas/cn-announcement.yml
+---
+id: cn/2025-01-02-uel
+announcement:
+  title: 公布将洛克希德·马丁公司等实体列入不可靠实体清单
+  url: https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_1234.html
+  publish_date: '2025-01-02'
+  publish_time: "16:00"
+  document_id: 商务部公告2025年第1号
+  document_type: cn/announcement
+  authority: 中华人民共和国商务部
+  publisher: 商务部
+  signatory: 王文涛
+  signatory_title: 部长
+  lang: zh-Hans
+  content: |
+    根据《中华人民共和国反外国制裁法》及相关法律法规，
+    商务部决定将下列实体列入不可靠实体清单...
+
+sanction_details:
+  instruments:
+    - id: cn/npc-anti-foreign-sanctions-law
+      articles:
+        - 第三条
+        - 第四条
+    - id: cn/mofcom-unreliable-entity-list-provisions
+
+  entities:
+    - name:
+        zh-Hans: 洛克希德·马丁公司
+        en: Lockheed Martin Corporation
+        script: Latn
+      type: organization
+      effective_date: '2025-01-02'
+      effective_time: "00:01"
+      sanction_list: 不可靠实体清单
+      reason:
+        - zh-Hans: 对台军售，严重损害中国主权和安全利益
+          en: Arms sales to Taiwan, seriously damaging China's sovereignty
+      measures:
+        - type:
+          - prohibit_import_export
+          - prohibit_investment_new
+          zh-Hans: 禁止从事与中国有关的进出口活动；禁止在中国境内新增投资
+          en: Prohibit import/export with China; Prohibit new investment in China
+
+    - name:
+        zh-Hans: 雷神导弹与防务公司
+        en: Raytheon Missiles & Defense
+        script: Latn
+      type: organization
+      effective_date: '2025-01-02'
+      sanction_list: 不可靠实体清单
+      reason:
+        - zh-Hans: 对台军售
+      measures:
+        - type:
+          - prohibit_import_export
+          - prohibit_investment_new
+          zh-Hans: 禁止从事与中国有关的进出口活动；禁止在中国境内新增投资
+
+legal_citations:
+  - legal_instrument_id: cn/npc-anti-foreign-sanctions-law
+    articles:
+      - 第三条
+      - 第四条
+    citation_type: legal_basis
+
+group_id: cn/2025-01-02-uel
+----
+
+=== Complete Legal Instrument Example
+
+[source,yaml]
+----
+# sources/legal-instruments/npc-anti-foreign-sanctions-law.yml
+# yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
+---
+id: cn/npc-anti-foreign-sanctions-law
+title: 中华人民共和国反外国制裁法
+short_title: 反外国制裁法
+url: http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311892.html
+type: 全国人民代表大会常务委员会公告
+document_id: 中华人民共和国反外国制裁法
+published_date: '2021-06-10'
+effective_date: '2021-06-10'
+lang: zh-Hans
+status: in_force
+
+approval_history:
+  - 2021年6月10日第十三届全国人民代表大会常务委员会第二十九次会议通过
+
+content:
+  - type: chapter
+    index: 1
+    label: 第一章
+    title: 总则
+    content:
+      - type: clause
+        index: 1
+        label: 第一条
+        content:
+          - 为了维护国家主权、安全、发展利益，保护我国公民、组织的合法权益，制定本法。
+      - type: clause
+        index: 2
+        label: 第二条
+        content:
+          - 中华人民共和国坚持独立自主的和平外交政策，坚持和平共处五项原则。
+      - type: clause
+        index: 3
+        label: 第三条
+        content:
+          - 中华人民共和国反对霸权主义和强权政治，反对任何国家以任何借口、任何方式干涉中国内政。
+      - type: clause
+        index: 4
+        label: 第四条
+        content:
+          - 国务院有关部门可以决定将直接或者间接参与制定、决定、实施本法第三条规定的歧视性限制措施的个人、组织列入反制清单。
+----
