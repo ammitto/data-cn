@@ -40,7 +40,7 @@ sanction_details:
         en: Teledyne Brown Engineering, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: 美国近日再次宣布向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报，严重干涉中国内政，严重损害中国主权和领土完整。
           en: The US recently announced again the sale of weapons to China's Taiwan region, seriously violating the One-China principle and the three China-US joint communiqués, seriously interfering in China's internal affairs, and seriously damaging China's sovereignty and territorial integrity.
@@ -60,7 +60,7 @@ sanction_details:
         en: BRINC Drones, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -69,7 +69,7 @@ sanction_details:
         en: Rapid Flight LLC
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -78,7 +78,7 @@ sanction_details:
         en: Red Six Solutions
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -87,7 +87,7 @@ sanction_details:
         en: Shield AI, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -96,7 +96,7 @@ sanction_details:
         en: SYNEXXUS, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -105,7 +105,7 @@ sanction_details:
         en: Firestorm Labs, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -114,7 +114,7 @@ sanction_details:
         en: Kratos Unmanned Aerial Systems, Inc.
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -123,7 +123,7 @@ sanction_details:
         en: HavocAI
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -132,7 +132,7 @@ sanction_details:
         en: Neros Technologies
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -141,7 +141,7 @@ sanction_details:
         en: Cyberlux Corporation
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -150,7 +150,7 @@ sanction_details:
         en: Domo Tactical Communications
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -159,7 +159,7 @@ sanction_details:
         en: Group W
       type: organization
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -172,7 +172,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: &measures_ind
         - type:
@@ -199,7 +199,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -212,7 +212,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -225,7 +225,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -238,7 +238,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -251,6 +251,6 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2024-12-05'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind

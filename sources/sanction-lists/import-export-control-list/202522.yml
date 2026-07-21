@@ -31,7 +31,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
           en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
@@ -51,7 +51,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -61,7 +61,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -71,7 +71,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -81,7 +81,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -91,7 +91,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -101,7 +101,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -111,7 +111,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -121,7 +121,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -131,7 +131,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -141,7 +141,7 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -151,6 +151,6 @@ sanction_details:
       type: organization
       effective_date: '2025-04-10'
       effective_time: "00:01"
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures

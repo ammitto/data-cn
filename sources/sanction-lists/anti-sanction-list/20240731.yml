@@ -53,7 +53,7 @@ sanction_details:
         en: U.S. Representative for Massachusetts's 2nd congressional district
       type: individual
       effective_date: '2024-07-31'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: |
             近年来频繁采取干涉中国内政、损害中国主权安全发展利益的言行。

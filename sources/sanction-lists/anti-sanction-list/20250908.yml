@@ -43,7 +43,7 @@ sanction_details:
         en: Member of the House of Councillors of Japan
       type: individual
       effective_date: '2025-09-08'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: |
             长期在台湾、钓鱼岛、历史、涉疆、涉藏、涉港等问题上散布谬论，公然参拜靖国神社，严重违背中日四个政治文件精神和一个中国原则，严重干涉中国内政，严重损害中国主权和领土完整。

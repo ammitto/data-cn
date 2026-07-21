@@ -52,7 +52,7 @@ sanction_details:
         en: Former Chairman of the House Select Committee on China, Former U.S. Representative for Wisconsin
       type: individual
       effective_date: '2024-05-21'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason:
         - zh-Hans: |
             近年来频繁采取干涉中国内政、损害中国主权和领土完整、侵犯中方利益的言行。

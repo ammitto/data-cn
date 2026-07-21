@@ -50,7 +50,7 @@ sanction_details:
         en: General Atomics Aeronautical Systems
       type: organization
       effective_date: '2024-04-11'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             美国持续向中国台湾地区出售武器，严重违反一个中国原则和中美三个联合公报规定，严重干涉中国内政，严重损害中国主权和领土完整。中方决定对参与向中国台湾地区出售武器的美国企业采取反制措施。
@@ -72,6 +72,6 @@ sanction_details:
         en: General Dynamics Land Systems
       type: organization
       effective_date: '2024-04-11'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures

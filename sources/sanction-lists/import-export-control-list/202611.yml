@@ -30,7 +30,7 @@ sanction_details:
         en: Mitsubishi Heavy Industries Shipbuilding Co.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: &reason
         - zh-Hans: 为维护国家安全和利益，履行防扩散等国际义务
           en: To safeguard national security and interests, and to fulfill international obligations such as non-proliferation
@@ -51,7 +51,7 @@ sanction_details:
         en: Mitsubishi Heavy Industries Aero Engines, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -60,7 +60,7 @@ sanction_details:
         en: Mitsubishi Heavy Industries Marine Machinery & Equipment Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -69,7 +69,7 @@ sanction_details:
         en: Mitsubishi Heavy Industries Engine & Turbocharger, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -78,7 +78,7 @@ sanction_details:
         en: Mitsubishi Heavy Industries Maritime Systems, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -87,7 +87,7 @@ sanction_details:
         en: Kawasaki Heavy Industries Aerospace Systems Company
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -96,7 +96,7 @@ sanction_details:
         en: KAWAJU Gifu Engineering Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -105,7 +105,7 @@ sanction_details:
         en: Fujitsu Defense & National Security, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -114,7 +114,7 @@ sanction_details:
         en: IHI Power Systems Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -123,7 +123,7 @@ sanction_details:
         en: IHI Master Metal Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -132,7 +132,7 @@ sanction_details:
         en: IHI Jet Service Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -141,7 +141,7 @@ sanction_details:
         en: IHI Aerospace Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -150,7 +150,7 @@ sanction_details:
         en: IHI Aero Manufacturing Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -159,7 +159,7 @@ sanction_details:
         en: IHI Aerospace Engineering Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -168,7 +168,7 @@ sanction_details:
         en: NEC Network and Sensor Systems, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -177,7 +177,7 @@ sanction_details:
         en: NEC Aerospace Systems, Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -186,7 +186,7 @@ sanction_details:
         en: Japan Marine United Corporation
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -195,7 +195,7 @@ sanction_details:
         en: JMU Defense Systems Co., Ltd.
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -204,7 +204,7 @@ sanction_details:
         en: National Defense Academy of Japan
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures
 
@@ -213,6 +213,6 @@ sanction_details:
         en: Japan Aerospace Exploration Agency
       type: organization
       effective_date: '2026-02-24'
-      sanction_list: 出口管制管控名单
+      sanction_list: cn/export-control-list
       reason: *reason
       measures: *measures

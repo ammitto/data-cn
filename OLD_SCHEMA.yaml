@@ -1,0 +1,228 @@
+# China Sanctions Knowledge Graph Schema
+#
+# This defines the data structure for China sanctions as a NORMALIZED knowledge graph.
+# Schema Version: 3.0
+#
+# Key principles:
+# - Entities are LIST-AGNOSTIC (can appear on multiple lists)
+# - Entries are LIST-SPECIFIC (junction records linking entity to list)
+# - IDs do NOT include source prefix (cn-xxx) - the directory structure provides context
+
+# ==============================================================================
+# ENTITY NODES (LIST-AGNOSTIC)
+# ==============================================================================
+# File: entities/{entity_id}.yaml
+# These represent the sanctioned persons or organizations
+# IMPORTANT: Entity IDs do NOT include "cn-" prefix
+
+entity:
+  id: string                    # Local identifier ONLY (e.g., "mitsubishi-heavy-industries")
+                                # NOT "cn-mitsubishi-heavy-industries"
+  type: string                  # "person" or "organization"
+  names:
+    - english: string           # English name
+      chinese: string           # Chinese name (optional)
+      is_primary: boolean       # Is this the primary name?
+
+  # For persons only
+  person_details:
+    date_of_birth: string       # ISO date or Chinese format
+    nationality: string         # Country name
+    gender: string              # "男" or "女"
+    title: string               # Position/title
+
+  # For organizations only
+  organization_details:
+    country_of_registration: string
+
+# ==============================================================================
+# ENTRY NODES (LIST-SPECIFIC)
+# ==============================================================================
+# File: entries/entry-{entity_id}-{list_type_short}.yaml
+# These link entities to specific lists with list-specific data
+# IMPORTANT: Must include list_type field!
+
+sanction_entry:
+  id: string                    # e.g., "entry-mitsubishi-import-export"
+  entity_id: string             # Reference to entity (WITHOUT cn- prefix)
+                                # e.g., "mitsubishi-heavy-industries"
+  list_type: string             # REQUIRED! One of:
+                                #   - "anti-sanction-list"
+                                #   - "import-export-control-list"
+                                #   - "unreliable-entity-list"
+  announcement_id: string       # Reference to announcement (WITHOUT cn- prefix)
+  legal_instrument_ids:         # References to legal instruments (WITHOUT cn- prefix)
+    - string
+    - string
+  measures:                     # Sanction measures applied
+    - string
+  status: string                # "active", "delisted", "exempted"
+  listed_date: string           # ISO date
+  delisted_date: string         # ISO date (if applicable)
+
+# ==============================================================================
+# LIST DEFINITION NODES
+# ==============================================================================
+# File: lists/{list_type}.yaml
+# These define each sanctions list
+
+list:
+  id: string                    # List type identifier (e.g., "import-export-control-list")
+  source: string                # Always "cn"
+  name: string                  # English name
+  name_chinese: string          # Chinese name
+  authority: string             # Issuing authority (e.g., "MOFCOM", "MFA")
+  description: string           # List description (optional)
+  url: string                   # Official URL (optional)
+  legal_instrument_ids:         # Legal instruments that authorize this list
+    - string
+
+# ==============================================================================
+# ANNOUNCEMENT NODES (LIST-AGNOSTIC)
+# ==============================================================================
+# File: announcements/{announcement_id}.yaml
+# These represent official government announcements
+# IMPORTANT: IDs do NOT include "cn-" prefix
+
+announcement:
+  id: string                    # e.g., "mofcom-2026-11" (NOT "cn-mofcom-2026-11")
+  number: string                # e.g., "商务部公告2026年第11号"
+  title: string                 # Full title in Chinese
+  date: string                  # ISO date "YYYY-MM-DD"
+  effective_date: string        # ISO date "YYYY-MM-DD"
+  issuing_authority: string     # "商务部" or "外交部"
+  department: string            # e.g., "安全与管制局"
+  source_url: string            # Official URL
+
+# ==============================================================================
+# LEGAL INSTRUMENT NODES (LIST-AGNOSTIC)
+# ==============================================================================
+# File: legal_instruments/{instrument_id}.yaml
+# These represent the laws and regulations cited as legal basis
+# IMPORTANT: IDs do NOT include "cn-" prefix
+
+legal_instrument:
+  id: string                    # e.g., "export-control-law" (NOT "cn-export-control-law")
+  name_chinese: string          # e.g., "中华人民共和国出口管制法"
+  name_english: string          # e.g., "Export Control Law of the People's Republic of China"
+  short_name: string            # e.g., "出口管制法"
+  enacted_date: string          # ISO date
+  url: string                   # Official text URL (optional)
+
+# ==============================================================================
+# INDEX FILE
+# ==============================================================================
+# File: _index.yaml
+
+index:
+  source: string                # "cn"
+  schema_version: string        # "3.0"
+  structure: string             # "normalized_knowledge_graph"
+  list_types:                   # Available list types for this source
+    - string
+    - string
+  counts:                       # Entity counts
+    entities: integer
+    entries: integer
+    announcements: integer
+    legal_instruments: integer
+    lists: integer
+  fetched_at: string            # ISO timestamp
+
+# ==============================================================================
+# DIRECTORY STRUCTURE
+# ==============================================================================
+# data-cn/processed/
+# ├── entities/                      # NORMALIZED - unique per source
+# │   ├── mitsubishi-heavy-industries.yaml    # NO cn- prefix
+# │   ├── kawasaki-heavy-industries.yaml
+# │   └── ...
+# ├── entries/                       # Links entity to list via list_type field
+# │   ├── entry-mitsubishi-import-export.yaml
+# │   ├── entry-mitsubishi-unreliable.yaml    # Same entity, different list!
+# │   └── ...
+# ├── announcements/                 # NORMALIZED - can affect multiple lists
+# │   ├── mofcom-2026-11.yaml                 # NO cn- prefix
+# │   └── ...
+# ├── legal_instruments/             # NORMALIZED - can authorize multiple lists
+# │   ├── export-control-law.yaml              # NO cn- prefix
+# │   └── ...
+# ├── lists/                         # List definitions
+# │   ├── anti-sanction-list.yaml
+# │   ├── import-export-control-list.yaml
+# │   └── unreliable-entity-list.yaml
+# └── _index.yaml
+
+# ==============================================================================
+# IRI PATTERNS
+# ==============================================================================
+# Entity:     https://www.ammitto.org/entity/cn/{local_id}
+# Entry:      https://www.ammitto.org/entry/cn/{list_type}/{local_id}
+# List:       https://www.ammitto.org/list/cn/{list_type}
+# Instrument: https://www.ammitto.org/legal_instrument/cn/{local_id}
+
+# ==============================================================================
+# EXAMPLES
+# ==============================================================================
+
+# entities/mitsubishi-heavy-industries.yaml
+---
+id: mitsubishi-heavy-industries
+type: organization
+names:
+  - english: Mitsubishi Heavy Industries, Ltd.
+    chinese: 三菱重工業株式会社
+    is_primary: true
+organization_details:
+  country_of_registration: Japan
+
+# entries/entry-mitsubishi-import-export.yaml
+---
+id: entry-mitsubishi-import-export
+entity_id: mitsubishi-heavy-industries
+list_type: import-export-control-list
+announcement_id: mofcom-2026-11
+legal_instrument_ids:
+  - export-control-law
+  - dual-use-export-control-regulation
+measures:
+  - 禁止出口两用物项
+  - 禁止转移或提供两用物项
+status: active
+listed_date: '2024-05-01'
+
+# lists/import-export-control-list.yaml
+---
+id: import-export-control-list
+source: cn
+name: Import-Export Control List
+name_chinese: 出口管制管控名单
+authority: MOFCOM
+legal_instrument_ids:
+  - export-control-law
+  - foreign-trade-law
+
+# legal_instruments/export-control-law.yaml
+---
+id: export-control-law
+name_chinese: 中华人民共和国出口管制法
+name_english: Export Control Law of the People's Republic of China
+short_name: 出口管制法
+enacted_date: '2020-12-01'
+
+# _index.yaml
+---
+source: cn
+schema_version: '3.0'
+structure: normalized_knowledge_graph
+list_types:
+  - anti-sanction-list
+  - import-export-control-list
+  - unreliable-entity-list
+counts:
+  entities: 100
+  entries: 150
+  announcements: 5
+  legal_instruments: 8
+  lists: 3
+fetched_at: "2024-01-15T10:30:00Z"

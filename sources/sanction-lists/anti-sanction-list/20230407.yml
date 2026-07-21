@@ -79,7 +79,7 @@ sanction_details:
         en: Hudson Institute
       type: organization
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: &reason
         - zh-Hans: |
             美方不顾中方反复交涉和坚决反对，执意允许台湾地区领导人蔡英文于2023年3月29日
@@ -106,7 +106,7 @@ sanction_details:
         en: Reagan Library
       type: organization
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_org
 
@@ -119,7 +119,7 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: &measures_ind
         - type:
@@ -148,7 +148,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -163,7 +163,7 @@ sanction_details:
       gender: male
       type: individual
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
 
@@ -178,6 +178,6 @@ sanction_details:
       gender: female
       type: individual
       effective_date: '2023-04-07'
-      sanction_list: 反制裁清单
+      sanction_list: cn/anti-sanction-list
       reason: *reason
       measures: *measures_ind
