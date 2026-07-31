@@ -35,7 +35,7 @@ jobs:
           # TODO: Implement CN source fetcher
           # China sanctions require HTML parsing from mofcom.gov.cn and mfa.gov.cn
           echo "CN source not yet implemented"
-          ammitto fetch cn --format yaml --output-dir processed --verbose || true
+          bundle exec ammitto fetch cn --format yaml --output-dir processed --verbose
 
       - name: Check for changes
         id: check_changes
