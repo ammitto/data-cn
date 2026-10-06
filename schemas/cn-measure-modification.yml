@@ -60,6 +60,15 @@ properties:
         pattern: "^[a-z]{2,3}(-[A-Za-z]{4})?(-[A-Z]{2})?$"
         description: Language code (e.g., "zh-Hans", "en")
         default: zh-Hans
+      type:
+        type: string
+        description: Type of announcement
+      document_id:
+        type: string
+        description: Official document ID, which names the announcement
+      signatory:
+        type: string
+        description: Person who signed the announcement
     additionalProperties: false
   measure_modifications:
     type: object
