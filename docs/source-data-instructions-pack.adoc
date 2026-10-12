@@ -28,7 +28,7 @@ The Ammitto sanctions data system follows the **Open/Closed Principle**:
 │ - YAML source files │     │ - Source parsers    │     │ - Vue components    │
 │ - JSON schemas      │     │ - Transformers      │     │ - API endpoints     │
 │ - Supporting data   │     │ - Ontology models   │     │ - Search index      │
-│ - Generated API     │     │ - Exporters         │     │ - Static pages      │
+│ - Processed YAML    │     │ - Exporters         │     │ - Static pages      │
 └─────────────────────┘     └─────────────────────┘     └─────────────────────┘
 ```
 
@@ -61,6 +61,7 @@ Create a new Git repository named `data-{source}` where `{source}` is the lowerc
 
 ```
 data-{source}/
+├── processed/                    # YAML written by the fetch workflow
 ├── sources/
 │   ├── sanction-lists/           # Main sanction list data
 │   │   ├── {list-type-1}/        # e.g., "consolidated-list", "asset-freeze"
@@ -90,18 +91,6 @@ data-{source}/
 │           └── validation_report.rb
 ├── scripts/
 │   └── validate_{source}_data.rb
-├── api/                          # Generated output (DO NOT EDIT)
-│   ├── v1/
-│   │   ├── node/
-│   │   │   ├── entity/
-│   │   │   ├── entry/
-│   │   │   ├── legal-instrument/
-│   │   │   └── ...
-│   │   ├── all.jsonld
-│   │   ├── search-index.json
-│   │   └── stats.json
-│   └── ontology/
-├── Rakefile                      # Build tasks
 ├── Gemfile
 ├── Gemfile.lock
 └── README.adoc                   # Documentation
@@ -571,47 +560,15 @@ module Ammitto
 end
 ----
 
-== Step 5: Create Rakefile for Data Generation
+== Step 5: Fetch and Publish
 
-[source,ruby]
-----
-# Rakefile
-# frozen_string_literal: true
+If the source has an automated fetch, add a `.github/workflows/fetch.yml`
+that runs `ammitto fetch {source} --format yaml --output-dir processed` and
+commits `processed/`. A source curated by hand, such as `cn`, keeps its YAML
+under `sources/` instead. The data repository holds no generated JSON-LD.
 
-require 'fileutils'
-
-desc 'Clean generated API files'
-task :clean do
-  api_dir = File.expand_path('api', __dir__)
-  # ... clean logic
-end
-
-desc 'Generate API files from source YAML data'
-task :generate do
-  ammitto_path = File.expand_path('../ammitto/lib', __dir__)
-  $LOAD_PATH.unshift(ammitto_path) if Dir.exist?(ammitto_path)
-
-  require 'ammitto'
-  require 'ammitto/cli/harmonize_command'
-
-  sources_dir = File.expand_path('..', __dir__)
-  output_dir = File.expand_path('api', __dir__)
-
-  options = {
-    sources_dir: sources_dir,
-    output_dir: output_dir,
-    verbose: ENV['VERBOSE'] == 'true'
-  }
-
-  command = Ammitto::Cmd::HarmonizeCommand.new(options, [:new_source])
-  command.run
-end
-
-desc 'Clean and regenerate all API files'
-task regenerate: [:clean, :generate]
-
-task default: :generate
-----
+The `ammitto.github.io` deploy workflow clones every `data-*` repository and
+runs `ammitto harmonize` over them to build the published API.
 
 == Step 6: Website Integration
 
@@ -664,8 +621,8 @@ The website (`ammitto.github.io`) automatically displays data from the generated
 | `/api/v1/node/entity/index.jsonld`
 | Entity index
 
-| `/api/v1/search-index.json`
-| Search index
+| `/api/v1/search-index/manifest.json`
+| Search index manifest, naming one shard file per source
 
 |===
 
@@ -704,13 +661,12 @@ Group:
 | `data-{source}` | Add source YAML files in `sources/`
 | `data-{source}` | Create supporting data files
 | `data-{source}` | Create validation library in `lib/`
-| `data-{source}` | Create Rakefile
 | `ammitto` | Create source module in `sources/{source}/`
 | `ammitto` | Implement transformer
 | `ammitto` | Register transformer in Registry
 | `ammitto` | Add tests for transformer
-| `data-{source}` | Run `rake regenerate` to generate API
-| `ammitto.github.io` | Copy generated API to website
+| `data-{source}` | Add a `fetch.yml` workflow writing `processed/`
+| `ammitto.github.io` | Add the repository and source to the deploy workflow
 | `ammitto.github.io` | Verify website displays data correctly
 
 |===
@@ -731,11 +687,12 @@ Group:
 
 === Debug Mode
 
-Run generation with verbose output:
+Run harmonize with verbose output from an `ammitto` gem checkout that sits
+beside the `data-*` repositories:
 
 [source,bash]
 ----
-VERBOSE=true bundle exec rake regenerate
+bundle exec ruby exe/ammitto harmonize {source} --verbose --sources-dir .. --output-dir /tmp/api
 ----
 
 == Contact
@@ -760,7 +717,6 @@ For questions or issues, please open an issue on the relevant repository.
 │   │sources/│       │sources/│       │sources/│       │sources/│                │
 │   │schemas/│       │schemas/│       │schemas/│       │schemas/│                │
 │   │lib/    │       │lib/    │       │lib/    │       │lib/    │                │
-│   │api/    │       │api/    │       │api/    │       │api/    │                │
 │   └────────┘       └────────┘       └────────┘       └────────┘                │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘

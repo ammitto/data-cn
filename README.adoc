@@ -2,7 +2,7 @@
 
 == Purpose
 
-This repository stores downloaded and processed sanctions data from the
+This repository stores curated sanctions data from the
 People's Republic of China government sanctions announcements.
 
 The data is maintained by the Ammitto project and used by the `ammitto` Ruby
@@ -219,33 +219,6 @@ The data follows a normalized structure where:
 * **Lists define sanctions regimes** - Each list has its own metadata
 * **Entries are junction records** - They link entities to lists with list-specific data
 
-=== Directory Structure
-
-```
-data-cn/processed/
-├── entities/                      # NORMALIZED - unique per source
-│   ├── mitsubishi-heavy-industries.yaml    # No prefix, just local ID
-│   ├── kawasaki-heavy-industries.yaml
-│   └── ...
-├── entries/                       # Links entity to list via list_type field
-│   ├── entry-mitsubishi-import-export.yaml # For import-export-control-list
-│   ├── entry-mitsubishi-unreliable.yaml    # Same entity, different list!
-│   └── ...
-├── announcements/                 # NORMALIZED - can affect multiple lists
-│   ├── mofcom-2026-11.yaml
-│   ├── mfa-2025-01.yaml
-│   └── ...
-├── legal_instruments/             # NORMALIZED - can authorize multiple lists
-│   ├── export-control-law.yaml    # No cn- prefix
-│   ├── anti-sanction-law.yaml
-│   └── ...
-├── lists/                         # List definitions
-│   ├── anti-sanction-list.yaml
-│   ├── import-export-control-list.yaml
-│   └── unreliable-entity-list.yaml
-└── _index.yaml
-```
-
 === IRI Structure
 
 All resources use normalized IRIs:
@@ -348,45 +321,35 @@ source_url: https://www.mofcom.gov.cn/...
 
 == Source Data Format
 
-The processed YAML files follow these patterns:
+There is no `processed/` directory. The data is the YAML under `sources/`,
+maintained by hand. Each announcement file under `sources/sanction-lists/`
+holds an `announcement` block and a `sanction_details` block, whose
+`entities` list carries one entry per sanctioned party
+(schema: `schemas/cn-announcement.yml`):
 
-=== Organization Entity
 [source,yaml]
 ----
-id: fujitsu-defense-national-security
-type: organization
-names:
-  - full_name: "Fujitsu Defense & National Security, Ltd."
-    is_primary: true
-    script: Latn
-  - full_name: "富士通防衛と国家安全株式会社"
-    is_primary: false
-    script: Hani
-source_references:
-  - source_code: cn
-    reference_number: mofcom-2026-11
-organization_details:
-  country_of_registration: Japan
-----
-
-=== Person Entity
-[source,yaml]
-----
-id: kathy-warden
-type: person
-names:
-  - full_name: "Kathy J. Warden"
-    is_primary: true
-    script: Latn
-  - full_name: "凯西·沃登"
-    is_primary: false
-    script: Hani
-source_references:
-  - source_code: cn
-    reference_number: mfa-2024-05-22
-person_details:
-  title: "Chairman, CEO and President of Northrop Grumman"
-  gender: female
+sanction_details:
+  instruments:
+    - id: cn/npc-anti-foreign-sanctions-law
+  entities:
+    - name:
+        zh-Hans: 麦克·加拉格尔
+        en: Mike Gallagher
+      title:
+        zh-Hans: 美国国会众议院"中国特设委"前任主席、威斯康星州前联邦众议员
+        en: Former Chairman of the House Select Committee on China, ...
+      type: individual
+      effective_date: '2024-05-21'
+      sanction_list: cn/anti-sanction-list
+      reason:
+        - zh-Hans: ...
+          en: ...
+      measures:
+        - type:
+            - asset_freeze
+          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
+          en: Freeze all assets in China, ...
 ----
 
 === Field Definitions
@@ -395,25 +358,34 @@ person_details:
 |===
 | Field | Description
 
-| `id`
-| Unique slug identifier (from English or Chinese name)
+| `name`
+| Name keyed by language (`zh-Hans`, `en`)
 
 | `type`
-| Entity type: `person` or `organization`
+| Entity type: `individual` or `organization`
 
-| `names`
-| Array of name variants; Chinese names use `script: Hani`
+| `title`
+| Optional position or description, keyed by language
 
-| `source_references`
-| Links to source announcement
+| `gender`
+| Optional (individuals only)
 
-| `person_details`
-| Person-specific: title, gender
+| `effective_date`
+| Date the listing takes effect (`effective_time` where the announcement gives one)
 
-| `organization_details`
-| Organization-specific: country_of_registration
+| `sanction_list`
+| The list identifier, e.g. `cn/anti-sanction-list`, `cn/unreliable-entity-list`
 
+| `reason`
+| Array of reasons, each keyed by language
+
+| `measures`
+| Array of measures: `type` codes plus the measure text keyed by language
 |===
+
+Files under `sources/sanction-updates/` follow `schemas/cn-measure-modification.yml`
+and files under `sources/legal-instruments/` follow `schemas/cn-legal-instrument.yml`;
+see the Source YAML Schema section below.
 
 == Harmonized Data Format
 
@@ -1224,94 +1196,20 @@ The following measure types are supported in the source YAML schema:
 
 == Updating Data
 
-Data is automatically updated daily via GitHub Actions.
-
-To manually update using the ammitto gem:
-
-[source,shell]
-----
-# From the ammitto gem directory
-bundle exec ruby exe/ammitto fetch cn --format yaml --output-dir ./processed
-----
-
-To migrate existing data to normalized structure:
+The YAML under `sources/` is curated by hand in this repository. After
+editing, validate it with `scripts/validate_cn_data.rb`:
 
 [source,shell]
 ----
-# Run the migration script
-ruby scripts/migrate_iri_structure.rb /path/to/data-cn/processed
+ruby scripts/validate_cn_data.rb
 ----
 
 == Knowledge Graph Integration
 
-This repository's source YAML data feeds into the Ammitto knowledge graph.
+This repository's YAML data feeds into the Ammitto knowledge graph.
 
-=== Data Flow Architecture
-
-The harmonization process transforms source YAML data into JSON-LD knowledge graph nodes:
-
-....
-┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
-│   Source YAML       │     │   Ammitto Gem       │     │   JSON-LD Output    │
-│   (sources/)        │────▶│   Transformer       │────▶│   (api/)            │
-│                     │     │                     │     │                     │
-│ • Announcement      │     │ • CnAnnouncement    │     │ • Entity nodes      │
-│ • Sanction details  │     │ • CnEntity          │     │ • Entry nodes       │
-│ • Legal instruments │     │ • CnMeasure         │     │ • Regime nodes      │
-│ • Modifications     │     │ • Transformer       │     │ • Authority nodes   │
-└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
-....
-
-=== Rake Tasks
-
-The repository provides rake tasks for managing the knowledge graph generation:
-
-[source,shell]
-----
-# Clean all generated API files
-bundle exec rake clean
-
-# Generate API files from source YAML
-bundle exec rake generate
-
-# Clean and regenerate (recommended for updates)
-bundle exec rake regenerate
-
-# Generate with verbose output
-VERBOSE=true bundle exec rake generate
-....
-
-=== Output Directory Structure
-
-The `api/` directory contains the generated JSON-LD knowledge graph:
-
-....
-api/
-├── node/
-│   ├── entity/
-│   │   └── cn/
-│   │       └── {local_id}.jsonld         # Entity identity data
-│   ├── entry/
-│   │   └── cn/
-│   │       ├── anti-sanction-list/
-│   │       │   └── {local_id}.jsonld     # Anti-sanction entries
-│   │       ├── import-export-control-list/
-│   │       │   └── {local_id}.jsonld     # Export control entries
-│   │       └── unreliable-entity-list/
-│   │           └── {local_id}.jsonld     # Unreliable entity entries
-│   ├── regime/
-│   │   ├── cn_anti_sanctions.jsonld
-│   │   ├── cn_export_control.jsonld
-│   │   └── cn_unreliable_entity.jsonld
-│   └── authority/
-│       └── cn.jsonld
-├── by-list/                               # Entries grouped by list
-├── by-authority/                          # Entries grouped by authority
-├── by-type/                               # Entities grouped by type
-├── all.jsonld                             # Aggregated graph
-├── search-index.json                      # Search index
-└── stats.json                             # Statistics
-....
+Harmonized JSON-LD for this source:
+https://www.ammitto.org/api/v1/sources/cn.jsonld
 
 === Entity-Entry Relationship
 
@@ -1403,44 +1301,6 @@ The transformer maps Chinese list names to URL-safe slugs:
 | unreliable-entity-list
 
 |===
-
-=== Usage Examples
-
-==== Loading Entity Data
-
-[source,ruby]
-----
-require 'json'
-
-# Load entity
-entity = JSON.parse(File.read('api/node/entity/cn/202535-csbc-corporation-taiwan.jsonld'))
-
-# Get entity identity
-puts entity['entity_type']  # => "organization"
-puts entity['names'].first['full_name']  # => "CSBC Corporation, Taiwan"
-
-# Get associated entries
-entry_id = entity['sanction_entry_ids'].first
-entry = JSON.parse(File.read("api/node/entry/cn/import-export-control-list/#{File.basename(entry_id)}.jsonld"))
-
-# Get sanction effects
-entry['effects'].each do |effect|
-  puts "#{effect['effect_type']}: #{effect['description']}"
-end
-----
-
-==== Querying by List Type
-
-[source,ruby]
-----
-# Get all import-export control list entries
-entries = Dir.glob('api/node/entry/cn/import-export-control-list/*.jsonld')
-
-entries.each do |path|
-  entry = JSON.parse(File.read(path))
-  puts "#{entry['reference_number']}: #{entry['status']}"
-end
-----
 
 === Regime Codes
 
