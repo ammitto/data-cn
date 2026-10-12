@@ -68,7 +68,8 @@ The Ammitto project needs a comprehensive harmonized data model that serves as a
   - Generated search-index.json (105KB)
   - Generated stats.json
 - [x] 8.7 Update ammitto.github.io website
-  - Copied cn.jsonld to ammitto.github.io/api/v1/sources/
+  - Copied cn.jsonld to ammitto.github.io/api/v1/sources/ (superseded: the
+    site deploy workflow now builds its API with `ammitto harmonize`)
   - Updated stats.json (CN: 168 -> 323 entities, Total: 83918 -> 84073)
   - Regenerated search-index.json
   - Regenerated node files
