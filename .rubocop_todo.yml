@@ -54,7 +54,6 @@ Metrics/PerceivedComplexity:
 Naming/PredicatePrefix:
   Exclude:
     - 'spec/**/*'
-    - 'lib/data_cn/validation_result.rb'
 
 # Offense count: 1
 # Configuration parameters: AllowedConstants.
@@ -63,12 +62,6 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'scripts/load_and_test_cn_data.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/IfUnlessModifier:
-  Exclude:
-    - 'lib/data_cn/validator.rb'
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -85,40 +78,8 @@ Style/NumericPredicate:
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   Exclude:
-    - 'lib/data_cn.rb'
-    - 'lib/data_cn/file_finder.rb'
-    - 'lib/data_cn/schema_loader.rb'
-    - 'lib/data_cn/schema_resolver.rb'
-    - 'lib/data_cn/validation_report.rb'
-    - 'lib/data_cn/validator.rb'
     - 'scripts/load_and_test_cn_data.rb'
     - 'scripts/validate_cn_data.rb'
-    - 'spec/data_cn/validator_spec.rb'
-
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
-  Exclude:
-    - 'lib/data_cn/validation_report.rb'
-
-# Offense count: 12
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyleForMultiline.
-# SupportedStylesForMultiline: comma, consistent_comma, diff_comma, no_comma
-Style/TrailingCommaInArguments:
-  Exclude:
-    - 'lib/data_cn/validator.rb'
-    - 'spec/data_cn/validator_spec.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyleForMultiline.
-# SupportedStylesForMultiline: comma, consistent_comma, diff_comma, no_comma
-Style/TrailingCommaInArrayLiteral:
-  Exclude:
-    - 'lib/data_cn/schema_resolver.rb'
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
