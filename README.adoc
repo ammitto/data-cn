@@ -1,1336 +1,150 @@
-= Ammitto China Sanctions Data Repository
+= Ammitto China sanctions data
 
-== Purpose
+This repository maintains Chinese sanctions and countermeasure announcements
+as YAML for Ammitto. Contributors transcribe Ministry of Foreign Affairs
+(MFA) and Ministry of Commerce (MOFCOM) announcements into `sources/`, with
+one file per official announcement and its source URL.
 
-This repository stores curated sanctions data from the
-People's Republic of China government sanctions announcements.
+== Source
 
-The data is maintained by the Ammitto project and used by the `ammitto` Ruby
-gem for querying international sanctions information.
+* Ministry of Foreign Affairs (MFA), anti-sanction list and countermeasures (反制裁清单和措施): https://www.mfa.gov.cn/web/wjb_673085/zfxxgk_674865/gknrlb/fzcqdcs/
+* Ministry of Commerce (MOFCOM), which publishes the Unreliable Entity List (不可靠实体清单) and the Export Control List (出口管制管控名单) announcements: https://www.mofcom.gov.cn/
 
-== Legal Basis
+China publishes these lists as individual announcements, not as one
+downloadable file. Each file here records the URL of the announcement it was
+transcribed from (`announcement.url`).
 
-China maintains several sanctions and restricted entity lists:
+The three lists covered:
 
-* **不可靠实体清单 (Unreliable Entity List)** - Ministry of Commerce (MOFCOM)
-* **反制裁清单 (Anti-Sanctions List)** - Ministry of Foreign Affairs (MFA)
-* **出口管制管控名单 (Export Control List)** - MOFCOM
+* Anti-Sanction List (`cn/anti-sanction-list`), MFA
+* Unreliable Entity List (`cn/unreliable-entity-list`), MOFCOM
+* Export Control List (`cn/export-control-list`), MOFCOM
 
-These are implemented through the Anti-Foreign Sanctions Law (2021) and
-various ministerial regulations.
+== Contents
 
-== Data Source
+The data is in `sources/`:
 
-China maintains multiple sanctions lists:
+* `sources/sanction-lists/anti-sanction-list/`: MFA decisions, named after the publication date, such as `20251226.yml`
+* `sources/sanction-lists/unreliable-entity-list/` and `sources/sanction-lists/import-export-control-list/`: MOFCOM announcements, named after the year and announcement number, such as `202501.yml` for 〔2025〕1号
+* `sources/sanction-updates/unreliable-entity-list-updates/`: announcements that suspend or end earlier measures, named after the date
+* `sources/legal-instruments/`: the laws and regulations the announcements cite
+* `sources/supporting/`: identifiers for the lists, publishing bodies and document types used in the files
 
-.Unreliable Entity List (不可靠实体清单)
-* **Authority**: Ministry of Commerce (商务部)
-* **URL**: http://mofcom.gov.cn
-* **Effects**: Import/export ban, investment ban
+The schemas for these files are in `schemas/`. `reference-docs/` holds the
+original Chinese texts as Markdown.
 
-.Anti-Sanctions List (反制裁清单)
-* **Authority**: Ministry of Foreign Affairs (外交部)
-* **URL**: http://mfa.gov.cn
-* **Effects**: Asset freeze, transaction ban, entry ban
+An announcement file in `sources/sanction-lists/` has two parts:
 
-.Export Control List (出口管制管控名单)
-* **Authority**: Ministry of Commerce
-* **Effects**: Export restrictions
+[cols="1,1,3"]
+|===
+| Key | Type | Meaning
 
-== Source Data Structure
+| `announcement.title` | list | Title, in Chinese (`zh-Hans`) and English (`en`)
+| `announcement.url` | string | Official URL of the announcement
+| `announcement.publish_date` | string | Publication date, `YYYY-MM-DD`; `publish_time` when known
+| `announcement.authority`, `publisher`, `signatory` | string | Issuing body, as an identifier from `sources/supporting/organizations.yml`; in a few files `signatory` is the signing official's name, with `signatory_title`
+| `announcement.type` | string | Document type, as an identifier from `sources/supporting/document-types.yml`
+| `announcement.document_id` | string | Official document number, such as `第19号`
+| `announcement.content` | string | Full text of the announcement, in Chinese
+| `sanction_details.instruments` | list | Laws cited: an `id` naming the law and, where cited, `articles`
+| `sanction_details.entities` | list | The listed parties, described below
+|===
 
-The `sources/` directory contains raw source data organized by type:
+Each entry in `sanction_details.entities`:
 
-```
-sources/
-├── sanction-lists/                          # Sanction list announcements (38 files)
-│   ├── anti-sanction-list/                  # 反制裁清单 (MFA) - 16 files
-│   │   ├── 20221223.yml
-│   │   ├── 20230407.yml
-│   │   └── ...
-│   ├── import-export-control-list/          # 出口管制管控名单 (MOFCOM) - 7 files
-│   │   ├── 202501.yml
-│   │   ├── 202522.yml
-│   │   └── ...
-│   └── unreliable-entity-list/             # 不可靠实体清单 (MOFCOM) - 14 files
-│       ├── 202301.yml
-│       ├── 202501.yml
-│       └── ...
-├── sanction-updates/                        # Measure modifications (3 files)
-│   └── unreliable-entity-list-updates/      # Suspend/stop actions
-│       ├── 20250514.yml
-│       ├── 20250812.yml
-│       └── 20251105.yml
-└── legal-instruments/                       # Legal instruments (7 files)
-    ├── 中华人民共和国反外国制裁法.yml
-    ├── 中华人民共和国出口管制法.yml
-    ├── 中华人民共和国对外贸易法.yml
-    ├── 中华人民共和国国家安全法 2015.yml
-    ├── 中华人民共和国两用物项出口管制条例.yml
-    ├── 不可靠实体清单规定.yml
-    └── ...
-```
+[cols="1,1,3"]
+|===
+| Key | Type | Meaning
 
-=== Schema Types
+| `name` | map | Name in Chinese (`zh-Hans`) and, where available, English (`en`)
+| `type` | string | `organization` or `individual`
+| `title` | map | Individuals: position, in Chinese and English, where given
+| `gender` | string | Individuals: `male` or `female`, where given
+| `sanction_list` | string | Which list: `cn/anti-sanction-list`, `cn/unreliable-entity-list` or `cn/export-control-list`
+| `effective_date` | string | Date the measures take effect
+| `reason` | list | Reason given, in Chinese and English
+| `measures` | list | Each measure in Chinese and English, with `type`, a list of codes such as `asset_freeze`, `prohibit_transactions`, `entry_ban` or `export_license_requirement`
+|===
 
-Each YAML file follows one of three schema types:
+Files in `sources/sanction-updates/` carry `measure_modifications.modifications`
+instead: each with `action` (such as `suspend`), the announcement it applies
+to (`target_announcement_id`, `target_announcement_date`), `effective_date`,
+`until_date` where set, and `notes`.
 
-. **Announcement Schema** - Standard sanction announcements with `sanction_details`
-. **Modification Schema** - Temporal modifications with `measure_modifications`
-. **Legal Instrument Schema** - Laws and regulations with structured content
+The files use YAML anchors to repeat shared reasons and measures, so a loader
+must allow aliases.
 
-Schema files are located in `schemas/`:
+== Using the data
 
-* `schemas/cn-announcement.yml` - For sanction list announcements
-* `schemas/cn-measure-modification.yml` - For measure modifications (suspend/stop)
-* `schemas/cn-legal-instrument.yml` - For legal instruments (laws, regulations)
+Clone or download this repository and run either example from its root
+directory. The Python example requires PyYAML
+(`python3 -m pip install PyYAML`).
 
-=== Sanction Updates (Measure Modifications)
+Ruby:
 
-Measure modification files track temporal changes to sanctions:
-
-[source,yaml]
+[source,ruby]
 ----
-# yaml-language-server: $schema=../../../schemas/cn-measure-modification.yml
----
-announcement:
-  title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
-  url: https://www.mofcom.gov.cn/...
-  publish_date: '2025-05-14'
-  publish_time: "22:00"
-  authority: 中华人民共和国商务部新闻办公室
-  content: |
-    有记者问：...
+require "yaml"
 
-measure_modifications:
-  instruments:
-    - id: cn/npc-anti-foreign-sanctions-law
-    - id: cn/mofcom-unreliable-entity-list-provisions
-  modifications:
-    - action: suspend                      # or "stop"
-      target_announcement_id: 〔2025〕7号
-      target_announcement_date: '2025-04-04'
-      effective_date: '2025-05-14'
-      until_date: '2025-08-12'               # Optional: when suspension ends
-      notes: 暂停4月4日公告相关措施90天
+Dir.glob("sources/sanction-lists/**/*.{yml,yaml}").sort.each do |path|
+  doc = YAML.safe_load_file(path, aliases: true)
+  date = doc["announcement"]["publish_date"]
+  doc["sanction_details"]["entities"].each do |entity|
+    name = entity["name"]["en"] || entity["name"]["zh-Hans"]
+    puts [date, entity["sanction_list"], entity["type"], name].join("\t")
+  end
+end
 ----
 
-Modification actions:
+Python:
 
-[cols="1,3"]
-|===
-| Action | Description
-
-| `suspend`
-| Temporarily suspend measures until a specified or unspecified date
-
-| `stop`
-| Permanently stop/terminate measures
-
-|===
-
-=== Legal Instruments
-
-Legal instruments in `legal-instruments/` are stored as structured YAML files
-with full text content organized hierarchically:
-
-[source,yaml]
+[source,python]
 ----
-# yaml-language-server: $schema=../../schemas/cn-legal-instrument.yml
----
-title: 中华人民共和国反外国制裁法
-url: http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311892.html
-type: 全国人民代表大会常务委员会公告
-document_id: 中华人民共和国反外国制裁法
-published_date: '2021-06-10'
-effective_date: '2021-06-10'
-approval_history:
-  - 2021年6月10日第十三届全国人民代表大会常务委员会第二十九次会议通过
+import glob
+import yaml
 
-content:
-  - type: chapter
-    index: 1
-    label: 第一章
-    title: 总则
-    content:
-      - type: clause
-        index: 1
-        label: 第一条
-        content:
-          - 为了维护国家主权、安全、发展利益...
-      - type: clause
-        index: 2
-        label: 第二条
-        content:
-          - 中华人民共和国坚持独立自主的和平外交政策...
+paths = glob.glob("sources/sanction-lists/**/*.yml", recursive=True)
+paths += glob.glob("sources/sanction-lists/**/*.yaml", recursive=True)
+for path in sorted(paths):
+    with open(path, encoding="utf-8") as f:
+        doc = yaml.safe_load(f)
+    date = doc["announcement"]["publish_date"]
+    for entity in doc["sanction_details"]["entities"]:
+        name = entity["name"].get("en") or entity["name"]["zh-Hans"]
+        print(date, entity["sanction_list"], entity["type"], name, sep="\t")
 ----
 
-Content types supported:
+The same lists, harmonized with the other sources into JSON-LD:
+https://www.ammitto.org/api/v1/sources/cn.jsonld
 
-[cols="1,3"]
-|===
-| Type | Description
+== Updates
 
-| `chapter`
-| Chapter or section with optional title and nested content
+This repository is maintained by hand: a new announcement is transcribed into
+a new file under `sources/`.
 
-| `clause`
-| Article/clause with label (e.g., "第一条")
+== Maintaining the data
 
-| `numbered-list`
-| Numbered list container
-
-| `list-item`
-| Individual list item with label (e.g., "（一）")
-
-|===
-
-Available legal instruments:
-
-[cols="1,2"]
-|===
-| File | Description
-
-| 中华人民共和国反外国制裁法.yml
-| Anti-Foreign Sanctions Law (2021)
-
-| 中华人民共和国出口管制法.yml
-| Export Control Law
-
-| 中华人民共和国对外贸易法.yml
-| Foreign Trade Law
-
-| 不可靠实体清单规定.yml
-| Unreliable Entity List Provisions
-
-| 中华人民共和国两用物项出口管制条例.yml
-| Dual-Use Export Control Regulations
-
-| 中华人民共和国国家安全法 2015.yml
-| National Security Law (2015)
-
-|===
-
-== Normalized Knowledge Graph Structure
-
-The data follows a normalized structure where:
-
-* **Entities are LIST-AGNOSTIC** - A person or organization can appear on multiple lists
-* **Lists define sanctions regimes** - Each list has its own metadata
-* **Entries are junction records** - They link entities to lists with list-specific data
-
-=== IRI Structure
-
-All resources use normalized IRIs:
-
-```
-# Entity (list-agnostic)
-https://www.ammitto.org/entity/cn/{local_id}
-
-# Entry (list-specific)
-https://www.ammitto.org/entry/cn/{list_type}/{local_id}
-
-# List
-https://www.ammitto.org/list/cn/{list_type}
-```
-
-Example IRIs:
-
-```
-https://www.ammitto.org/entity/cn/mitsubishi-heavy-industries
-https://www.ammitto.org/entry/cn/import-export-control-list/mitsubishi-heavy-industries
-https://www.ammitto.org/entry/cn/unreliable-entity-list/mitsubishi-heavy-industries
-https://www.ammitto.org/list/cn/import-export-control-list
-```
-
-=== Available List Types
-
-[cols="1,2,2"]
-|===
-| List Type | Name (English) | Name (Chinese)
-
-| `anti-sanction-list` | Anti-Sanction List | 反制裁清单
-| `import-export-control-list` | Import-Export Control List | 出口管制管控名单
-| `unreliable-entity-list` | Unreliable Entity List | 不可靠实体清单
-|===
-
-== Entity Schema
-
-=== Entity (List-Agnostic)
-
-[source,yaml]
-----
-# entities/mitsubishi-heavy-industries.yaml
-id: mitsubishi-heavy-industries      # NO cn- prefix
-type: organization
-names:
-  - english: Mitsubishi Heavy Industries, Ltd.
-    chinese: 三菱重工業株式会社
-    is_primary: true
-organization_details:
-  country_of_registration: Japan
-----
-
-=== Entry (List-Specific)
-
-[source,yaml]
-----
-# entries/entry-mitsubishi-import-export.yaml
-id: entry-mitsubishi-import-export
-entity_id: mitsubishi-heavy-industries   # Reference to entity
-list_type: import-export-control-list    # Which list this entry belongs to
-announcement_id: mofcom-2026-11
-legal_instrument_ids:
-  - export-control-law                   # NO cn- prefix
-  - dual-use-export-control-regulation
-measures:
-  - 禁止出口两用物项
-  - 禁止转移或提供两用物项
-status: active
-listed_date: '2024-05-01'
-----
-
-=== List Definition
-
-[source,yaml]
-----
-# lists/import-export-control-list.yaml
-id: import-export-control-list
-source: cn
-name: Import-Export Control List
-name_chinese: 出口管制管控名单
-authority: MOFCOM
-legal_instrument_ids:
-  - export-control-law
-  - foreign-trade-law
-----
-
-=== Announcement
-
-[source,yaml]
-----
-# announcements/mofcom-2026-11.yaml
-id: mofcom-2026-11                       # NO cn- prefix
-number: 商务部公告2026年第11号
-title: 公布将20家日本实体列入出口管制管控名单
-date: '2026-02-24'
-effective_date: '2026-02-24'
-issuing_authority: 中华人民共和国商务部
-source_url: https://www.mofcom.gov.cn/...
-----
-
-== Source Data Format
-
-There is no `processed/` directory. The data is the YAML under `sources/`,
-maintained by hand. Each announcement file under `sources/sanction-lists/`
-holds an `announcement` block and a `sanction_details` block, whose
-`entities` list carries one entry per sanctioned party
-(schema: `schemas/cn-announcement.yml`):
-
-[source,yaml]
-----
-sanction_details:
-  instruments:
-    - id: cn/npc-anti-foreign-sanctions-law
-  entities:
-    - name:
-        zh-Hans: 麦克·加拉格尔
-        en: Mike Gallagher
-      title:
-        zh-Hans: 美国国会众议院"中国特设委"前任主席、威斯康星州前联邦众议员
-        en: Former Chairman of the House Select Committee on China, ...
-      type: individual
-      effective_date: '2024-05-21'
-      sanction_list: cn/anti-sanction-list
-      reason:
-        - zh-Hans: ...
-          en: ...
-      measures:
-        - type:
-            - asset_freeze
-          zh-Hans: 冻结在我国境内的动产、不动产和其他各类财产
-          en: Freeze all assets in China, ...
-----
-
-=== Field Definitions
-
-[cols="1,4"]
-|===
-| Field | Description
-
-| `name`
-| Name keyed by language (`zh-Hans`, `en`)
-
-| `type`
-| Entity type: `individual` or `organization`
-
-| `title`
-| Optional position or description, keyed by language
-
-| `gender`
-| Optional (individuals only)
-
-| `effective_date`
-| Date the listing takes effect (`effective_time` where the announcement gives one)
-
-| `sanction_list`
-| The list identifier, e.g. `cn/anti-sanction-list`, `cn/unreliable-entity-list`
-
-| `reason`
-| Array of reasons, each keyed by language
-
-| `measures`
-| Array of measures: `type` codes plus the measure text keyed by language
-|===
-
-Files under `sources/sanction-updates/` follow `schemas/cn-measure-modification.yml`
-and files under `sources/legal-instruments/` follow `schemas/cn-legal-instrument.yml`;
-see the Source YAML Schema section below.
-
-== Harmonized Data Format
-
-After harmonization, entities are transformed into JSON-LD format using the
-Ammitto gem's harmonized models.
-
-=== Source YAML Schema
-
-The source YAML files in `sources/` follow two schema types:
-
-==== Announcement Schema (Type 1)
-
-Standard sanction announcements with `sanction_details`:
-
-[source,yaml]
-----
-announcement:
-  title: 关于对...采取反制裁措施的决定
-  url: https://www.mfa.gov.cn/...
-  publish_date: '2022-12-23'
-  publish_time: "08:00"                  # Optional: HH:MM format
-  authority: 中华人民共和国外交部
-  publisher: 外交部                       # Optional
-  type: 中华人民共和国外交部令
-  document_id: 第4号
-  signatory: 王毅                         # Optional
-  signatory_title: 部长                   # Optional
-  content: |                              # Full announcement text
-    现公布《关于对...》
-
-sanction_details:
-  instruments:
-    - id: cn/npc-anti-foreign-sanctions-law
-      articles:                          # Optional
-        - 第四条
-        - 第五条
-  entities:
-    - name:
-        zh-Hans: 余茂春
-        en: Miles Yu                     # Optional
-      type: individual                   # or organization
-      effective_date: '2022-12-23'
-      effective_time: "08:00"            # Optional: HH:MM format
-      sanction_list: 反制裁清单
-      reason:
-        - zh-Hans: 美方借口所谓...
-          en: The US imposed...          # Optional
-      measures:
-        - type:
-          - asset_freeze
-          - prohibit_transactions
-          zh-Hans: 冻结在我国境内的...
-          en: Freeze all assets...       # Optional
-      title:                             # Optional (for individuals)
-        zh-Hans: 哈德逊研究所所长
-        en: Director of Hudson Institute
-      gender: male                       # Optional (for individuals)
-----
-
-==== Measure Modification Schema (Type 2)
-
-Temporal modifications (suspend/continue/stop) with `measure_modifications`:
-
-[source,yaml]
-----
-announcement:
-  title: 商务部新闻发言人就调整不可靠实体清单措施答记者问
-  publish_date: '2025-05-14'
-  publish_time: "22:00"
-  authority: 中华人民共和国商务部新闻办公室
-  content: |
-
-measure_modifications:
-  instruments:
-    - id: cn/npc-anti-foreign-sanctions-law
-  modifications:
-    - action: suspend                     # or continue_suspend, stop
-      target_announcement_id: 〔2025〕7号
-      target_announcement_date: '2025-04-04'
-      effective_date: '2025-05-14'
-      effective_time: "22:00"             # Optional: HH:MM format
-      duration_days: 90                   # Optional
-      duration_description: 1年           # Optional
-      affected_entities: 11家美国实体
-      notes: 暂停4月4日公告相关措施90天
-----
-
-=== Harmonized JSON-LD Output
-
-The China transformer in the ammitto gem converts source YAML to harmonized JSON-LD:
-
-[source,json]
-----
-{
-  "@context": "https://www.ammitto.org/schema/v1/context.jsonld",
-  "@id": "https://www.ammitto.org/entity/cn/fujitsu-defense-national-security",
-  "@type": "OrganizationEntity",
-  "names": [
-    {
-      "@type": "NameVariant",
-      "fullName": "Fujitsu Defense & National Security, Ltd.",
-      "script": "Latn",
-      "isPrimary": true
-    },
-    {
-      "@type": "NameVariant",
-      "fullName": "富士通防衛と国家安全株式会社",
-      "script": "Hani",
-      "isPrimary": false
-    }
-  ],
-  "organizationDetails": {
-    "@type": "OrganizationDetails",
-    "countryOfRegistration": "JP"
-  },
-  "sanctionEntries": [
-    {
-      "@id": "https://www.ammitto.org/entry/cn/export-control-list/fujitsu-defense-national-security",
-      "@type": "SanctionEntry",
-      "authority": {
-        "@id": "https://www.ammitto.org/authority/cn",
-        "name": "China MOFCOM"
-      },
-      "regime": {
-        "@type": "SanctionRegime",
-        "code": "CN_EXPORT_CONTROL",
-        "name": "出口管制管控名单 (Export Control List)"
-      },
-      "effects": [
-        {
-          "@type": "SanctionEffect",
-          "effectType": "dual_use_export_ban",
-          "scope": "full",
-          "description": "禁止出口两用物项"
-        },
-        {
-          "@type": "SanctionEffect",
-          "effectType": "dual_use_transfer_ban",
-          "scope": "full",
-          "description": "禁止转移或提供两用物项"
-        }
-      ],
-      "status": "active",
-      "period": {
-        "@type": "TemporalPeriod",
-        "listedDate": "2026-02-24",
-        "listedTime": "16:00",
-        "effectiveDate": "2026-02-24",
-        "effectiveTime": "00:01"
-      },
-      "legalInstruments": [
-        {
-          "@id": "https://www.ammitto.org/legal_instrument/cn/export-control-law",
-          "name": "Export Control Law of the PRC"
-        }
-      ],
-      "announcement": {
-        "@type": "OfficialAnnouncement",
-        "title": "商务部公告2026年第11号",
-        "url": "https://www.mofcom.gov.cn/...",
-        "publishedDate": "2026-02-24",
-        "publishedTime": "16:00",
-        "documentId": "2026年第11号",
-        "documentType": "商务部公告",
-        "signatory": "商务部",
-        "authority": "中华人民共和国商务部",
-        "content": "根据《中华人民共和国出口管制法》...",
-        "language": "zh-CN"
-      }
-    }
-  ]
-}
-----
-
-=== Harmonized Model Fields
-
-The ammitto gem's harmonized models support the following fields from China YAML sources:
-
-==== TemporalPeriod
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `listedDate`
-| date
-| Date entity was listed
-
-| `listedTime`
-| string
-| Time entity was listed (HH:MM)
-
-| `effectiveDate`
-| date
-| Date sanction became effective
-
-| `effectiveTime`
-| string
-| Time sanction became effective (HH:MM)
-
-| `expiryDate`
-| date
-| Date sanction expires
-
-| `isIndefinite`
-| boolean
-| Whether sanction has no end date
-
-| `lastUpdated`
-| string
-| Last update timestamp (ISO 8601)
-
-|===
-
-==== OfficialAnnouncement
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `title`
-| string
-| Title of the announcement
-
-| `url`
-| string
-| URL of the official announcement
-
-| `publishedDate`
-| date
-| Date of publication
-
-| `publishedTime`
-| string
-| Time of publication (HH:MM)
-
-| `author`
-| string
-| Who authored/published it
-
-| `documentType`
-| string
-| Type (press release, regulation, decision)
-
-| `documentId`
-| string
-| Official document ID (e.g., "第4号")
-
-| `signatory`
-| string
-| Person who signed the announcement
-
-| `signatoryTitle`
-| string
-| Title of the signatory
-
-| `publisher`
-| string
-| Publisher of the announcement
-
-| `authority`
-| string
-| Authority issuing the announcement
-
-| `content`
-| string
-| Full text content of the announcement
-
-| `language`
-| string
-| ISO 639-1 code (zh-CN for China)
-
-|===
-
-==== SanctionEntry
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `id`
-| string
-| URI identifier
-
-| `entityId`
-| string
-| Reference to Entity
-
-| `authority`
-| Authority
-| Issuing authority
-
-| `regime`
-| SanctionRegime
-| Sanctions regime
-
-| `listType`
-| ListType
-| Type of list
-
-| `legalBases`
-| LegalInstrument[]
-| Legal instruments
-
-| `effects`
-| SanctionEffect[]
-| Sanction effects
-
-| `reasons`
-| SanctionReason[]
-| Reasons for sanction
-
-| `period`
-| TemporalPeriod
-| Time period
-
-| `status`
-| string
-| Current status (active, suspended, terminated)
-
-| `referenceNumber`
-| string
-| Authority's ID
-
-| `remarks`
-| string
-| Additional remarks
-
-| `announcement`
-| OfficialAnnouncement
-| Official announcement
-
-| `rawSourceData`
-| RawSourceData
-| Original source data
-
-|===
-
-=== Harmonized Ontology Models
-
-The ammitto gem provides a comprehensive harmonized ontology that serves as a
-superset of all sanctions data structures across different sources. The following
-new models have been added to support China sanctions data:
-
-==== LocalizedString
-
-Represents text in a specific language with optional script and region metadata.
-
-[source,yaml]
-----
-value: 三菱重工業株式会社
-language: zh
-script: Hani
-region: CN
-is_primary: true
-is_transliteration: false
-----
-
-Fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `value`
-| string
-| The text content
-
-| `language`
-| string
-| ISO 639-1 code (zh, en, ru, ar)
-
-| `script`
-| string
-| ISO 15924 code (Latn, Hani, Cyrl, Arab, Hant)
-
-| `region`
-| string
-| ISO 3166-1 code (CN, TW, HK)
-
-| `is_primary`
-| boolean
-| Whether this is the primary representation
-
-| `is_transliteration`
-| boolean
-| Whether this is a transliteration from another script
-
-| `transliteration_system`
-| string
-| Transliteration system (pinyin, wade-giles, hepburn)
-
-|===
-
-==== LegalCitation
-
-Represents a reference to a legal instrument with specific articles, sections, and paragraphs.
-
-[source,yaml]
-----
-id: https://www.ammitto.org/citation/cn/2021-afsla-art4
-legal_instrument_id: https://www.ammitto.org/instrument/cn/anti-foreign-sanctions-law
-articles:
-  - 第四条
-  - 第五条
-citation_type: legal_basis
-context: Primary legal authority for countermeasures
-quoted_text:
-  - value: 为了维护国家主权...
-    language: zh
-----
-
-Fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `id`
-| string
-| Unique IRI identifier
-
-| `legal_instrument_id`
-| string
-| Reference to the LegalInstrument
-
-| `articles`
-| array[string]
-| Specific articles cited (e.g., "第四条")
-
-| `sections`
-| array[string]
-| Specific sections cited
-
-| `paragraphs`
-| array[string]
-| Specific paragraphs cited
-
-| `citation_type`
-| string
-| Type: legal_basis, reference, amendment, interpretation
-
-| `context`
-| string
-| Why this instrument is cited
-
-| `quoted_text`
-| LocalizedString[]
-| Quoted text from the instrument
-
-|===
-
-==== SanctionList
-
-Represents a sanctions regime/list maintained by an authority.
-
-[source,yaml]
-----
-id: https://www.ammitto.org/list/cn/UEL
-source: cn
-code: UEL
-name:
-  - value: 不可靠实体清单
-    language: zh
-    is_primary: true
-  - value: Unreliable Entity List
-    language: en
-authority:
-  id: cn
-  name: Ministry of Commerce of China
-list_type: primary
-status: active
-established_date: '2020-09-19'
-----
-
-Fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `id`
-| string
-| Unique IRI
-
-| `source`
-| string
-| Source code (cn, eu, un, us)
-
-| `code`
-| string
-| List code (UEL, ASL, ECL)
-
-| `name`
-| LocalizedString[]
-| Multilingual name
-
-| `description`
-| LocalizedString[]
-| Multilingual description
-
-| `authority`
-| Authority
-| Authority maintaining the list
-
-| `regime`
-| SanctionRegime
-| Sanction regime
-
-| `legal_citations`
-| LegalCitation[]
-| Legal citations establishing this list
-
-| `list_type`
-| string
-| Type: primary, secondary, consolidated
-
-| `status`
-| string
-| Status: active, inactive, archived
-
-| `established_date`
-| date
-| Date the list was established
-
-| `url`
-| string
-| Official URL
-
-|===
-
-==== SanctionGroup
-
-Represents a collection of sanction entries announced together in a single announcement.
-
-[source,yaml]
-----
-id: https://www.ammitto.org/group/cn/2025-01-02-uel
-announcement_id: https://www.ammitto.org/announcement/cn/2025-01-02
-list_id: https://www.ammitto.org/list/cn/UEL
-entry_ids:
-  - https://www.ammitto.org/entry/cn/uel-2025-001
-  - https://www.ammitto.org/entry/cn/uel-2025-002
-entity_count: 2
-effective_date: '2025-01-02'
-----
-
-Fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `id`
-| string
-| Unique IRI
-
-| `announcement_id`
-| string
-| Reference to OfficialAnnouncement
-
-| `list_id`
-| string
-| Reference to SanctionList
-
-| `entry_ids`
-| array[string]
-| IDs of entries in this group
-
-| `shared_measures`
-| SanctionEffect[]
-| Measures applied to all entries
-
-| `shared_reasons`
-| SanctionReason[]
-| Reasons for all entries
-
-| `effective_date`
-| date
-| Date when sanctions became effective
-
-| `effective_time`
-| string
-| Time when sanctions became effective
-
-| `entity_count`
-| integer
-| Number of entities in the group
-
-|===
-
-==== SanctionPeriodModification
-
-Represents a temporal modification to sanctions (suspend, resume, stop, amend, extend).
-
-[source,yaml]
-----
-id: https://www.ammitto.org/modification/cn/2025-001
-target_type: entry
-target_id: https://www.ammitto.org/entry/cn/uel-2024-015
-action: suspend
-effective_date: '2025-01-01'
-until_date: '2025-04-01'
-duration_days: 90
-duration_description: 90天
-announcement_id: https://www.ammitto.org/announcement/cn/2025-001
-status: active
-----
-
-Fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `id`
-| string
-| Unique IRI
-
-| `target_type`
-| string
-| Type: entry, group, list
-
-| `target_id`
-| string
-| IRI of target being modified
-
-| `target_announcement_id`
-| string
-| Announcement that created the target
-
-| `target_announcement_date`
-| date
-| Date of original announcement
-
-| `affected_entity_count`
-| integer
-| Number of entities affected
-
-| `action`
-| string
-| Action: suspend, resume, stop, amend, extend
-
-| `effective_date`
-| date
-| Date modification becomes effective
-
-| `until_date`
-| date
-| End date for suspension
-
-| `duration_days`
-| integer
-| Duration in days
-
-| `duration_description`
-| string
-| Duration in original language
-
-| `announcement_id`
-| string
-| Announcement triggering this modification
-
-| `legal_citations`
-| LegalCitation[]
-| Legal citations for this modification
-
-| `reason`
-| LocalizedString[]
-| Reason for modification
-
-| `status`
-| string
-| Status: active, expired, superseded
-
-|===
-
-==== Enhanced SanctionEntry Fields
-
-The SanctionEntry model now includes additional fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `group_id`
-| string
-| Reference to SanctionGroup (if part of collective sanction)
-
-| `modifications`
-| SanctionPeriodModification[]
-| Modifications affecting this entry
-
-| `legal_citations`
-| LegalCitation[]
-| Legal citations specific to this entry
-
-|===
-
-==== Enhanced OfficialAnnouncement Fields
-
-The OfficialAnnouncement model now includes additional fields:
-
-[cols="1,2,2"]
-|===
-| Field | Type | Description
-
-| `sanction_group_ids`
-| array[string]
-| IDs of SanctionGroup objects created by this announcement
-
-| `modifications`
-| SanctionPeriodModification[]
-| Modifications announced by this announcement
-
-| `legal_citations`
-| LegalCitation[]
-| Legal citations from this announcement
-
-|===
-
-=== CN-Specific Effect Types
-
-The following measure types are supported in the source YAML schema:
-
-[cols="1,3"]
-|===
-| Measure Type | Description
-
-| `asset_freeze`
-| 冻结在我国境内的动产、不动产和其他各类财产
-
-| `prohibit_transactions`
-| 禁止我国境内的组织、个人与其进行有关交易活动
-
-| `prohibit_cooperation`
-| 禁止我国境内的组织、个人与其进行有关合作活动
-
-| `entry_ban`
-| 禁止入境
-
-| `visa_ban`
-| 不予签发签证
-
-| `prohibit_import_export`
-| 禁止从事与中国有关的进出口活动
-
-| `prohibit_investment_new`
-| 禁止在中国境内新增投资
-
-| `prohibit_data_transmission`
-| 禁止数据传输
-
-| `prohibit_sensitive_information_provision`
-| 禁止提供敏感信息
-
-| `prohibit_export_dual_use_items`
-| 禁止出口两用物项
-
-| `prohibit_transfer_provide_dual_use_items`
-| 禁止转移或提供两用物项
-
-| `prohibit_export_specific_product`
-| 禁止出口特定产品
-
-| `export_license_requirement`
-| 特殊情况下确需出口的，应当向商务部提出申请
-
-| `investigation`
-| 调查
-
-| `unreliable_entity_list`
-| 列入不可靠实体清单
-
-| `prohibit_export_gene_sequencers`
-| 禁止出口基因测序仪
-
-| `cancel_work_permit`
-| 不批准并取消工作许可
-
-| `cancel_stay_residence`
-| 取消居留许可
-
-| `provide_information`
-| 提供信息
-
-| `allow_statement`
-| 允许声明
-
-| `cooperate_investigation`
-| 配合调查
-
-| `report_violation`
-| 报告违规
-
-| `fine`
-| 罚款
-
-|===
-
-== Special Considerations
-
-* **Format**: HTML announcements (not structured XML/JSON)
-* **Language**: Chinese with English transliterations
-* **Parsing**: Requires HTML extraction from official announcements
-* **Encoding**: UTF-8 with Chinese characters
-* **Multiple Lists**: China has 3 distinct sanctions lists - entities may appear on multiple
-
-== Updating Data
-
-The YAML under `sources/` is curated by hand in this repository. After
-editing, validate it with `scripts/validate_cn_data.rb`:
+After transcribing an announcement, use Ruby and Bundler to install the
+link:Gemfile[Gemfile] dependencies and run the validation wrapper from the
+repository root:
 
 [source,shell]
 ----
-ruby scripts/validate_cn_data.rb
+bundle install
+bundle exec ruby scripts/validate_cn_data.rb
 ----
 
-== Knowledge Graph Integration
-
-This repository's YAML data feeds into the Ammitto knowledge graph.
-
-Harmonized JSON-LD for this source:
-https://www.ammitto.org/api/v1/sources/cn.jsonld
-
-=== Entity-Entry Relationship
-
-The architecture follows a normalized pattern where entities and entries are separate but linked:
-
-....
-┌──────────────────────────────────────────────────────────────────────────┐
-│                           ENTITY (List-Agnostic)                          │
-│                                                                           │
-│  id: https://www.ammitto.org/entity/cn/202535-csbc-corporation-taiwan    │
-│  entity_type: organization                                                │
-│  names:                                                                   │
-│    - full_name: CSBC Corporation, Taiwan (Latn, primary)                 │
-│    - full_name: 国际造船股份有限公司 (Hani)                              │
-│  sanction_entry_ids:                                                      │
-│    - https://www.ammitto.org/entry/cn/import-export-control-list/...     │
-│                                                                           │
-└───────────────────────────────────┬──────────────────────────────────────┘
-                                    │
-                                    │ sanction_entry_ids
-                                    ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│                        ENTRY (List-Specific)                              │
-│                                                                           │
-│  id: .../entry/cn/import-export-control-list/202535-csbc-corporation...  │
-│  entity_id: .../entity/cn/202535-csbc-corporation-taiwan                 │
-│  authority: { "@id": ".../authority/cn" }                                │
-│  regime: { "@id": ".../regime/cn_export_control" }                       │
-│  effects:                                                                 │
-│    - effect_type: prohibit_export_dual_use_items                         │
-│      description: 禁止向上述台湾地区实体出口两用物项...                   │
-│    - effect_type: export_license_requirement                             │
-│      description: 特殊情况下确需出口的...                                │
-│  period:                                                                  │
-│    effective_date: '2025-07-09'                                             │
-│  status: active                                                           │
-│  announcement:                                                            │
-│    title: 公布将8家台湾地区实体列入出口管制管控名单                       │
-│    url: https://www.mofcom.gov.cn/...                                    │
-│    document_id: 2025年第35号                                              │
-│    content: 根据《中华人民共和国出口管制法》...                          │
-│                                                                           │
-└──────────────────────────────────────────────────────────────────────────┘
-....
-
-=== IRI Patterns
-
-All resources use normalized IRIs following these patterns:
-
-[cols="1,3"]
-|===
-| Resource Type | IRI Pattern
-
-| Entity
-| `https://www.ammitto.org/entity/cn/{local_id}`
-
-| Entry
-| `https://www.ammitto.org/entry/cn/{list_type}/{local_id}`
-
-| Regime
-| `https://www.ammitto.org/regime/{regime_code}`
-
-| Authority
-| `https://www.ammitto.org/authority/cn`
-
-| List
-| `https://www.ammitto.org/list/cn/{list_type}`
-
-|===
-
-=== List Type Mapping
-
-The transformer maps Chinese list names to URL-safe slugs:
-
-[cols="2,2,2"]
-|===
-| Chinese Name | Internal Code | URL Slug
-
-| 反制裁清单
-| anti_sanctions
-| anti-sanction-list
-
-| 出口管制管控名单
-| export_control
-| import-export-control-list
-
-| 不可靠实体清单
-| unreliable_entity
-| unreliable-entity-list
-
-|===
-
-=== Regime Codes
-
-Each sanctions regime has a unique code for consistent referencing:
-
-[cols="1,2,2"]
-|===
-| Code | English Name | Chinese Name
-
-| CN_ANTI_SANCTIONS
-| Anti-Sanctions List
-| 反制裁清单
-
-| CN_EXPORT_CONTROL
-| Export Control List
-| 出口管制管控名单
-
-| CN_UNRELIABLE_ENTITY
-| Unreliable Entity List
-| 不可靠实体清单
-
-|===
-
-== Related Repositories
-
-* https://github.com/ammitto/ammitto[ammitto] - Main Ruby gem with harmonization
-* https://github.com/ammitto/data[data] - Harmonized knowledge graph output
-* https://github.com/ammitto/ammitto.github.io[ammitto.github.io] - Website with search
+link:scripts/validate_cn_data.rb[The wrapper] delegates validation to the
+Ammitto gem. The source schemas are in link:schemas/[schemas/]; preserve the
+official text in `reference-docs/` and the announcement URL in each YAML
+record when updating the data.
 
 == License
 
 Data in this repository is sourced from official Chinese government
 announcements. The data processing code is part of the Ammitto project.
+
+== Related
+
+* https://www.ammitto.org[ammitto.org]: search across all sources
+* https://github.com/ammitto/ammitto[ammitto]: the Ruby gem that harmonizes this data
