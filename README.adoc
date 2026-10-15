@@ -74,6 +74,58 @@ to (`target_announcement_id`, `target_announcement_date`), `effective_date`,
 The files use YAML anchors to repeat shared reasons and measures, so a loader
 must allow aliases.
 
+== Harmonized field mapping
+
+The https://github.com/ammitto/ammitto/blob/74491e856c1e68aea52c0cf0e34061d48429d359/lib/ammitto/sources/cn/transformer.rb[China transformer] reads announcement and measure-modification documents. Entity paths below are relative to `sanction_details.entities[]`.
+
+Targets below use canonical Ruby fields. Entity classes are under
+`Ammitto::Ontology::Entities`; `SanctionEntry`, `OfficialAnnouncement`,
+`SanctionReason` and `SanctionPeriodModification` are under
+`Ammitto::Ontology::Sanction`; other target classes are under
+`Ammitto::Ontology::ValueObjects`. JSON-LD uses the serializer's wire keys:
+`SourceReference.fetched_at`, for example, is published as `retrievedAt`.
+
+[cols="2,3,4",options="header"]
+|===
+| Input field | Canonical target | Transformation
+
+| `name.en`, `name.zh-Hans`
+| `Entity.names` → `NameVariant.full_name`, `script`, `is_primary`
+| Keeps English and Chinese variants; English is primary when present.
+
+| `type`, `gender`
+| `PersonEntity` or `OrganizationEntity`; `PersonEntity.gender`
+| Uses the source party type; copies gender for persons.
+
+| `announcement.document_id`, entity name, `sanction_list`
+| `Entity.id`; `SanctionEntry.id`, `regime`
+| Derives collision-aware party references and list-qualified entry IRIs; export-control announcement IRIs include their list.
+
+| `measures[].type`, localized measure text
+| `SanctionEffect.effect_type`, `localized_descriptions`
+| Uses the first type of each measure and retains language/script metadata; absent measures use `sectoral_sanction`.
+
+| `reason[]`
+| `SanctionEntry.reason_details` → `SanctionReason.localized_descriptions`
+| Keeps language-keyed reasons as localized values with category `other`.
+
+| `effective_date`, `effective_time`
+| `TemporalPeriod.effective_date`, `effective_time`, `is_indefinite`
+| Parses the date, retains the time, and marks the period indefinite.
+
+| `announcement.title`, `url`, `publish_date`, `publish_time`, `document_id`
+| `OfficialAnnouncement.title`, `url`, `publish_date`, `publish_time`, `document_id`
+| Title prefers Chinese, then English; dates are parsed separately from publication times.
+
+| `sanction_details.instruments[]`
+| `LegalCitation`
+| Builds citations and legal-instrument IRIs from the supplied identifiers or law.
+
+| `measure_modifications.modifications[]`
+| `SanctionPeriodModification.target_announcement_id`, `action`, `effective_date`, `until_date`
+| Builds target notice IRIs using the announcement naming rule (list-qualified for `export_control`) and retains action, dates, times and notes.
+|===
+
 == Using the data
 
 Clone or download this repository and run either example from its root
